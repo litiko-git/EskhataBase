@@ -1,0 +1,635 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "99cfa45a-9de8-410b-bff6-74b493f05154",
+  "Name": "TeamsCommonAPI",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.TeamsCommonAPI.Client",
+  "ClientBaseAssemblyName": "DirRX.TeamsCommonAPI.ClientBase",
+  "ClientBaseNamespace": "DirRX.TeamsCommonAPI.ClientBase",
+  "ClientNamespace": "DirRX.TeamsCommonAPI.Client",
+  "Code": "RNDNot1",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "6c7c8ab4-ef88-495c-9c61-24dc08709956",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "6c7890eb-2fd1-4d4c-8c37-30dafc425738",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "3ea541af-8683-4712-9d5d-f5197f1917d2",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "59f1c3d1-aef0-4519-8350-af2743080b64",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "ec7b606a-21ee-4f16-aba8-ab8c2af76d12",
+      "MaxVersion": "",
+      "MinVersion": "0.0.1.0"
+    },
+    {
+      "Id": "df83a2ea-8d43-4ec4-a34a-2e61863014df",
+      "MaxVersion": "",
+      "MinVersion": "4.2.0.0"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "86e79c89-c11e-4d7d-b9be-11ea15159daf"
+    },
+    {
+      "ItemId": "d0756b04-e78e-42c2-a1e8-f30be8976f8f",
+      "PreviousItemId": "86e79c89-c11e-4d7d-b9be-11ea15159daf"
+    },
+    {
+      "ItemId": "77fb1182-2eea-4c64-ad63-51313d821f79",
+      "PreviousItemId": "d0756b04-e78e-42c2-a1e8-f30be8976f8f"
+    },
+    {
+      "ItemId": "7d9f857c-9a46-4a16-89bf-0aa9c2e629d9",
+      "PreviousItemId": "77fb1182-2eea-4c64-ad63-51313d821f79"
+    },
+    {
+      "ItemId": "9535accb-0f25-4887-b6de-af8f7b14489a",
+      "PreviousItemId": "7d9f857c-9a46-4a16-89bf-0aa9c2e629d9"
+    },
+    {
+      "ItemId": "e5fd1e1e-5678-43ad-9bc6-3efdf4e351d8",
+      "PreviousItemId": "9535accb-0f25-4887-b6de-af8f7b14489a"
+    },
+    {
+      "ItemId": "98c48a14-3f00-4301-ab7d-57f1c42e53c2",
+      "PreviousItemId": "e5fd1e1e-5678-43ad-9bc6-3efdf4e351d8"
+    },
+    {
+      "ItemId": "039f3c6e-ec74-4cee-8cf2-39082a5a7695",
+      "PreviousItemId": "98c48a14-3f00-4301-ab7d-57f1c42e53c2"
+    },
+    {
+      "ItemId": "b5b0edbf-cfe3-4663-bb73-67c454af29e1",
+      "PreviousItemId": "039f3c6e-ec74-4cee-8cf2-39082a5a7695"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InitializationFunctions": [
+    {
+      "Name": "CreateDefaultEventTypes",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
+  ],
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.TeamsCommonAPI",
+  "IsolatedAssemblyName": "DirRX.TeamsCommonAPI.Isolated",
+  "IsolatedNamespace": "DirRX.TeamsCommonAPI.Isolated",
+  "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "1040ce6e-1c82-45be-afe6-6b333c00c828",
+      "Name": "ConsolidatedTasksMonitor",
+      "GenerateHandler": true,
+      "Monthly": "WorkingDays",
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:00:00"
+    }
+  ],
+  "Libraries": [
+    {
+      "NameGuid": "6be0b71e-383f-4310-a2d6-6e0216242bba",
+      "Name": "CentrifugoUtils",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "c7e9a9ac-8c4c-4cb4-92f2-6adcc3a0de8a",
+      "Name": "CommonUtils",
+      "Scope": "Both"
+    }
+  ],
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "TaskTitleMaxLength",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.Int32",
+      "Value": "250"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "ConfigureCollectiveTask",
+      "Parameters": [
+        {
+          "Name": "settings",
+          "ParameterType": "global::DirRX.TeamsCommonAPI.ITeamsNoticesSettings",
+          "ParameterTypeFullName": "DirRX.TeamsCommonAPI.ITeamsNoticesSettings, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "task",
+          "ParameterType": "global::DirRX.TeamsCommonAPI.ITeamsTask",
+          "ParameterTypeFullName": "DirRX.TeamsCommonAPI.ITeamsTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "ConsolidatedTaskComplemention",
+      "Parameters": [
+        {
+          "Name": "task",
+          "ParameterType": "global::DirRX.TeamsCommonAPI.ITeamsTask",
+          "ParameterTypeFullName": "DirRX.TeamsCommonAPI.ITeamsTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GetEntities",
+      "Parameters": [
+        {
+          "Name": "request",
+          "ParameterType": "global::DirRX.TeamsCommonAPI.Structures.Module.IEntityCollectionRequest",
+          "ParameterTypeFullName": "DirRX.TeamsCommonAPI.Structures.Module.IEntityCollectionRequest"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "GetRootTask",
+      "Parameters": [
+        {
+          "Name": "task",
+          "ParameterType": "global::DirRX.TeamsCommonAPI.ITeamsTask",
+          "ParameterTypeFullName": "DirRX.TeamsCommonAPI.ITeamsTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::DirRX.TeamsCommonAPI.ITeamsTask",
+      "ReturnTypeFullName": "DirRX.TeamsCommonAPI.ITeamsTask, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetTaskUsers",
+      "Parameters": [
+        {
+          "Name": "task",
+          "ParameterType": "global::DirRX.TeamsCommonAPI.ITeamsTask",
+          "ParameterTypeFullName": "DirRX.TeamsCommonAPI.ITeamsTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetThumbnail",
+      "Parameters": [
+        {
+          "Name": "userId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "System.Byte[]",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetThumbnails",
+      "Parameters": [
+        {
+          "Name": "userIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.TeamsCommonAPI.Structures.Module.IUserThumbnailDto>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "GetWebClient",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "RaiseNotify",
+      "Parameters": [
+        {
+          "Name": "noticeItem",
+          "ParameterType": "System.Object"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SearchRecipients",
+      "Parameters": [
+        {
+          "Name": "searchValue",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::DirRX.TeamsCommonAPI.Structures.Module.ISearchRecipientsResult",
+      "ReturnTypeFullName": "DirRX.TeamsCommonAPI.Structures.Module.ISearchRecipientsResult",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "SetAllAsRead",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "SetAsRead",
+      "Parameters": [
+        {
+          "Name": "noticeId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void",
+      "WebApiRequestType": "Post"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "BinaryDataValue",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Guid>"
+        },
+        {
+          "Name": "Size",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Hash",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Storage",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.TeamsCommonAPI.Structures.Module.IStorage"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "EntityCollectionRequest",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "EntityCollection",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.TeamsCommonAPI.Structures.Module.IEntityRequest>"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "EntityCollectionResponse",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Entities",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.TeamsCommonAPI.Structures.Module.IEntityResponse>"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "EntityRequest",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Guid",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "IsIncludeBinaryValues",
+          "TypeFullName": "global::System.Boolean"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "EntityResponse",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Guid",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "IsUnauthorized",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "IsIncludeBinaryValues",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "IsError",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "ErrorCause",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Properties",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.Dictionary<global::System.String, global::DirRX.TeamsCommonAPI.Structures.Module.IProperty>"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "NavigationValue",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "TypeGuid",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Guid"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "Property",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Type",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Value",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Object"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "RecipientDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "JobTitle",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Department",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Thumbnail",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IsActive",
+          "TypeFullName": "global::System.Boolean"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "SearchRecipientsResult",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "recipients",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.TeamsCommonAPI.Structures.Module.IRecipientDto>"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "Storage",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Address",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    },
+    {
+      "Name": "UserThumbnailDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Thumbnail",
+          "IsArray": true,
+          "TypeFullName": "global::System.Byte[]"
+        }
+      ],
+      "StructureNamespace": "DirRX.TeamsCommonAPI.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.TeamsCommonAPI",
+  "ResourcesKeys": [
+    "CollectiveTaskSubject",
+    "PlanRespAssignNotifyText",
+    "SectionRespAssignNotifyText",
+    "ActivityRespAssignNotifyText",
+    "ActivityCannotStartNotifyText",
+    "ActivityMustEndedNotifyText",
+    "ActivityMustStartNotifyText",
+    "ActivityOverdatedNotifyText",
+    "ActivityStatusChangedNotifyText",
+    "MilestoneMustReachNotifyText",
+    "MilestoneOverdatedNotifyText",
+    "PlanMustEndedNotifyText",
+    "PlanMustStartedNotifyText",
+    "PlanOverdatedNotifyText",
+    "PlanParticipantsAddedNotifyText",
+    "SectionMustStartNotifyText",
+    "SectionMustEndNotifyText",
+    "SectionOverdatedNotifyText",
+    "StartedActivityChangedNotifyText",
+    "AssignedTicketNotifyText",
+    "TicketCommentNotifyText",
+    "Year",
+    "AddressNotFound",
+    "MdEditorName",
+    "MdExtension",
+    "RxmdEditorName",
+    "RxmdExtension",
+    "TextDocuments",
+    "SearchRecipientsException",
+    "UnknownPropertyType",
+    "IncorrectGuid",
+    "TypeByGuidNotFound",
+    "EntityNotFound",
+    "ModuleNotFound",
+    "KnowledgeBaseRoleName"
+  ],
+  "ServerAssemblyName": "DirRX.TeamsCommonAPI.Server",
+  "ServerNamespace": "DirRX.TeamsCommonAPI.Server",
+  "SharedAssemblyName": "DirRX.TeamsCommonAPI.Shared",
+  "SharedNamespace": "DirRX.TeamsCommonAPI.Shared",
+  "SpecialFolders": [
+    {
+      "NameGuid": "86e79c89-c11e-4d7d-b9be-11ea15159daf",
+      "Name": "IncomingTeamsFolder",
+      "DefaultContentType": "7d9f857c-9a46-4a16-89bf-0aa9c2e629d9",
+      "DisplayType": "Inbox",
+      "FilterPanel": {
+        "NameGuid": "8a01f44a-e6b5-4017-8c74-cf18fb49f6ad",
+        "Name": "FilterPanel",
+        "Controls": [
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "538de5f3-0adc-40a8-9660-e1b53557691a",
+            "Name": "PeriodGroup"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListMetadata, Sungero.Metadata",
+            "NameGuid": "23a31c6b-5c39-4709-8ff0-a79316c2780e",
+            "Name": "Period",
+            "ParentGuid": "538de5f3-0adc-40a8-9660-e1b53557691a"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "42de351f-a221-4787-b06d-3c891a2dd8af",
+            "Name": "Today",
+            "IsSelected": true,
+            "ParentGuid": "23a31c6b-5c39-4709-8ff0-a79316c2780e"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "47d4ef95-e4c5-4286-a20d-8b22f82ee7c1",
+            "Name": "Unread",
+            "ParentGuid": "23a31c6b-5c39-4709-8ff0-a79316c2780e",
+            "PreviousGuid": "42de351f-a221-4787-b06d-3c891a2dd8af"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "2dfbcad4-e36f-4505-b2ef-2f9699acbe19",
+            "Name": "All",
+            "ParentGuid": "23a31c6b-5c39-4709-8ff0-a79316c2780e",
+            "PreviousGuid": "47d4ef95-e4c5-4286-a20d-8b22f82ee7c1"
+          }
+        ]
+      },
+      "HandledEvents": [
+        "DataQueryServer",
+        "VisibilityHandlerServer"
+      ],
+      "IsShow": true,
+      "IsViewSettingsByFolder": true,
+      "Kind": "Computable",
+      "NeedShowMarkedCount": true,
+      "ParentFolderId": "eb72a985-606c-4647-ba0c-1389928a4e17"
+    },
+    {
+      "NameGuid": "d0756b04-e78e-42c2-a1e8-f30be8976f8f",
+      "Name": "SendedTeamsFolder",
+      "DefaultContentType": "77fb1182-2eea-4c64-ad63-51313d821f79",
+      "DisplayType": "Outbox",
+      "FilterPanel": {
+        "NameGuid": "9d5516d1-13a5-40b0-99ee-30817cfc1aa4",
+        "Name": "FilterPanel",
+        "Controls": []
+      },
+      "HandledEvents": [
+        "DataQueryServer",
+        "VisibilityHandlerServer"
+      ],
+      "IsShow": true,
+      "Kind": "Computable",
+      "NeedShowMarkedCount": false,
+      "ParentFolderId": "201bcad8-a5c4-4ef4-ba90-55334e02dd29"
+    }
+  ],
+  "Version": "1.0.4700.6",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

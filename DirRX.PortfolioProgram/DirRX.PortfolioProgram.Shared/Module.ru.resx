@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleDisplayName" xml:space="preserve">
+    <value>Портфели и программы</value>
+  </data>
+  <data name="ShipmentRisk" xml:space="preserve">
+    <value>Риск поставки</value>
+  </data>
+  <data name="PlanningRisk" xml:space="preserve">
+    <value>Риск планирования</value>
+  </data>
+  <data name="SecurityRisk" xml:space="preserve">
+    <value>Риск безопасности</value>
+  </data>
+  <data name="FinancialRisk" xml:space="preserve">
+    <value>Финансовый риск</value>
+  </data>
+  <data name="CommunicationRisk" xml:space="preserve">
+    <value>Коммуникационный риск</value>
+  </data>
+  <data name="BusinessRisk" xml:space="preserve">
+    <value>Бизнес-риск</value>
+  </data>
+  <data name="QualityRisk" xml:space="preserve">
+    <value>Риск несоответствия качеству</value>
+  </data>
+  <data name="RiskWillNotOccur" xml:space="preserve">
+    <value>Не возникнет</value>
+  </data>
+  <data name="RiskIsUnlikelyToOccur" xml:space="preserve">
+    <value>Скорее всего, не возникнет</value>
+  </data>
+  <data name="ProbabilitiesOfRiskAreTheSame" xml:space="preserve">
+    <value>Вероятность возникновения и невозникновения равна</value>
+  </data>
+  <data name="RiskIsLikelyToOccur" xml:space="preserve">
+    <value>Скорее всего, возникнет</value>
+  </data>
+  <data name="RiskWillMostCertainlyOccur" xml:space="preserve">
+    <value>Наверняка возникнет</value>
+  </data>
+  <data name="ImpactDescriptionMinimal" xml:space="preserve">
+    <value>Минимальные (незначительное изменение стоимости и сроков)</value>
+  </data>
+  <data name="ImpactDescriptionAcceptable" xml:space="preserve">
+    <value>Допустимые (увеличение стоимости менее чем на 10% и сроков менее чем на 5%)</value>
+  </data>
+  <data name="ImpactDescriptionSignificant" xml:space="preserve">
+    <value>Значительные (увеличение стоимости на 10-20% и сроков на 5-10%)</value>
+  </data>
+  <data name="ImpactDescriptionCritical" xml:space="preserve">
+    <value>Критические, возможны значительные потери или приостановка работ по проекту (увеличение стоимости на 20-40% и сроков на 10-20%)</value>
+  </data>
+  <data name="ImpactDescriptionDisastrous" xml:space="preserve">
+    <value>Катастрофические, возможно прекращение работ по проекту (увеличение стоимости более чем на 40% и сроков более чем на 20%)</value>
+  </data>
+  <data name="ImpactContentChangeMinimal" xml:space="preserve">
+    <value>Едва заметное уменьшение содержания</value>
+  </data>
+  <data name="ImpactContentChangeAcceptable" xml:space="preserve">
+    <value>Затронуты второстепенные области содержания</value>
+  </data>
+  <data name="ImpactContentChangeSignificant" xml:space="preserve">
+    <value>Затронуты основные области содержания</value>
+  </data>
+  <data name="ImpactContentChangeCritical" xml:space="preserve">
+    <value>Уменьшение содержания неприемлемо для спонсоров</value>
+  </data>
+  <data name="ImpactContentChangeDiasastrous" xml:space="preserve">
+    <value>Конечный продукт проекта практически бесполезен</value>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>Не определено</value>
+  </data>
+  <data name="RoadmapIsNotAvailableWitoutPortfolioProgramLicense" xml:space="preserve">
+    <value>Для работы с отчетом "Дорожная карта" требуется лицензия на модуль "Портфели и программы".</value>
+  </data>
+</root>

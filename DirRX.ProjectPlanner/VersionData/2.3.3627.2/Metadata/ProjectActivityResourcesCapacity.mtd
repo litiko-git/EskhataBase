@@ -1,0 +1,67 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "6e2d9247-0bfe-467d-a7e7-48911eb88b13",
+  "Name": "ProjectActivityResourcesCapacity",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ProjectActivi1",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "bc4e0a51-b84a-4823-9229-00a530c6cc6f",
+      "Name": "ProjectActivity",
+      "CanBeSearch": false,
+      "Code": "PrjctActivity",
+      "EntityGuid": "647a920e-ebf5-47b3-8aa6-bd9f2831515c",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "2dedd699-ff4e-4ac2-90ea-2a2fdabfd3be",
+      "Name": "ResourceId",
+      "CanBeSearch": false,
+      "Code": "ResourceId",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "bc4e0a51-b84a-4823-9229-00a530c6cc6f"
+    },
+    {
+      "$type": "Sungero.Metadata.DoublePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "cc9dede6-ef31-433c-bc50-931fd43011b8",
+      "Name": "Capacity",
+      "CanBeSearch": false,
+      "Code": "Capacity",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "2dedd699-ff4e-4ac2-90ea-2a2fdabfd3be"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "60248641-f3a8-4f81-8080-0519d2bec448",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "b075ec18-6dac-41ad-896a-d32ec31817f9",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 11
+    }
+  ]
+}

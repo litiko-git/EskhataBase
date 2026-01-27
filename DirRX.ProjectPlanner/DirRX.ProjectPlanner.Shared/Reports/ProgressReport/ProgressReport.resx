@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProgressReportTitle" xml:space="preserve">
+    <value>Project Plan Progress Report</value>
+  </data>
+  <data name="ProjectPlanName" xml:space="preserve">
+    <value>Project plan</value>
+  </data>
+  <data name="ProjectCharterName" xml:space="preserve">
+    <value>Project charter: </value>
+  </data>
+  <data name="ProjectFolderName" xml:space="preserve">
+    <value>Project folder: </value>
+  </data>
+  <data name="ProjectCostsTitle" xml:space="preserve">
+    <value>Costs</value>
+  </data>
+  <data name="ProjectCharacteristicsName" xml:space="preserve">
+    <value>Project characteristics</value>
+  </data>
+  <data name="CharacteristicName" xml:space="preserve">
+    <value>Characteristic</value>
+  </data>
+  <data name="PlannedValues" xml:space="preserve">
+    <value>Planned</value>
+  </data>
+  <data name="PredictableName" xml:space="preserve">
+    <value>Predictable</value>
+  </data>
+  <data name="FactValueName" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="ComplexityProjectTitle" xml:space="preserve">
+    <value>Workload</value>
+  </data>
+  <data name="ProjectDurationTitle" xml:space="preserve">
+    <value>Duration, w.d.</value>
+  </data>
+  <data name="ProjectCostsTitleCurrency" xml:space="preserve">
+    <value>Costs, {0}</value>
+  </data>
+  <data name="MilestonesName" xml:space="preserve">
+    <value>Milestones</value>
+  </data>
+  <data name="MilestoneName" xml:space="preserve">
+    <value>Milestone</value>
+  </data>
+  <data name="DateName" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="StatusName" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="PerformerName" xml:space="preserve">
+    <value>Performer</value>
+  </data>
+  <data name="NoteName" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="WbsName" xml:space="preserve">
+    <value>WBS</value>
+  </data>
+  <data name="DialogName" xml:space="preserve">
+    <value>Progress Report</value>
+  </data>
+  <data name="ReportPeriodDialogName" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="IncludeAgileDialogName" xml:space="preserve">
+    <value>Include tickets from related Agile boards</value>
+  </data>
+  <data name="ProgressTitle" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="OverdueStagesName" xml:space="preserve">
+    <value>Overdue Stages</value>
+  </data>
+  <data name="StageName" xml:space="preserve">
+    <value>Stage</value>
+  </data>
+  <data name="StartDateName" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="EndDateName" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="PercentCompletedName" xml:space="preserve">
+    <value>% completed</value>
+  </data>
+  <data name="CompletedStagesName" xml:space="preserve">
+    <value>Stages Completed Within Report Period</value>
+  </data>
+  <data name="CurrentStagesName" xml:space="preserve">
+    <value>Current and Upcoming Stages</value>
+  </data>
+  <data name="TableName" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="ProgressAgileTitle" xml:space="preserve">
+    <value>Progress on Related Agile boards</value>
+  </data>
+  <data name="CompletedTicketsTitle" xml:space="preserve">
+    <value>Completed Tickets</value>
+  </data>
+  <data name="TicketName" xml:space="preserve">
+    <value>Ticket</value>
+  </data>
+  <data name="WorkloadName" xml:space="preserve">
+    <value>Workload</value>
+  </data>
+  <data name="CompletedDateName" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="DeadlineName" xml:space="preserve">
+    <value>Deadline</value>
+  </data>
+  <data name="PerformerTicketName" xml:space="preserve">
+    <value>Performer</value>
+  </data>
+  <data name="StubTextAgile" xml:space="preserve">
+    <value>No related Agile boards found. Make sure that the plan and required Agile boards are related to the project.</value>
+  </data>
+  <data name="CurrentTicketsTitle" xml:space="preserve">
+    <value>Tickets in Progress</value>
+  </data>
+  <data name="MilestoneStatusDone" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="MilestoneStatusNotDone" xml:space="preserve">
+    <value>Not done</value>
+  </data>
+  <data name="StartPeriodDateNotAvailable" xml:space="preserve">
+    <value>The start date of the report period must be earlier than the current date.</value>
+  </data>
+  <data name="TextEmptyCompletedStages" xml:space="preserve">
+    <value>There are no completed stages in the selected period.</value>
+  </data>
+  <data name="TextEmptyOverdueStages" xml:space="preserve">
+    <value>There are no overdue stages in the selected period.</value>
+  </data>
+  <data name="TextEmptyCurrentStages" xml:space="preserve">
+    <value>There are no stages in the current and next report periods.</value>
+  </data>
+  <data name="CustomDate" xml:space="preserve">
+    <value>From specified date</value>
+  </data>
+  <data name="EntirePlan" xml:space="preserve">
+    <value>Entire plan</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="OneWeek" xml:space="preserve">
+    <value>One week</value>
+  </data>
+  <data name="Quarter" xml:space="preserve">
+    <value>Quarter</value>
+  </data>
+  <data name="TwoWeeks" xml:space="preserve">
+    <value>Two weeks</value>
+  </data>
+  <data name="ReportVersionDialogName" xml:space="preserve">
+    <value>Project plan version</value>
+  </data>
+  <data name="ReportVersionItemName" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="ProjectCurrentStateName" xml:space="preserve">
+    <value>Current state</value>
+  </data>
+  <data name="PredictValueName" xml:space="preserve">
+    <value>Expected values</value>
+  </data>
+</root>

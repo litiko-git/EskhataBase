@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Property_EventType" xml:space="preserve">
+    <value>EventType</value>
+  </data>
+  <data name="Enum_EventType_SectOverdated" xml:space="preserve">
+    <value>Section not completed on time</value>
+  </data>
+  <data name="Property_SolutionIdentifier" xml:space="preserve">
+    <value>SolutionIdentifier</value>
+  </data>
+  <data name="Enum_SolutionIdentifier_ProjectPlanning" xml:space="preserve">
+    <value>ProjectPlanning</value>
+  </data>
+  <data name="Enum_EventType_ActMustStarted" xml:space="preserve">
+    <value>Stage should be started</value>
+  </data>
+  <data name="Enum_EventType_SectMustEnded" xml:space="preserve">
+    <value>Section should be completed</value>
+  </data>
+  <data name="Enum_EventType_SectMustStarted" xml:space="preserve">
+    <value>Section should be started</value>
+  </data>
+  <data name="Enum_EventType_PlanOverdated" xml:space="preserve">
+    <value>Project plan not completed on time</value>
+  </data>
+  <data name="Enum_EventType_PlanMustEnded" xml:space="preserve">
+    <value>Project plan should be completed</value>
+  </data>
+  <data name="Enum_EventType_PlanMustStarted" xml:space="preserve">
+    <value>Project plan should be started</value>
+  </data>
+  <data name="Enum_EventType_PlanParticipAdd" xml:space="preserve">
+    <value>Employee added to list of participants in project plan</value>
+  </data>
+  <data name="Enum_EventType_MilesRespAssign" xml:space="preserve">
+    <value>Assigned responsibility for milestone</value>
+  </data>
+  <data name="Enum_EventType_ActRespAssign" xml:space="preserve">
+    <value>Assigned responsibility for stage</value>
+  </data>
+  <data name="Enum_EventType_SectRespAssign" xml:space="preserve">
+    <value>Assigned responsibility for section</value>
+  </data>
+  <data name="Enum_EventType_PlanRespAssign" xml:space="preserve">
+    <value>Assigned responsibility for project plan</value>
+  </data>
+  <data name="Enum_EventType_ActCannotStart" xml:space="preserve">
+    <value>Prerequisite stage not completed on time</value>
+  </data>
+  <data name="Enum_EventType_ActMustEnded" xml:space="preserve">
+    <value>Stage should be completed</value>
+  </data>
+  <data name="Enum_EventType_ActOverdated" xml:space="preserve">
+    <value>Stage not completed on time</value>
+  </data>
+  <data name="Enum_EventType_MilestMustReach" xml:space="preserve">
+    <value>The milestone of the project plan should be reached</value>
+  </data>
+  <data name="Enum_EventType_MilestOverdated" xml:space="preserve">
+    <value>Project plan milestone not reached on time</value>
+  </data>
+  <data name="Enum_EventType_ActStatusChangd" xml:space="preserve">
+    <value>Change in stage status</value>
+  </data>
+  <data name="Enum_EventType_StartedActChd" xml:space="preserve">
+    <value>Changes in stage that has already started</value>
+  </data>
+  <data name="Property_SectionIdentifier" xml:space="preserve">
+    <value>SectionIdentifier</value>
+  </data>
+  <data name="Enum_SectionIdentifier_RespAssign" xml:space="preserve">
+    <value>О назначении ответственным</value>
+  </data>
+  <data name="Enum_SectionIdentifier_PlanDate" xml:space="preserve">
+    <value>О плановых датах</value>
+  </data>
+  <data name="Enum_SectionIdentifier_Other" xml:space="preserve">
+    <value>Прочие</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Type of Event to Notify Participants</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Type of Event to Notify Participants</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Types of Events to Notify Participants</value>
+  </data>
+  <data name="Enum_SolutionIdentifier_AgileBoards" xml:space="preserve">
+    <value>AgileBoards</value>
+  </data>
+  <data name="Enum_EventType_AssignedTickets" xml:space="preserve">
+    <value>On assigned tickets</value>
+  </data>
+  <data name="Enum_EventType_TicketComments" xml:space="preserve">
+    <value>On comments to tickets</value>
+  </data>
+  <data name="Enum_SectionIdentifier_AssignedTickets" xml:space="preserve">
+    <value>Assigned tickets</value>
+  </data>
+  <data name="Property_NotifyText" xml:space="preserve">
+    <value>NotifyText</value>
+  </data>
+</root>

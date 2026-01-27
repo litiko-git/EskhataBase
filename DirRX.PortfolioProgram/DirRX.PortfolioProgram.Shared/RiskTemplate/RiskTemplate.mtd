@@ -1,0 +1,110 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "bf90b08b-447d-4cad-b505-65e29f5258b7",
+  "Name": "RiskTemplate",
+  "Actions": [
+    {
+      "NameGuid": "14b3b35f-c547-43d9-847f-57c900bfa109",
+      "Name": "ApplyToProjectRisk",
+      "ActionArea": "CardAndCollection",
+      "GenerateHandler": true,
+      "IsMultiSelectAction": true,
+      "IsVisibleInDesktopClient": false,
+      "LargeIconName": "Action_ApplyToProjectRisk_large_14b3b35fc54743d9847f57c900bfa109.png",
+      "SmallIconName": "Action_ApplyToProjectRisk_small_14b3b35fc54743d9847f57c900bfa109.png"
+    }
+  ],
+  "BaseGuid": "586b8b3b-6518-4ad9-99d3-9fafd6f328f5",
+  "CanBeNavigationPropertyType": true,
+  "CreationAreaMetadata": {
+    "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "HandledEvents": [
+    "RefreshClient"
+  ],
+  "IconName": "RiskTemplate.ico",
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "PortfolioProgramRiskTemplate",
+  "LookupMode": "Standalone",
+  "OperationsClass": "",
+  "Overridden": [
+    "LookupMode",
+    "IconName"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetAllTemplateRisks",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::DirRX.PortfolioProgram.IRiskTemplate>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "4a787360-350d-438b-bf77-b8b66d65efb2",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [
+      {
+        "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
+        "NameGuid": "c447f27d-d0fe-4d40-b49b-1b4647367853",
+        "Name": "ApplyToProjectRisk",
+        "ActionGuid": "14b3b35f-c547-43d9-847f-57c900bfa109",
+        "ButtonSize": "Large",
+        "Index": -1,
+        "ParentGuid": "8d6d4866-3c29-42b1-b2a7-b926cda2e92e"
+      }
+    ],
+    "Groups": [
+      {
+        "NameGuid": "8d6d4866-3c29-42b1-b2a7-b926cda2e92e",
+        "Name": "Risks",
+        "IconName": null,
+        "Index": 21,
+        "ParentGuid": "21a31627-5f58-4416-8c4a-90f538ee2e57",
+        "SmallIconName": null
+      }
+    ],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "8026ae31-1306-4af9-825f-5df7d97ca019",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [
+      {
+        "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
+        "NameGuid": "d5966e37-31da-4d26-97bf-04169f9368ee",
+        "Name": "ApplyToProject",
+        "ActionGuid": "14b3b35f-c547-43d9-847f-57c900bfa109",
+        "ButtonSize": "Large",
+        "Index": 13,
+        "IsShowInContextMenu": true,
+        "ParentGuid": "2509cc57-494f-4021-abb8-e011df7384b1"
+      }
+    ],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 12
+    }
+  ]
+}

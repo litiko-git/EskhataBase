@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_ProjectKind" xml:space="preserve">
+    <value>Kind</value>
+  </data>
+  <data name="Property_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Property_Manager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="Property_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Property_LeadingProject" xml:space="preserve">
+    <value>Included in</value>
+  </data>
+  <data name="Property_Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Enum_Priority_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Enum_Priority_Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Enum_Priority_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Property_StatusIssues" xml:space="preserve">
+    <value>Issues status</value>
+  </data>
+  <data name="Enum_StatusIssues_NoIssues" xml:space="preserve">
+    <value>No issues</value>
+  </data>
+  <data name="Enum_StatusIssues_NotSpecified" xml:space="preserve">
+    <value>Not specified</value>
+  </data>
+  <data name="Resource_ea990064fa4c4971ac1a53ec48a689a7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ea990064fa4c4971ac1a53ec48a689a7_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_623c5d3554604bc0a403543a2c855029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_bbca20a1f1f34488b835c107cd110244" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_bbca20a1f1f34488b835c107cd110244_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_ab0d039d1cf949aea7fa6756f64635c3" xml:space="preserve">
+    <value>Deadlines</value>
+  </data>
+  <data name="Resource_79423b56cae045b8ac8b9e9bce81699b" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_ab391200f1554ef9ae3c209add2c6ce8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_cd4f408183a34194803fe74e578076a0" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_01ea0939144e46ae86571e6d31c7e3bf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_c45f3bb48e80474a97be56d5b5cda28c" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Resource_ad957de2de894fbe8a0835cf850c5ff5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ad957de2de894fbe8a0835cf850c5ff5_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_88c571d88352453681f0ac9e55f05bf6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_88c571d88352453681f0ac9e55f05bf6_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_7a51bfa3c4274bbbad4a7ec35746712c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_7a51bfa3c4274bbbad4a7ec35746712c_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_f73c485555ef452a8456ec09adc01721" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="Resource_5fce9b60eb654779a0be63fb2fce6675" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_5fce9b60eb654779a0be63fb2fce6675_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_b9e1831b69024aa29aa8bbdd1a0afd4c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_b9e1831b69024aa29aa8bbdd1a0afd4c_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_081364b76eef4a64ae2b35878d1729cf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_081364b76eef4a64ae2b35878d1729cf_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enum_StatusIssues_UnderControl" xml:space="preserve">
+    <value>Under control</value>
+  </data>
+  <data name="Enum_StatusIssues_NeedAssistance" xml:space="preserve">
+    <value>Need assistance</value>
+  </data>
+  <data name="Form_821eca5695474b18832ace8f6b54374d" xml:space="preserve">
+    <value>Structure</value>
+  </data>
+  <data name="ControlGroup_d878a5b8d8b34f4281788212179c935d" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Open the card of portfolio, program, or project</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Open the card of portfolio, program, or project.</value>
+  </data>
+  <data name="FilterPanel_LeadingProject_a3b992f3988c4dffb8f0de16116b918d" xml:space="preserve">
+    <value>Included In</value>
+  </data>
+  <data name="FilterPanel_StatusIssues_628463be93bb43f9a3a2b9e52a71e472" xml:space="preserve">
+    <value>Issues status</value>
+  </data>
+  <data name="FilterPanel_NeedAssistance_68b181bc877746f7ad26ef58ce428431" xml:space="preserve">
+    <value>Need assistance</value>
+  </data>
+  <data name="FilterPanel_UnderControl_f0e7902581c84c3c92d39b32c4d34d7a" xml:space="preserve">
+    <value>Under control</value>
+  </data>
+  <data name="FilterPanel_Any_676c3789c3b9476b9a5a154912a78c3d" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_ProjectManager_e9b5b1fbeeb54019838164718971afe1" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="FilterPanel_ManagementTeam_4ef2130885b441988d45f0dd02b85092" xml:space="preserve">
+    <value>In the management team</value>
+  </data>
+  <data name="FilterPanel_Me_96747fdd831a45a187b524e497e39613" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="FilterPanel_MySubordinates_536b42bde3954625a8ad2fd5dc17b4b4" xml:space="preserve">
+    <value>My Subordinates</value>
+  </data>
+  <data name="FilterPanel_AnyRecipient_1a743ccf4aa949ed87efd2ea456684f5" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_Employee_d184cd214b3640d48b8f67941e9011cd" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="FilterPanel_Type_b73c8e002933450bb6d65e20f904fb6a" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="FilterPanel_Project_a4f0571591834158862ff953f1cde9fc" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="FilterPanel_Program_0301effbdc0642ecb15b795c5e959c30" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="FilterPanel_Portfolio_7d54745ec86a4820a57dbe1e909b3c83" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>Manager [Manager]</value>
+  </data>
+  <data name="Property_GatesDirRX" xml:space="preserve">
+    <value>Gates</value>
+  </data>
+  <data name="Form_3e92c5067ef9431482a12dcae217124a" xml:space="preserve">
+    <value>Gates</value>
+  </data>
+  <data name="ControlGroup_87cbe170ea5e421ea66a4cafbd9dc999" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateGateDirRX" xml:space="preserve">
+    <value>Gate</value>
+  </data>
+  <data name="Action_CreateGateDirRXDescription" xml:space="preserve">
+    <value>Create a gate</value>
+  </data>
+  <data name="Action_CreateGateDirRXHint" xml:space="preserve">
+    <value>Create Gate</value>
+  </data>
+  <data name="Action_CreateGateDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateGateDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_Create_0f742a5eb2ca42998e6ee4d8006f9af5" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysis" xml:space="preserve">
+    <value>Workload Analysis</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysisDescription" xml:space="preserve">
+    <value>Workload summary report on employees participating in projects.</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysisHint" xml:space="preserve">
+    <value>Workload Analysis</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysisConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowWorkloadAnalysisConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRX" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRXDescription" xml:space="preserve">
+    <value>Create child portfolio</value>
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRXHint" xml:space="preserve">
+    <value>Create child portfolio</value>
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRX" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRXDescription" xml:space="preserve">
+    <value>Create child program</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRXHint" xml:space="preserve">
+    <value>Create child program</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRX" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRXDescription" xml:space="preserve">
+    <value>Create child project</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRXHint" xml:space="preserve">
+    <value>Create child project</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_CreateSubProject_3b221ec77eec420da7a5e164490c6529" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Ribbon_CreateSubProjectDescription_3b221ec77eec420da7a5e164490c6529" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_CreateSubProjectHint_3b221ec77eec420da7a5e164490c6529" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowRoadmapDirRX" xml:space="preserve">
+    <value>Roadmap</value>
+  </data>
+  <data name="Action_ShowRoadmapDirRXDescription" xml:space="preserve">
+    <value>Open roadmap that shows gates of portfolios, programs, and projects.</value>
+  </data>
+  <data name="Action_ShowRoadmapDirRXHint" xml:space="preserve">
+    <value>Roadmap</value>
+  </data>
+  <data name="Action_ShowRoadmapDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowRoadmapDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_ReportsActions_7ba146f934224c44b3eca8f677cd26b1" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Ribbon_StaticDropDownButtonDirRX_c12029966f0146ca8c3ddf2230df8949" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Ribbon_StaticDropDownButtonDirRXDescription_c12029966f0146ca8c3ddf2230df8949" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_StaticDropDownButtonDirRXHint_c12029966f0146ca8c3ddf2230df8949" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_ReportsCommands_15e4bf0570e24b55a712256cf321a401" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Enum_Stage_Planning" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="FilterPanel_Planning_1fb8e4fe29aa4e16b6acd7fc6da9213c" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="Action_RisksDirRX" xml:space="preserve">
+    <value>Risks</value>
+  </data>
+  <data name="Action_RisksDirRXDescription" xml:space="preserve">
+    <value>Open the list of actual and upcoming risks</value>
+  </data>
+  <data name="Action_RisksDirRXHint" xml:space="preserve">
+    <value>Open the list of actual and upcoming risks</value>
+  </data>
+  <data name="Action_RisksDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_RisksDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_RisksDirRX_79043ca97f804e8caab5875e77bd4eff" xml:space="preserve">
+    <value>Risks</value>
+  </data>
+</root>

@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SendTaskSubject" xml:space="preserve">
+    <value>Выполните работы по этапу "{0}"</value>
+  </data>
+  <data name="SendTaskActiveText" xml:space="preserve">
+    <value>Необходимо выполнить работы по связанному этапу.</value>
+  </data>
+  <data name="CantEditCompletedProject" xml:space="preserve">
+    <value>Проект закрыт, планирование недоступно.</value>
+  </data>
+  <data name="ProjectPlannerNoLicense" xml:space="preserve">
+    <value>Для работы с модулем планирования проектов необходима лицензия</value>
+  </data>
+  <data name="ExceprionMessage" xml:space="preserve">
+    <value>Нет прав на создание этапов проекта.</value>
+  </data>
+  <data name="ProjectsFileTypeName" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
+  <data name="AplicationName" xml:space="preserve">
+    <value>Встроенный редактор планов</value>
+  </data>
+  <data name="ProjectPlanName" xml:space="preserve">
+    <value>План проекта</value>
+  </data>
+  <data name="EmployeeNotFound" xml:space="preserve">
+    <value>Не найден сотрудник {0} с ID {1}</value>
+  </data>
+  <data name="ProjectSettingsName" xml:space="preserve">
+    <value>Настройки редактора планов</value>
+  </data>
+  <data name="ProjectPlanLockedError" xml:space="preserve">
+    <value>Не удалось выдать права доступа пользователю {0}. План проекта с ИД {1} заблокирован пользователем {2}.</value>
+  </data>
+  <data name="ProjectLockedError" xml:space="preserve">
+    <value>Не удалось выдать права доступа пользователю {0}. Проект с ИД {1} заблокирован пользователем {2}.</value>
+  </data>
+  <data name="EmployeeResourceTypeName" xml:space="preserve">
+    <value>Сотрудник</value>
+  </data>
+  <data name="EmployeeResourceTypeUnit" xml:space="preserve">
+    <value>ч.</value>
+  </data>
+  <data name="RoomResourceTypeName" xml:space="preserve">
+    <value>Помещение</value>
+  </data>
+  <data name="TransportResourceTypeName" xml:space="preserve">
+    <value>Транспорт</value>
+  </data>
+  <data name="TransportResourceTypeUnit" xml:space="preserve">
+    <value>м/ч.</value>
+  </data>
+  <data name="MaterialResourcesTypeName" xml:space="preserve">
+    <value>Материалы</value>
+  </data>
+  <data name="WebClientURIEmptyError" xml:space="preserve">
+    <value>В настройках не указан адрес веб-клиента. Обратитесь к администратору системы.</value>
+  </data>
+  <data name="EmployeeForActivityNotFound" xml:space="preserve">
+    <value>Сотрудник с ИД {0}, указанный в этапе плана "{1}", не найден в системе.</value>
+  </data>
+  <data name="EmployeeIdNotFilled" xml:space="preserve">
+    <value>Не заполнено поле 'Id' для этапа плана {1}</value>
+  </data>
+  <data name="NotEnoughRightsToUpdateProject" xml:space="preserve">
+    <value>Недостаточно прав на изменение проекта "{0}".</value>
+  </data>
+  <data name="ResourceNotFound" xml:space="preserve">
+    <value>Ресурс с ИД {0} не найден.</value>
+  </data>
+  <data name="CannotConvert" xml:space="preserve">
+    <value>Не удалось конвертировать план проекта с ИД {0}. План заблокирован пользователем {1}.</value>
+  </data>
+  <data name="LastVersionAutoSigned" xml:space="preserve">
+    <value>Автоматически подписана при конвертации утвержденной версии '{0}' плана при обновлении решения до версии 2.3</value>
+  </data>
+  <data name="NullReferenceResourceTypeException" xml:space="preserve">
+    <value>Свойство Type типа ProjectResourceType({0}) не должно содержать значение null</value>
+  </data>
+  <data name="EmployeeIdNotFoundExeption" xml:space="preserve">
+    <value>Сотрудник с ИД {0} не найден.</value>
+  </data>
+  <data name="ExecutionRequestExeption" xml:space="preserve">
+    <value>{0} Ошибка выполнения запроса GetOrCreateResourceId для employeeId={1}</value>
+  </data>
+  <data name="GetCapacityException" xml:space="preserve">
+    <value>Возникло исключение в методе GetCapacity с параметрами: resourcesIds: {0},  startDate: {1},  EndDate: {2}. {3}</value>
+  </data>
+  <data name="LastVersionAutoSignedPrefix" xml:space="preserve">
+    <value>Автоматически подписана при конвертации утвержденной версии </value>
+  </data>
+  <data name="NonExistentPlanIdExeption" xml:space="preserve">
+    <value>Ошибка при выполнение метода UpdateResourcesDataDto.План проекта с ИД {0} не существует</value>
+  </data>
+  <data name="UpdatePlanDataException" xml:space="preserve">
+    <value>Произошла ошибка вызова UpdatePlanData:  ИД плана {0}, номер версии {1}.</value>
+  </data>
+  <data name="CheckPlanExistsExeption" xml:space="preserve">
+    <value>В методе CheckPlanExists  произошла ошибка, planId={0}, versionNumber={1}</value>
+  </data>
+  <data name="ErrorWhileTryOpenWebClient" xml:space="preserve">
+    <value>Не удалось получить адрес веб-клиента. Обратитесь к администратору системы.</value>
+  </data>
+  <data name="CouldNotConvertProjectPlan" xml:space="preserve">
+    <value>Не удалось конвертировать план проекта «{0}».</value>
+  </data>
+  <data name="ResourceLinksTableNotFoundExceptionText" xml:space="preserve">
+    <value>Не найдена таблица ResourceLinks.</value>
+  </data>
+  <data name="HealthCheckExceptionText" xml:space="preserve">
+    <value>При проверке доступности решения произошла ошибка:</value>
+  </data>
+  <data name="PplanRespAssigned" xml:space="preserve">
+    <value>Назначение ответственным за план проекта</value>
+  </data>
+  <data name="PplanSectionRespAssigned" xml:space="preserve">
+    <value>Назначение ответственным за раздел</value>
+  </data>
+  <data name="PplanActivityRespAssigned" xml:space="preserve">
+    <value>Назначение ответственным за этап</value>
+  </data>
+  <data name="PplanMilestoneRespAssigned" xml:space="preserve">
+    <value>Назначение ответственным за веху</value>
+  </data>
+  <data name="PlanParticipAdd" xml:space="preserve">
+    <value>Добавление в список участников проекта</value>
+  </data>
+  <data name="PlanMustStarted" xml:space="preserve">
+    <value>План проекта должен быть начат</value>
+  </data>
+  <data name="PlanMustEnded" xml:space="preserve">
+    <value>План проекта должен быть завершен</value>
+  </data>
+  <data name="PlanOverdated" xml:space="preserve">
+    <value>План проекта не завершен в срок</value>
+  </data>
+  <data name="SectMustStarted" xml:space="preserve">
+    <value>Раздел должен быть начат</value>
+  </data>
+  <data name="SectMustEnded" xml:space="preserve">
+    <value>Раздел должен быть завершен</value>
+  </data>
+  <data name="SectOverdated" xml:space="preserve">
+    <value>Раздел не завершен в срок</value>
+  </data>
+  <data name="ActMustStarted" xml:space="preserve">
+    <value>Этап должен быть начат</value>
+  </data>
+  <data name="ActCannotStart" xml:space="preserve">
+    <value>Нельзя начать этап, так как предшествующий этап не завершен в срок</value>
+  </data>
+  <data name="ActMustEnded" xml:space="preserve">
+    <value>Этап должен быть завершен</value>
+  </data>
+  <data name="ActOverdated" xml:space="preserve">
+    <value>Этап не выполнен в срок</value>
+  </data>
+  <data name="MilestMustReach" xml:space="preserve">
+    <value>Веха плана проекта должна быть достигнута</value>
+  </data>
+  <data name="MilestOverdated" xml:space="preserve">
+    <value>Веха плана проекта не достигнута в срок</value>
+  </data>
+  <data name="ActStatusChangd" xml:space="preserve">
+    <value>Изменение статуса этапа</value>
+  </data>
+  <data name="StartedActChd" xml:space="preserve">
+    <value>Изменение в начавшемся этапе</value>
+  </data>
+  <data name="FailedToGrantPermissionsToDocType" xml:space="preserve">
+    <value>Не удалось выдать права доступа к типу документа '{0}' для всех пользователей системы. Возможно права уже настраивались ранее вручную, вы можете изменить их в панели 'Администрирование' самостоятельно. {1}</value>
+  </data>
+  <data name="FailToFindUpdatedIdExceptionText" xml:space="preserve">
+    <value>Не удалось найти обновленный id для активити с ИД "{0}".</value>
+  </data>
+  <data name="ErrorUriTicket" xml:space="preserve">
+    <value>Не удалось получить ссылку на тикет с ИД "{0}" на доске с ИД "{1}".</value>
+  </data>
+  <data name="ErrorUriActivity" xml:space="preserve">
+    <value>Не удалось получить ссылку на этап с ИД "{0}" на плане с ИД "{1}".</value>
+  </data>
+  <data name="ColdNotFindCalendarWithResourceId" xml:space="preserve">
+    <value>Не найден календарь на "{0}" год для ресурса с id "{1}".</value>
+  </data>
+  <data name="CouldNotFIndVariables" xml:space="preserve">
+    <value>Не найдено одно или несколько ключевых полей в фоновом процессе 'GrantRightsActivityResponsible': projectPlan = "{0}", project = "{1}", employee = "{2}"</value>
+  </data>
+  <data name="ResourceReportTitle" xml:space="preserve">
+    <value>Сводный отчет по загрузке ресурсов на "{0}"</value>
+  </data>
+  <data name="Workload" xml:space="preserve">
+    <value>Загрузка</value>
+  </data>
+  <data name="ProjectCoreId" xml:space="preserve">
+    <value>ИД проекта</value>
+  </data>
+  <data name="DateRange" xml:space="preserve">
+    <value>Диапазон дат</value>
+  </data>
+  <data name="BlockedVersionsText" xml:space="preserve">
+    <value>Версии плана проекта заблокированы:
+{0}</value>
+  </data>
+  <data name="BlockedLinkedProjectText" xml:space="preserve">
+    <value>Связанный проект заблокирован:
+{0}</value>
+  </data>
+  <data name="BlockedProjectPlanCardText" xml:space="preserve">
+    <value>Карточка плана проекта заблокирована:
+{0}</value>
+  </data>
+  <data name="ProjectPlanNotFoundExceptionText" xml:space="preserve">
+    <value>Не найден план проекта с ИД {0}.</value>
+  </data>
+  <data name="PerformerName" xml:space="preserve">
+    <value>Ответственный:</value>
+  </data>
+  <data name="ActivityName" xml:space="preserve">
+    <value>Название этапа</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Неделя</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="WorkloadAnalysisTimeline" xml:space="preserve">
+    <value>Детализация</value>
+  </data>
+  <data name="YearsTimeline" xml:space="preserve">
+    <value>До лет</value>
+  </data>
+  <data name="QuartersTimeline" xml:space="preserve">
+    <value>До кварталов</value>
+  </data>
+  <data name="WeeksTimeline" xml:space="preserve">
+    <value>До недель</value>
+  </data>
+  <data name="MonthsTimeline" xml:space="preserve">
+    <value>До месяцев</value>
+  </data>
+  <data name="DaysTimeline" xml:space="preserve">
+    <value>До дней</value>
+  </data>
+  <data name="QuarterString" xml:space="preserve">
+    <value>{0} Кв.</value>
+  </data>
+  <data name="Quarter" xml:space="preserve">
+    <value>Квартал</value>
+  </data>
+  <data name="NoAccessRightsName" xml:space="preserve">
+    <value>(нет прав доступа)</value>
+  </data>
+  <data name="ManagerName" xml:space="preserve">
+    <value>Руководитель</value>
+  </data>
+  <data name="ManagerDepartment" xml:space="preserve">
+    <value>Подразделение руководителя</value>
+  </data>
+  <data name="ManagerJobTitle" xml:space="preserve">
+    <value>Должность руководителя</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>Наша организация</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="JobTitle" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Проект</value>
+  </data>
+  <data name="FreeTime" xml:space="preserve">
+    <value>Свободное время</value>
+  </data>
+  <data name="BusinessUnit" xml:space="preserve">
+    <value>Организация</value>
+  </data>
+  <data name="ResourceReportOrgTitle" xml:space="preserve">
+    <value>Сводный отчет по загрузке ресурсов на проектах</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Доступно</value>
+  </data>
+  <data name="AvailabilityStatus" xml:space="preserve">
+    <value>Загрузка/Доступно</value>
+  </data>
+  <data name="OtherStage" xml:space="preserve">
+    <value>Другие этапы</value>
+  </data>
+  <data name="OtherProject" xml:space="preserve">
+    <value>Другие проекты</value>
+  </data>
+  <data name="OtherState" xml:space="preserve">
+    <value>Другие состояния</value>
+  </data>
+  <data name="OtherKind" xml:space="preserve">
+    <value>Другие виды</value>
+  </data>
+  <data name="OtherLeadingProject" xml:space="preserve">
+    <value>Другие ведущие проекты</value>
+  </data>
+  <data name="OtherManager" xml:space="preserve">
+    <value>Другие руководители</value>
+  </data>
+  <data name="SingleGateToMilestoneWarning" xml:space="preserve">
+    <value>В версии плана одна контрольная точка может быть связана с одной вехой.</value>
+  </data>
+  <data name="DefaultRoadMapTitle" xml:space="preserve">
+    <value>Дорожная карта по контрольным точкам портфелей, программ и проектов</value>
+  </data>
+  <data name="RoadMapPortfolioTitle" xml:space="preserve">
+    <value>Дорожная карта портфеля проектов {0}</value>
+  </data>
+  <data name="RoadMapProgramTitle" xml:space="preserve">
+    <value>Дорожная карта программы проектов {0}</value>
+  </data>
+  <data name="RoadMapProjectTitle" xml:space="preserve">
+    <value>Дорожная карта проекта {0}</value>
+  </data>
+  <data name="SyncAccessRightsProjectError" xml:space="preserve">
+    <value>Произошли ошибка в ФП "{3}" при обработке проекта "{0}" - "{1}": {2}</value>
+  </data>
+  <data name="NoAccess" xml:space="preserve">
+    <value>Нет прав доступа</value>
+  </data>
+  <data name="SelectBusinessUnitsForAdd" xml:space="preserve">
+    <value>Добавление нашей организации</value>
+  </data>
+  <data name="SelectBusinessUnitsForDelete" xml:space="preserve">
+    <value>Исключение нашей организации</value>
+  </data>
+  <data name="SelectDepartmentsForAdd" xml:space="preserve">
+    <value>Добавление подразделения</value>
+  </data>
+  <data name="SelectDepartmentsForDelete" xml:space="preserve">
+    <value>Исключение подразделения</value>
+  </data>
+  <data name="AddBusinessUnit" xml:space="preserve">
+    <value>Добавить организацию</value>
+  </data>
+  <data name="RemoveBusinessUnit" xml:space="preserve">
+    <value>Исключить организацию</value>
+  </data>
+  <data name="AddDepartment" xml:space="preserve">
+    <value>Добавить подразделение</value>
+  </data>
+  <data name="RemoveDepartment" xml:space="preserve">
+    <value>Исключить подразделение</value>
+  </data>
+  <data name="LevelStatusesGenerationError" xml:space="preserve">
+    <value>Ошибка генерации списка LevelStatuses. Значение "{0}" не совпадает не с одним из значений перечисления.</value>
+  </data>
+  <data name="OverdueTaskDateHistoryComment" xml:space="preserve">
+    <value>Отправка с прошедшим сроком</value>
+  </data>
+  <data name="CouldNotStopProjectActivityTaskError" xml:space="preserve">
+    <value>Не удалось остановить задачу c Id={0}: {1}.</value>
+  </data>
+  <data name="CouldNotUpdateAndRestartProjectActivityTaskError" xml:space="preserve">
+    <value>Не удалось обновить и рестартовать задачу c Id={0}: {1}.</value>
+  </data>
+  <data name="CouldNotCreateAndStartProjectActivityTaskError" xml:space="preserve">
+    <value>Не удалось создать и отправить задачу по активити c Id={0}: {1}</value>
+  </data>
+  <data name="RootTaskAlreadyExistMessage" xml:space="preserve">
+    <value>Нельзя создать корневую задачу по этапу с Id={0}, так как она уже существует.</value>
+  </data>
+  <data name="ActivityDeletionBlockedByTask" xml:space="preserve">
+    <value>Невозможно удалить этап, так как связанная с ним задача "{0}" не прекращена.</value>
+  </data>
+  <data name="PlannedCostsName" xml:space="preserve">
+    <value>Запланированные затраты</value>
+  </data>
+  <data name="PlanWorkloadName" xml:space="preserve">
+    <value>План. трудоемкость</value>
+  </data>
+  <data name="FactCostsName" xml:space="preserve">
+    <value>Фактические затраты</value>
+  </data>
+  <data name="FactWorkloadName" xml:space="preserve">
+    <value>Факт. трудоемкость</value>
+  </data>
+  <data name="ExecutionPercentageName" xml:space="preserve">
+    <value>% выполнения</value>
+  </data>
+  <data name="FactStartDateName" xml:space="preserve">
+    <value>Дата начала (факт)</value>
+  </data>
+  <data name="FactEndDateName" xml:space="preserve">
+    <value>Дата окончания (факт)</value>
+  </data>
+  <data name="PlanStartDateName" xml:space="preserve">
+    <value>Дата начала (план)</value>
+  </data>
+  <data name="PlanEndDateName" xml:space="preserve">
+    <value>Дата окончания (план)</value>
+  </data>
+  <data name="ProjectDates" xml:space="preserve">
+    <value>СРОКИ ПРОЕКТА</value>
+  </data>
+  <data name="SyncProjectPlanDataError" xml:space="preserve">
+    <value>Произошла ошибка в фоновом процессе "Планирование проектов. Актуализация сведений о затратах, трудоемкости и ходе работ по планам". ИД плана: {0}.</value>
+  </data>
+</root>

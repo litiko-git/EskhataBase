@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="GetProjectCoreIdByGate">
+    <default><![CDATA[ SELECT Project
+  FROM DirRX_Project_ProjCoreGates
+  WHERE Gate = @GateId]]></default>
+  </query>
+</queries>

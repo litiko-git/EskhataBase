@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="sf_81fa363f_766c_423b_818a_e48efe57c3d4" xml:space="preserve">
+    <value>Project Documents</value>
+  </data>
+  <data name="sf_03a19579_a42e_4974_8a8c_820eafd4bcaa" xml:space="preserve">
+    <value>Projects plans</value>
+  </data>
+  <data name="FilterPanel_Date_f40fdd3c735c4ca7aab24b8b503abc19" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="FilterPanel_Status_665f09adb8114d468cb1331258f9f070" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FilterPanel_Active_1bd7e863fb784f7eb41ade02cfc4249b" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="FilterPanel_StartGroup_c71d808c0bc7491a9b5621ab26db8b88" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="FilterPanel_StartPeriodThisMonth_5e83d99caaf94699a46210bd46de3766" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="FilterPanel_StartPeriodManual_ebb9f6928d0341dc9a38ee3d3b6cf1fc" xml:space="preserve">
+    <value>User-defined period</value>
+  </data>
+  <data name="FilterPanel_FinishGroup_4376e70058a447568fcb2641dc791d77" xml:space="preserve">
+    <value>Finish date</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodThisMonth_1134b81dea1745e38d480d8a13dfa59b" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodManual_c178178856b24fe998ef7dfd59f55bf3" xml:space="preserve">
+    <value>User-defined period</value>
+  </data>
+  <data name="FilterPanel_DraftDirRX_1ed427687c6349c9af4c83bcc6da9fdb" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="FilterPanel_ObsoleteDirRX_ec4b2d870a4d4d4fbcc8d0c2e024d891" xml:space="preserve">
+    <value>Obsolete</value>
+  </data>
+  <data name="JobDisplayName_be8a8c8c9ebf415e8260d4437b76e3d1" xml:space="preserve">
+    <value>Projects. Grant access rights to documents automatically</value>
+  </data>
+  <data name="JobDescription_be8a8c8c9ebf415e8260d4437b76e3d1" xml:space="preserve">
+    <value>Grant access rights to documents automatically</value>
+  </data>
+  <data name="CoverAction_ResourcesRegistryDirRX" xml:space="preserve">
+    <value>Resources Registry</value>
+  </data>
+  <data name="CoverDescription_ResourcesRegistryDirRX" xml:space="preserve">
+    <value>List of resources that the company uses in its project activites.</value>
+  </data>
+  <data name="CoverAction_ShowResourcesTypeDirRX" xml:space="preserve">
+    <value>Show Resource type</value>
+  </data>
+  <data name="CoverDescription_ShowResourcesTypeDirRX" xml:space="preserve">
+    <value>Manage resource types.</value>
+  </data>
+  <data name="sf_32243fa1_67ee_47c6_bb16_822a06b37341" xml:space="preserve">
+    <value>Project Tasks</value>
+  </data>
+  <data name="FilterPanel_IncludedInSungero_8d858b66b56742b990c085ae3e450aec" xml:space="preserve">
+    <value>Created On</value>
+  </data>
+  <data name="FilterPanel_ProjectSungero_9d725cef49254b13a7708a82ee901c1f" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FilterPanel_MeSungero_c46a3d5347e543dfa6e0661a3bf21e50" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="FilterPanel_AnyPerformerSungero_ce3ac74aaf0e47e2a9bd20457bc7a296" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_MySubordinatesSungero_c0fa172a83de417598a1ae8d0098a080" xml:space="preserve">
+    <value>My Subordinates</value>
+  </data>
+  <data name="FilterPanel_PerformerSungero_f1e3731bd0a848788d0819d29a47b5d4" xml:space="preserve">
+    <value>Performer</value>
+  </data>
+  <data name="FilterPanel_SelectAnotherSungero_1ffd27404d5b42339935c61e03fd85b4" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="FilterPanel_StateSungero_5e45b55a4a924c9a9983dcb3f66c635d" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="FilterPanel_InWorkSungero_96f739ad85a84b83928615c8c70f4f25" xml:space="preserve">
+    <value>In Process</value>
+  </data>
+  <data name="FilterPanel_ExpiredSungero_3910e662d9ee45309ee1c489cf567a6c" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="FilterPanel_AllSungero_d1fea16b8be7483dad4a3522c6f0f40e" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="FilterPanel_PeriodSungero_807d891a68034db9a98d25963d6d442e" xml:space="preserve">
+    <value>Sent in last</value>
+  </data>
+  <data name="FilterPanel_Days30Sungero_394db63c0d38490385b6a80b33f181f7" xml:space="preserve">
+    <value>30 Days</value>
+  </data>
+  <data name="FilterPanel_Days90Sungero_e5f8fe15044742ca9923ff95be52f7ac" xml:space="preserve">
+    <value>90 Days</value>
+  </data>
+  <data name="FilterPanel_Days180Sungero_32356e71572b492894f235927ee12ba0" xml:space="preserve">
+    <value>180 Days</value>
+  </data>
+  <data name="FilterPanel_ChildProjectDirRX_9cb2b34fd1e8495ea135fcc363de66e2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FilterPanel_ChildProjectTasksFlagDirRX_6a6efe9cc32a47dcb1b8e66edfde0cfc" xml:space="preserve">
+    <value>Including Subprojects</value>
+  </data>
+  <data name="CoverDescription_CreatePortfolio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CoverAction_CreatePortfolio" xml:space="preserve">
+    <value>New Portfolio</value>
+  </data>
+  <data name="CoverDescription_ProjectsList" xml:space="preserve">
+    <value>Contains the company’s projects, programs, and portfolios. You can filter them by type, status, managers, deadlines, etc.</value>
+  </data>
+  <data name="CoverAction_CreateProgram" xml:space="preserve">
+    <value>New Program</value>
+  </data>
+  <data name="CoverDescription_CreateProgram" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sf_2c3d9c8a_87d5_4d1f_98f3_57d0e6b7e776" xml:space="preserve">
+    <value>Register of Portfolios and Programs</value>
+  </data>
+  <data name="sf_3898cada_26ca_4007_83bc_7cf9eb3e3f85" xml:space="preserve">
+    <value>Register of Projects</value>
+  </data>
+  <data name="FilterPanel_LeadingProject_57d25a93f0384083ad4134a931a2e7d1" xml:space="preserve">
+    <value>Included In</value>
+  </data>
+  <data name="FilterPanel_StatusIssues_096a0a8f764a47368affeef51b1b0512" xml:space="preserve">
+    <value>Issues status</value>
+  </data>
+  <data name="FilterPanel_NeedAssistance_f801fbbb3fad4268b571b45fa8762557" xml:space="preserve">
+    <value>Need assistance</value>
+  </data>
+  <data name="FilterPanel_UnderControl_f4e1117f7a974fd7b0bee498c96f8f02" xml:space="preserve">
+    <value>Under control</value>
+  </data>
+  <data name="FilterPanel_Any_a321129d21b640229c03f04516f000f3" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_ProjectManager_cc8b467fea3f49cd95fbc1c0b0a65275" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="FilterPanel_ManagementTeam_67d69cf9975e4c5a96c9b51da9e81e6e" xml:space="preserve">
+    <value>In the management team</value>
+  </data>
+  <data name="FilterPanel_Me_58feff5241b0456392991d7aac78d886" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="FilterPanel_MySubordinates_0c46081317ea42ada732d236f52fee34" xml:space="preserve">
+    <value>My Subordinates</value>
+  </data>
+  <data name="FilterPanel_AnyRecipient_a7571027bfd84063b16263138ab639aa" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_Employee_7c68429507714f58ad346c4da45d1cc3" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="FilterPanel_Type_5b411ec105bd4cefb642dd39a890ff55" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="FilterPanel_Project_f8f4150d22214a45967d710e4a514a7b" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="FilterPanel_Program_5980f1f1e4244de9a7b16f50018020fe" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="FilterPanel_Portfolio_d6f4f74c1aae4648b7e7685fd5ea7f8d" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="FilterPanel_Status_fbe688445deb47ecbae08805c9452392" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FilterPanel_Active_a0604621391f4107baed71988bf909ef" xml:space="preserve">
+    <value>Execution</value>
+  </data>
+  <data name="FilterPanel_Closed_c8159218dc26442799d9c99610062763" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="FilterPanel_StartGroup_6ff2fa7070454e55b642ded238c5c216" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="FilterPanel_FinishGroup_3647f6ef169e4fd1b97e9c8c8e306e60" xml:space="preserve">
+    <value>Finish date</value>
+  </data>
+  <data name="FilterPanel_Main_242ca1940f69456dbfa8cb5d02dd8d4f" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="FilterPanel_InternalCustomer_933a92bc416a4aa9a134965b878300ca" xml:space="preserve">
+    <value>Internal customer</value>
+  </data>
+  <data name="FilterPanel_ExternalCustomer_802452f4b5294cabb038888eaab5160f" xml:space="preserve">
+    <value>External customer</value>
+  </data>
+  <data name="FilterPanel_Customers_2ae4b361fd9642c08e3d0a2fae3ada0d" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="FilterPanel_Initiation_cef0a038ee3247889bb493995a6cca4a" xml:space="preserve">
+    <value>Initiation</value>
+  </data>
+  <data name="FilterPanel_Closing_82b74f810ecd47948bf7b8b409482236" xml:space="preserve">
+    <value>Closure</value>
+  </data>
+  <data name="CoverGroup_Projects" xml:space="preserve">
+    <value>Portfolios and Programs</value>
+  </data>
+  <data name="FilterPanel_LeadingProject_5f04a88355af4656b39939298ec4a868" xml:space="preserve">
+    <value>Included In</value>
+  </data>
+  <data name="FilterPanel_StatusIssues_0894e60dbe274b2eb5e4eaa5c55f6c05" xml:space="preserve">
+    <value>Issues status</value>
+  </data>
+  <data name="FilterPanel_NeedAssistance_3ad682f29df14e87a9d2328d459d8a2d" xml:space="preserve">
+    <value>Need assistance</value>
+  </data>
+  <data name="FilterPanel_UnderControl_058f28df69544dffb44af4f9d57492bf" xml:space="preserve">
+    <value>Under control</value>
+  </data>
+  <data name="FilterPanel_Any_25b1ee4f7c4142b487595064fa79cb8e" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_ProjectManager_acc134027763488381d22183ec55a5d7" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="FilterPanel_ManagementTeam_363fb93f0d6942b5bcd372b110a502ce" xml:space="preserve">
+    <value>In the management team</value>
+  </data>
+  <data name="FilterPanel_Me_5a59db4574b64ce6a95ce79ff6532bde" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="FilterPanel_MySubordinates_f815305e090b45bda66101954e39d537" xml:space="preserve">
+    <value>My Subordinates</value>
+  </data>
+  <data name="FilterPanel_AnyRecipient_ccf58ec46e4242f98ee0dbf6727871a8" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="FilterPanel_Employee_d209ee8bbab1489d8cc9e62c04a05461" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="FilterPanel_Status_b3e3f560d28548e6aac7c399ef98259a" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FilterPanel_Active_b1027d2ad2994f5b81e82e25dad3efef" xml:space="preserve">
+    <value>Execution</value>
+  </data>
+  <data name="FilterPanel_Closed_a41f9b9ad58944a6984937a3a4755dca" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="FilterPanel_StartGroup_807e8176be9348b68db62e53d31183a8" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="FilterPanel_StartPeriodThisMonth_7baeb45203c14576bcbda1bd232924a1" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="FilterPanel_StartPeriodManual_9f3d1117bb47416097248428ebad52b6" xml:space="preserve">
+    <value>User-defined period</value>
+  </data>
+  <data name="FilterPanel_FinishGroup_b30347478971433cb02e0ef28cf1f3d8" xml:space="preserve">
+    <value>Finish date</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodThisMonth_d6bfd7b21f534416a0159d5d0fcea3b6" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodManual_cc7b95664c8345d4bd0d93361d1b0060" xml:space="preserve">
+    <value>User-defined period</value>
+  </data>
+  <data name="FilterPanel_Main_a9964f00656643c88e848f19b28bb719" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="FilterPanel_ProjectKind_a74e9632314e42a9a19549a1d428c64e" xml:space="preserve">
+    <value>Project kind</value>
+  </data>
+  <data name="FilterPanel_InternalCustomer_4194475338cd464a954ae4660aa96d16" xml:space="preserve">
+    <value>Internal customer</value>
+  </data>
+  <data name="FilterPanel_ExternalCustomer_2f77a35ee6124d3bae97323a96cf82cb" xml:space="preserve">
+    <value>External customer</value>
+  </data>
+  <data name="FilterPanel_Customers_de4c27496fc94ecfb0991f40660df959" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="FilterPanel_Initiation_b78a65010e6345618de16d039b198f1f" xml:space="preserve">
+    <value>Initiation</value>
+  </data>
+  <data name="FilterPanel_Closing_e7f05d951bf847b7a6a959fba2afab09" xml:space="preserve">
+    <value>Closure</value>
+  </data>
+  <data name="CoverAction_ProjectCoresList" xml:space="preserve">
+    <value>Register of Portfolios and Programs</value>
+  </data>
+  <data name="CoverDescription_ProjectCoresList" xml:space="preserve">
+    <value>Stores the company’s projects, programs, and portfolios. You can filter them by type, status, managers, deadlines, etc.</value>
+  </data>
+  <data name="CoverAction_ProjectsListCustom" xml:space="preserve">
+    <value>Register of Projects</value>
+  </data>
+  <data name="CoverDescription_ProjectsListCustom" xml:space="preserve">
+    <value>Stores the company’s projects. You can filter them by type, status, managers, deadlines, etc.</value>
+  </data>
+  <data name="CoverGroup_ReportsDirRX" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="CoverAction_WorkloadAnalysis" xml:space="preserve">
+    <value>Workload Analysis</value>
+  </data>
+  <data name="CoverDescription_WorkloadAnalysis" xml:space="preserve">
+    <value>Workload summary report on employees participating in projects.</value>
+  </data>
+  <data name="CoverAction_RoadmapDirRX" xml:space="preserve">
+    <value>Roadmap</value>
+  </data>
+  <data name="CoverDescription_RoadmapDirRX" xml:space="preserve">
+    <value>Open roadmap that shows gates of portfolios, programs, and projects.</value>
+  </data>
+  <data name="FilterPanel_PlanningDirRX_6f3c90e0d9a94947ae0976ce45adcd3c" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="FilterPanel_PlanningDirRX_3e38876c0cd546bfbacc5a2ca81d1711" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="CoverAction_RisksListDirRX" xml:space="preserve">
+    <value>Risk Templates</value>
+  </data>
+  <data name="CoverGroup_RisksDirRX" xml:space="preserve">
+    <value>Risks</value>
+  </data>
+  <data name="CoverDescription_RisksListDirRX" xml:space="preserve">
+    <value>List of risks that might occur within projects.</value>
+  </data>
+  <data name="sf_3990ddb7_dbf2_43fa_96a5_b39df6b5911c" xml:space="preserve">
+    <value>Risk templates</value>
+  </data>
+  <data name="CoverGroup_Links" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+</root>

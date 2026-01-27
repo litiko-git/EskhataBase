@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Project Plan (Obsolete)</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Project Plan (Obsolete)</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Register of Projects plans (Obsolete)</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_DocumentKind" xml:space="preserve">
+    <value>Document kind</value>
+  </data>
+  <data name="Property_StartDate" xml:space="preserve">
+    <value>Start date (planned)</value>
+  </data>
+  <data name="Property_EndDate" xml:space="preserve">
+    <value>Finish date (planned)</value>
+  </data>
+  <data name="Property_ActualStartDate" xml:space="preserve">
+    <value>Start date (actual)</value>
+  </data>
+  <data name="Property_ActualFinishDate" xml:space="preserve">
+    <value>Finish date (actual)</value>
+  </data>
+  <data name="Property_Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Property_Stage" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Enum_Stage_Initiation" xml:space="preserve">
+    <value>Initiation</value>
+  </data>
+  <data name="Enum_Stage_Execution" xml:space="preserve">
+    <value>Execution</value>
+  </data>
+  <data name="Enum_Stage_Completion" xml:space="preserve">
+    <value>Closure</value>
+  </data>
+  <data name="Enum_Stage_Completed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="Property_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Enum_Status_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Enum_Status_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="Property_TeamMembers" xml:space="preserve">
+    <value>Team members</value>
+  </data>
+  <data name="Ribbon_Creating_c33fdc442d594a8381235f19c8d36fd9" xml:space="preserve">
+    <value>Creating</value>
+  </data>
+  <data name="Property_ExecutionPercent" xml:space="preserve">
+    <value>% complete</value>
+  </data>
+  <data name="Property_BaselineWork" xml:space="preserve">
+    <value>Baseline work</value>
+  </data>
+  <data name="Property_BaselineWorkType" xml:space="preserve">
+    <value>Baseline work type</value>
+  </data>
+  <data name="Enum_BaselineWorkType_Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="Enum_BaselineWorkType_Money" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="Property_PlannedCosts" xml:space="preserve">
+    <value>Planned costs</value>
+  </data>
+  <data name="Property_FactualCosts" xml:space="preserve">
+    <value>Factual costs</value>
+  </data>
+  <data name="FilterPanel_Status_6c0f862744fb4e638d448481e73a07cd" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FilterPanel_Active_8bc22aff24054a1eaf4c4195470f18ef" xml:space="preserve">
+    <value>Execution</value>
+  </data>
+  <data name="FilterPanel_Closed_88a13f28332e48139a77c643f6aed1c8" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="FilterPanel_StartGroup_07b6fcb22f894462b8c166645a67424d" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="FilterPanel_StartPeriodThisMonth_43f0c49e0ecf4c119e5d8e128ce86003" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="FilterPanel_StartPeriodManual_fefd5aea5f3649a4a06440bb57f033b6" xml:space="preserve">
+    <value>User-defined period</value>
+  </data>
+  <data name="FilterPanel_FinishGroup_45fc6186690a4302934e5eceb6aa13b7" xml:space="preserve">
+    <value>Finish date</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodThisMonth_240bcb130a5d4b52a67c853cbe99dbf1" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodManual_8d2d3e7371c346d29ef216e3767c0803" xml:space="preserve">
+    <value>User-defined period</value>
+  </data>
+  <data name="FilterPanel_Main_3332e12897a44878a1143b099444ddbe" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="FilterPanel_ProjectKind_4d6ca0e2fcf34aa7936174892639efa7" xml:space="preserve">
+    <value>Project kind</value>
+  </data>
+  <data name="FilterPanel_ProjectManager_5b8174842b444cb492c60ed618a3af8e" xml:space="preserve">
+    <value>Project manager</value>
+  </data>
+  <data name="FilterPanel_InternalCustomer_cbe6189c646549058d81b4d832503b9a" xml:space="preserve">
+    <value>Internal customer</value>
+  </data>
+  <data name="FilterPanel_ExternalCustomer_f2ad44c7b1ff405e9c3a1f1f6d102b36" xml:space="preserve">
+    <value>External customer</value>
+  </data>
+  <data name="FilterPanel_LeadingProject_65312ea228ff46e79c556e7711cd035c" xml:space="preserve">
+    <value>Leading Project</value>
+  </data>
+  <data name="FilterPanel_Customers_99ed907954ea4cd0b773a6d154c34bf1" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="FilterPanel_Initiation_365155496bed4fd4bd12df30c36921e4" xml:space="preserve">
+    <value>Initiation</value>
+  </data>
+  <data name="FilterPanel_Closing_3ca3bca6e427407c962e41b57ac6bc3e" xml:space="preserve">
+    <value>Closure</value>
+  </data>
+  <data name="Resource_a4234aaf007d40fd9b3fee5fff8313d0" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_a4234aaf007d40fd9b3fee5fff8313d0_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_dac5a094b07f407ea80d71198fff1704" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_19d79b707e0f4250be9370bd02e01774" xml:space="preserve">
+    <value>Dates</value>
+  </data>
+  <data name="ControlGroup_96ee8ca321ee4918a45fd49f2e52f0b2" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="ControlGroup_1740bf8b8268499cba237bf8bb7d400f" xml:space="preserve">
+    <value>Team members</value>
+  </data>
+  <data name="ControlGroup_08dc99accb654cfd902cad1a9f887e56" xml:space="preserve">
+    <value>Project folder structure</value>
+  </data>
+  <data name="Ribbon_Project_f177c319f7b1496998c82a60d713fdab" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Action_ChooseEntityAndCloseCollectionDescription" xml:space="preserve">
+    <value>Select current item and close list.</value>
+  </data>
+  <data name="Action_ReadVersionHint" xml:space="preserve">
+    <value>Read version</value>
+  </data>
+  <data name="Action_CreateVersionFromLastVersionDescription" xml:space="preserve">
+    <value>Create a new version of the document from the latest version.</value>
+  </data>
+  <data name="Action_CopyChildEntityDescription" xml:space="preserve">
+    <value>Copy selected row.</value>
+  </data>
+  <data name="Action_AddChildEntityDescription" xml:space="preserve">
+    <value>Add a new row.</value>
+  </data>
+  <data name="Ribbon_CreateCommands_3ff46c681aac4315a9933a148eba27c9" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Action_ReadLastVersion" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Action_ReadLastVersionDescription" xml:space="preserve">
+    <value>Open project for read</value>
+  </data>
+  <data name="Action_ReadLastVersionHint" xml:space="preserve">
+    <value>Open project for read</value>
+  </data>
+  <data name="Action_ReadLastVersionConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ReadLastVersionConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_EditLastVersion" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Action_EditLastVersionDescription" xml:space="preserve">
+    <value>Open project for edit</value>
+  </data>
+  <data name="Action_EditLastVersionHint" xml:space="preserve">
+    <value>Open project for edit</value>
+  </data>
+  <data name="Action_EditLastVersionConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_EditLastVersionConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CopyToClipboard" xml:space="preserve">
+    <value>Copy link</value>
+  </data>
+  <data name="Action_CreateVersionFromLastVersion" xml:space="preserve">
+    <value>New version</value>
+  </data>
+  <data name="Action_CopyToClipboardFromCardHint" xml:space="preserve">
+    <value>Copy link</value>
+  </data>
+  <data name="Action_CopyEntity" xml:space="preserve">
+    <value>Create copy</value>
+  </data>
+  <data name="Action_CopyEntityHint" xml:space="preserve">
+    <value>Create copy</value>
+  </data>
+  <data name="Action_CopyEntityDescription" xml:space="preserve">
+    <value>Copy selected item and open the card of the new item.</value>
+  </data>
+  <data name="Action_CreateVersion" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Action_CreateVersionDescription" xml:space="preserve">
+    <value>Create a copy of the selected document version.</value>
+  </data>
+  <data name="Action_CreateVersionHint" xml:space="preserve">
+    <value>Copy version</value>
+  </data>
+  <data name="Action_CopyVersionConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CopyVersionHint" xml:space="preserve">
+    <value>Copy version</value>
+  </data>
+  <data name="Action_CopyVersionConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CopyVersionDescription" xml:space="preserve">
+    <value>Create a copy of the selected document version.</value>
+  </data>
+  <data name="Action_CopyVersion" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersion" xml:space="preserve">
+    <value>New version</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersionDescription" xml:space="preserve">
+    <value>Create a new version of the document from the latest version.</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersionHint" xml:space="preserve">
+    <value>Create version</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersionConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CopyVersionFromLastVersionConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateVersionFromLastVersionHint" xml:space="preserve">
+    <value>Create version</value>
+  </data>
+  <data name="Action_ImportVersion" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Action_CreateFromFileHint" xml:space="preserve">
+    <value>Create plan from file</value>
+  </data>
+  <data name="Action_ImportVersionCustom" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Action_ImportVersionCustomDescription" xml:space="preserve">
+    <value>Import file into the document version.</value>
+  </data>
+  <data name="Action_ImportVersionCustomHint" xml:space="preserve">
+    <value>Import version</value>
+  </data>
+  <data name="Action_ImportVersionCustomConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ImportVersionCustomConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ImportVersionHint" xml:space="preserve">
+    <value>Import version</value>
+  </data>
+  <data name="Action_ImportVersionDescription" xml:space="preserve">
+    <value>Import file into the document version.</value>
+  </data>
+  <data name="Property_IsCopy" xml:space="preserve">
+    <value>Is copy</value>
+  </data>
+  <data name="Action_ShowProject" xml:space="preserve">
+    <value>Show project</value>
+  </data>
+  <data name="Action_ShowProjectDescription" xml:space="preserve">
+    <value>Show related project</value>
+  </data>
+  <data name="Action_ShowProjectHint" xml:space="preserve">
+    <value>Show related project</value>
+  </data>
+  <data name="Action_ShowProjectConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowProjectConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateFromFile" xml:space="preserve">
+    <value>Create from file</value>
+  </data>
+  <data name="Action_CreateFromFileDescription" xml:space="preserve">
+    <value>Create new project plan from file.</value>
+  </data>
+  <data name="Action_CreateFromTemplate" xml:space="preserve">
+    <value>Create empty plan</value>
+  </data>
+  <data name="Action_CreateFromTemplateHint" xml:space="preserve">
+    <value>Create empty plan</value>
+  </data>
+  <data name="Action_CreateFromTemplateDescription" xml:space="preserve">
+    <value>Create empty project plan</value>
+  </data>
+  <data name="Action_UpdateResourcesData" xml:space="preserve">
+    <value>UpdateResourcesData</value>
+  </data>
+  <data name="Action_UpdateResourcesDataDescription" xml:space="preserve">
+    <value>UpdateResourcesData</value>
+  </data>
+  <data name="Action_UpdateResourcesDataHint" xml:space="preserve">
+    <value>UpdateResourcesData</value>
+  </data>
+  <data name="Action_UpdateResourcesDataConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_UpdateResourcesDataConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_ProjectId" xml:space="preserve">
+    <value>ProjectId</value>
+  </data>
+  <data name="Action_GetCapacity" xml:space="preserve">
+    <value>GetCapacity</value>
+  </data>
+  <data name="Action_GetCapacityDescription" xml:space="preserve">
+    <value>GetCapacity</value>
+  </data>
+  <data name="Action_GetCapacityHint" xml:space="preserve">
+    <value>GetCapacity</value>
+  </data>
+  <data name="Action_GetCapacityConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_GetCapacityConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_GetOrCreateResource" xml:space="preserve">
+    <value>GetOrCreateResource</value>
+  </data>
+  <data name="Action_GetOrCreateResourceDescription" xml:space="preserve">
+    <value>GetOrCreateResource</value>
+  </data>
+  <data name="Action_GetOrCreateResourceHint" xml:space="preserve">
+    <value>GetOrCreateResource</value>
+  </data>
+  <data name="Action_GetOrCreateResourceConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_GetOrCreateResourceConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+</root>

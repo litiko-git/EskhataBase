@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Portfolios</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>Manager [Manager]</value>
+  </data>
+  <data name="Resource_ea990064fa4c4971ac1a53ec48a689a7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ea990064fa4c4971ac1a53ec48a689a7_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_623c5d3554604bc0a403543a2c855029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_bbca20a1f1f34488b835c107cd110244" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_bbca20a1f1f34488b835c107cd110244_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_c45f3bb48e80474a97be56d5b5cda28c" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Resource_ad957de2de894fbe8a0835cf850c5ff5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ad957de2de894fbe8a0835cf850c5ff5_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_88c571d88352453681f0ac9e55f05bf6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_88c571d88352453681f0ac9e55f05bf6_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_7a51bfa3c4274bbbad4a7ec35746712c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_7a51bfa3c4274bbbad4a7ec35746712c_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_081364b76eef4a64ae2b35878d1729cf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_081364b76eef4a64ae2b35878d1729cf_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_2d140c6afec84614bac0c2dce3b7ff3a" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_2d140c6afec84614bac0c2dce3b7ff3a_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_a3c83fb0dc834f5e8b4fa30ddeb676d4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_8eba8a4c8b754450af36694fe24ea9f6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowFolder" xml:space="preserve">
+    <value>Portfolio Folder</value>
+  </data>
+  <data name="Action_ShowFolderHint" xml:space="preserve">
+    <value>Portfolio Folder</value>
+  </data>
+  <data name="Action_ShowFolderDescription" xml:space="preserve">
+    <value>Open portfolio folder</value>
+  </data>
+  <data name="Action_CloseProject" xml:space="preserve">
+    <value>Close Portfolio</value>
+  </data>
+  <data name="Action_CloseProjectHint" xml:space="preserve">
+    <value>Close portfolio and move it to archive</value>
+  </data>
+  <data name="Action_ReopenProject" xml:space="preserve">
+    <value>Reopen Portfolio</value>
+  </data>
+  <data name="Action_ReopenProjectHint" xml:space="preserve">
+    <value>Reopen portfolio and retrieve it from archive</value>
+  </data>
+  <data name="Action_ReopenProjectDescription" xml:space="preserve">
+    <value>Portfolio will be opened. Its child projects, programs and portfolios will not be opened. The portfolio folder will be moved to the "Projects" folder.</value>
+  </data>
+  <data name="Action_ReopenProjectConfirmationMessage" xml:space="preserve">
+    <value>Reopen the portfolio and retrieve it from archive?</value>
+  </data>
+  <data name="Action_ReopenProjectConfirmationDescription" xml:space="preserve">
+    <value>Portfolio will be opened. Its child projects, programs and portfolios will not be opened. The portfolio folder will be moved to the “Projects” folder.</value>
+  </data>
+  <data name="Action_CloseProjectDescription" xml:space="preserve">
+    <value>Portfolio, its child projects, programs and portfolios will be closed. The portfolio folder will be moved to the "Project Archive" folder.</value>
+  </data>
+  <data name="ControlGroup_d4d0d738cb3744de9960f6d03c5f6c7e" xml:space="preserve">
+    <value>Portfolio folder structure</value>
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Open the portfolio card</value>
+  </data>
+  <data name="Action_CreateProjectDocument" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Open the portfolio card.</value>
+  </data>
+</root>

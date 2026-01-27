@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Планирование проекта</value>
+  </data>
+  <data name="JobDisplayName_60f15c6f40154eae844ecfa0db83e6c3" xml:space="preserve">
+    <value>Проекты. Синхронизировать права доступа на проект, план проекта и контрольные точки</value>
+  </data>
+  <data name="JobDescription_60f15c6f40154eae844ecfa0db83e6c3" xml:space="preserve">
+    <value>Установить для плана проекта те же права доступа, как на проект, а для контрольных точек – те же права на изменение и полный доступ, как на проект</value>
+  </data>
+  <data name="AsyncHandler_Description_d2723e4ce0504ca78019ebe5cc0de313" xml:space="preserve">
+    <value>Выдача прав ответственным за этап плана.</value>
+  </data>
+  <data name="AsyncHandler_Description_a0deeb8bb27e411f8069705b2d911df0" xml:space="preserve">
+    <value>AsyncHandler</value>
+  </data>
+  <data name="AsyncHandler_Description_6bcda5b5e8854226ae760a8a9e9fe9c7" xml:space="preserve">
+    <value>AsyncHandler</value>
+  </data>
+  <data name="AsyncHandler_Description_5695ad2eb3254d25b9b42deb7f80e52e" xml:space="preserve">
+    <value>Удаляет документ с помощью которого производится экспорт в формат MS Project</value>
+  </data>
+  <data name="JobDisplayName_ac83a8e620ae4afb80ff47d028f12602" xml:space="preserve">
+    <value>Планирование проектов. Рассылка уведомлений</value>
+  </data>
+  <data name="JobDescription_ac83a8e620ae4afb80ff47d028f12602" xml:space="preserve">
+    <value>Отправить заблаговременные уведомления о событиях планов проектов</value>
+  </data>
+  <data name="CoverGroup_Reports" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="CoverAction_ProgressReportAction" xml:space="preserve">
+    <value>Отчет о ходе работ</value>
+  </data>
+  <data name="AsyncHandler_Description_268c4e057fe344a3ba0c59932d149f92" xml:space="preserve">
+    <value>Повторная отправка автозапускаемых задач</value>
+  </data>
+  <data name="JobDisplayName_d0d44353437444faa51576a46706b5d4" xml:space="preserve">
+    <value>Планирование проектов. Автоматическая отправка задач</value>
+  </data>
+  <data name="JobDescription_d0d44353437444faa51576a46706b5d4" xml:space="preserve">
+    <value>Отправка задач по этапам при наступлении плановой даты начала или при выполнении условий для старта этапа</value>
+  </data>
+  <data name="AsyncHandler_Description_f98cb8745e754270b14cb5475fefa58c" xml:space="preserve">
+    <value>Отправка задач по этапам при наступлении плановой даты начала или при выполнении условий для старта этапа для последней версии плана</value>
+  </data>
+  <data name="AsyncHandler_Description_1aebdb7c22684bdfab75bd3f9c9d4b53" xml:space="preserve">
+    <value>DeleteVersionAsyncHandler</value>
+  </data>
+  <data name="AsyncHandler_Description_ebd6a54b77594c1292d73eee3a72ff66" xml:space="preserve">
+    <value>UpdateProjectAssignmentFactData</value>
+  </data>
+  <data name="JobDisplayName_25419ca5e3174323a01d0509bffc62bd" xml:space="preserve">
+    <value>Планирование проектов. Актуализация сведений о затратах, трудоемкости и ходе работ по планам</value>
+  </data>
+  <data name="JobDescription_25419ca5e3174323a01d0509bffc62bd" xml:space="preserve">
+    <value>Заполнение фактических и плановых затрат, фактической и плановой трудоемкости и % выполнения работ по плану на основе его этапов</value>
+  </data>
+  <data name="AsyncHandler_Description_efdc250ddf514dfc96f7902ec529aec0" xml:space="preserve">
+    <value>AsyncHandler</value>
+  </data>
+</root>

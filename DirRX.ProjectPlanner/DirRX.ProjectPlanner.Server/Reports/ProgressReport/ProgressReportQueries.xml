@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CreateMilestonesTable">
+    <mssql><![CDATA[create table {0}
+([ReportSessionId] varchar(256) NOT NULL,
+[Id] bigint NOT NULL,
+[Wbs] varchar(256) NOT NULL,
+[Name] nvarchar(max) NULL,
+[Date] datetime NOT NULL,
+[Status] nvarchar(max) NULL,
+[Responsible] nvarchar(max) NULL,
+[NumberVersion] int NOT NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+(ReportSessionId citext NOT NULL,
+Id bigint NOT NULL,
+Wbs citext NOT NULL,
+Name citext NULL,
+Date timestamp NOT NULL,
+Status citext NULL,
+Responsible citext NULL,
+NumberVersion int NOT NULL)]]></postgres>
+  </query>
+  <query key="SelectMilestones">
+    <default><![CDATA[select *
+from DirRX_PP_Reports_Milestones temp
+where ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="SelectOverdueStages">
+    <default><![CDATA[select *
+from DirRX_PP_Reports_Overdue_Stages
+where ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="SelectCompletedStages">
+    <default><![CDATA[select *
+from DirRX_PP_Reports_Completed_Stages
+where ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="SelectCurrentStages">
+    <default><![CDATA[select *
+from DirRX_PP_Reports_Current_Stages
+where ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="CreateStagesTable">
+    <mssql><![CDATA[create table {0}
+([ReportSessionId] varchar(256) NOT NULL,
+[IdStage] bigint NOT NULL,
+[Wbs] varchar(256) NOT NULL,
+[NameStage] nvarchar(max) NULL,
+[StartDate] datetime NOT NULL,
+[EndDate] datetime NOT NULL,
+[ExecutionPercent] int NOT NULL,
+[Responsible] nvarchar(max) NULL,
+[NumberVersion] int NOT NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+(ReportSessionId citext NOT NULL,
+IdStage bigint NOT NULL,
+Wbs citext NOT NULL,
+NameStage citext NULL,
+StartDate timestamp NOT NULL,
+EndDate timestamp NOT NULL,
+ExecutionPercent int NOT NULL,
+Responsible citext NULL,
+NumberVersion int NOT NULL)]]></postgres>
+  </query>
+  <query key="SelectCompletedTickets">
+    <default><![CDATA[SELECT board.name as BoardName, 
+       board.id as BoardId,
+       ticket.columnname as ColumnName,   
+       ticket.name as TicketName, 
+       ticket.id as TicketId,
+       recipient.name as Performer,  
+       ticket.laboriousness as Workload,
+       ticket.completedate as CompletedDate,
+       ticket.uid as Uid,
+       columns.indexcolumn as IndexColumn
+FROM dirrx_kanban1_ticket ticket
+LEFT JOIN dirrx_kanban1_ticketperforme ticketperformer ON ticketperformer.ticket = ticket.id
+LEFT JOIN sungero_core_recipient recipient ON recipient.id = ticketperformer.performer
+LEFT JOIN dirrx_kanban1_column col ON ticket.columnid = col.id
+LEFT JOIN dirrx_kanban1_boardcolumns columns ON col.id = columns.column
+LEFT JOIN dirrx_kanban1_board board ON board.id = ticket.boardid
+WHERE board.project = @ProjectId AND ticket.status = 'Closed' AND ticket.completedate <= @CurrentDate AND ticket.completedate >= @StartDate]]></default>
+  </query>
+  <query key="SelectCurrentTickets">
+    <default><![CDATA[SELECT board.name as BoardName,  
+       board.id as BoardId,
+       ticket.columnname as ColumnName,   
+       ticket.name as TicketName, 
+       ticket.id as TicketId,
+       recipient.name as Performer,  
+       ticket.laboriousness as Workload,
+       ticket.completedate as CompletedDate,
+       ticket.uid as Uid,
+       columns.indexcolumn as IndexColumn
+FROM dirrx_kanban1_ticket ticket
+LEFT JOIN dirrx_kanban1_ticketperforme ticketperformer ON ticketperformer.ticket = ticket.id
+LEFT JOIN sungero_core_recipient recipient ON recipient.id = ticketperformer.performer
+LEFT JOIN dirrx_kanban1_column col ON ticket.columnid = col.id
+LEFT JOIN dirrx_kanban1_boardcolumns columns ON col.id = columns.column
+LEFT JOIN dirrx_kanban1_board board ON board.id = columns.board
+WHERE board.project = @ProjectId AND ticket.status != 'Deleted' AND columns.indexcolumn != 0 AND col.isfinal != true]]></default>
+  </query>
+  <query key="SelectBoardWithProject">
+    <default><![CDATA[SELECT board.id as BoardName
+FROM dirrx_kanban1_board board
+WHERE board.project = @projectId]]></default>
+  </query>
+</queries>

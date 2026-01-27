@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collectiondc7e8561080243198e101e5bfa9bbb2a FormGuid="fa03f748-4397-42ef-bdc2-22119af7bf7f">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="View" isnull="true" iskey="true">
+          <property name="LinesPerRowMode">None</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">946,-162</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="2">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_TeamMembers_Member</property>
+            <property name="FieldName">Member</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">80</property>
+            <property name="ActualWidth">7*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_TeamMembers_Group</property>
+            <property name="FieldName">Group</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">57</property>
+            <property name="ActualWidth">5*</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collectiondc7e8561080243198e101e5bfa9bbb2a>
+  <Collection6ffbabc48a48444f87f23cfc2aa5bb67 FormGuid="8a7955d8-c410-424e-8f71-5d1946d07000">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="View" isnull="true" iskey="true">
+          <property name="LinesPerRowMode">None</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">982,164</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="9">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_EventType</property>
+            <property name="FieldName">EventType</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">300</property>
+            <property name="ActualWidth">300</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_ProjectLead</property>
+            <property name="FieldName">ProjectLead</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_RepSection</property>
+            <property name="FieldName">RepSection</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_ActivityRep</property>
+            <property name="FieldName">ActivityRep</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_ProjectAdmin</property>
+            <property name="FieldName">ProjectAdmin</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_CustomerInternal</property>
+            <property name="FieldName">CustomerInternal</property>
+            <property name="VisibleIndex">5</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_Participant</property>
+            <property name="FieldName">Participant</property>
+            <property name="VisibleIndex">6</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item8" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_MgmntTeam</property>
+            <property name="FieldName">MgmntTeam</property>
+            <property name="VisibleIndex">7</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item9" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_ResponsibleNotices_Observers</property>
+            <property name="FieldName">Observers</property>
+            <property name="VisibleIndex">8</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection6ffbabc48a48444f87f23cfc2aa5bb67>
+  <Collection6236b800aca249fea741d08e4ee2acfe FormGuid="8a7955d8-c410-424e-8f71-5d1946d07000">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="View" isnull="true" iskey="true">
+          <property name="LinesPerRowMode">None</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">982,164</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="9">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_EventType</property>
+            <property name="FieldName">EventType</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">300</property>
+            <property name="ActualWidth">300</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_ProjectLead</property>
+            <property name="FieldName">ProjectLead</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_RepSection</property>
+            <property name="FieldName">RepSection</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_ActivityRep</property>
+            <property name="FieldName">ActivityRep</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_ProjectAdmin</property>
+            <property name="FieldName">ProjectAdmin</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_CustomerInternal</property>
+            <property name="FieldName">CustomerInternal</property>
+            <property name="VisibleIndex">5</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_Participant</property>
+            <property name="FieldName">Participant</property>
+            <property name="VisibleIndex">6</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item8" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_MgmntTeam</property>
+            <property name="FieldName">MgmntTeam</property>
+            <property name="VisibleIndex">7</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item9" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_PlanDateNotices_Observers</property>
+            <property name="FieldName">Observers</property>
+            <property name="VisibleIndex">8</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection6236b800aca249fea741d08e4ee2acfe>
+  <Collectionce112df4987a4d4fa508efa1c741f108 FormGuid="8a7955d8-c410-424e-8f71-5d1946d07000">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="View" isnull="true" iskey="true">
+          <property name="LinesPerRowMode">None</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">982,164</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="9">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_EventType</property>
+            <property name="FieldName">EventType</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">300</property>
+            <property name="ActualWidth">300</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_ProjectLead</property>
+            <property name="FieldName">ProjectLead</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_RepSection</property>
+            <property name="FieldName">RepSection</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_ActivityRep</property>
+            <property name="FieldName">ActivityRep</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_ProjectAdmin</property>
+            <property name="FieldName">ProjectAdmin</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_CustomerInternal</property>
+            <property name="FieldName">CustomerInternal</property>
+            <property name="VisibleIndex">5</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_Participant</property>
+            <property name="FieldName">Participant</property>
+            <property name="VisibleIndex">6</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item8" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_MgmntTeam</property>
+            <property name="FieldName">MgmntTeam</property>
+            <property name="VisibleIndex">7</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+          <property name="Item9" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanRX_OtherNotices_Observers</property>
+            <property name="FieldName">Observers</property>
+            <property name="VisibleIndex">8</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">130</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collectionce112df4987a4d4fa508efa1c741f108>
+  <AccessRightsAccessRightEntryCardGrid_38106a151b4548f2900c4f02ff9fa8b2>
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="\$GridControl" iskey="true" value="GridControl">
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="AutoWidth">true</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="LinesPerRowMode">None</property>
+        </property>
+      </property>
+    </XtraSerializer>
+  </AccessRightsAccessRightEntryCardGrid_38106a151b4548f2900c4f02ff9fa8b2>
+  <collapsableTree>
+    <Layout>
+      <IsDocked>true</IsDocked>
+      <Width>230</Width>
+    </Layout>
+  </collapsableTree>
+  <treeListLayout>
+    <GridViewSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ColumnWidths>
+        <string>230</string>
+        <string>Auto</string>
+        <string>*</string>
+      </ColumnWidths>
+    </GridViewSettings>
+  </treeListLayout>
+</settings>

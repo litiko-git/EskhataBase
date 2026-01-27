@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<RouteScheme xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MaxBlockId="25">
+  <Blocks>
+    <BlockBase xsi:type="StartBlock">
+      <Id>1</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CustomProperties />
+      <ParameterOperations />
+    </BlockBase>
+    <BlockBase xsi:type="FinishBlock">
+      <Id>2</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CustomProperties />
+      <ParameterOperations />
+      <UnderReview>false</UnderReview>
+      <ReviewAssignmentId>0</ReviewAssignmentId>
+    </BlockBase>
+    <BlockBase xsi:type="ScriptBlock">
+      <Id>9</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CreatedInTaskGuid>1dfb1055-aaf3-4722-8b6f-9d85c64b32aa</CreatedInTaskGuid>
+      <Title>Подготовка данных задачи</Title>
+      <CustomProperties />
+      <ParameterOperations />
+    </BlockBase>
+    <BlockBase xsi:type="NoticeBlock">
+      <Id>10</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CreatedInTaskGuid>1dfb1055-aaf3-4722-8b6f-9d85c64b32aa</CreatedInTaskGuid>
+      <Title>Уведомление автора задания о завершении</Title>
+      <CustomProperties />
+      <ParameterOperations />
+      <GroupsAttachmentsRights />
+      <AttachmentGroupsSettings />
+      <TypeGuid>0e15f86c-ab7f-4466-8b49-08773985ecaa</TypeGuid>
+      <CreatedEntitiesIds />
+      <Performers />
+    </BlockBase>
+    <BlockBase xsi:type="AssignmentBlock">
+      <Id>11</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CreatedInTaskGuid>1dfb1055-aaf3-4722-8b6f-9d85c64b32aa</CreatedInTaskGuid>
+      <Title>Задание</Title>
+      <CustomProperties />
+      <ParameterOperations />
+      <GroupsAttachmentsRights>
+        <GroupAttachmentsRights>
+          <GroupId>00000000-0000-0000-0000-000000000000</GroupId>
+          <AttachmentsRights>AllPerformersAllAttachments</AttachmentsRights>
+          <AttachmentsRightsType>676a7c2d-f883-4528-b190-84fa0e3cc0f3</AttachmentsRightsType>
+        </GroupAttachmentsRights>
+      </GroupsAttachmentsRights>
+      <AttachmentGroupsSettings />
+      <TypeGuid>ca40bc93-e562-4a4f-9db0-23950fd61584</TypeGuid>
+      <CreatedEntitiesIds />
+      <Performers />
+      <IsStopped>false</IsStopped>
+      <IsParallel>true</IsParallel>
+      <AbsoluteDeadline>0001-01-01T00:00:00</AbsoluteDeadline>
+      <RelativeDeadline>00:00:00</RelativeDeadline>
+      <RelativeDeadlineDays xsi:nil="true" />
+      <RelativeDeadlineHours xsi:nil="true" />
+      <RelativeDeadlineTimeBase xsi:nil="true" />
+      <AbsoluteStopAssignmentsDeadline>0001-01-01T00:00:00</AbsoluteStopAssignmentsDeadline>
+      <RelativeStopAssignmentsDeadline>00:00:00</RelativeStopAssignmentsDeadline>
+      <RelativeStopDeadlineDays xsi:nil="true" />
+      <RelativeStopDeadlineHours xsi:nil="true" />
+      <AbsoluteStopAssignmentsDeadlineInternal>0001-01-01T00:00:00</AbsoluteStopAssignmentsDeadlineInternal>
+      <ExecutionResults />
+    </BlockBase>
+    <BlockBase xsi:type="DecisionBlock">
+      <Id>24</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CreatedInTaskGuid>1dfb1055-aaf3-4722-8b6f-9d85c64b32aa</CreatedInTaskGuid>
+      <Title>Отправить задание на приемку?</Title>
+      <CustomProperties />
+      <ParameterOperations />
+      <ConditionExpressions />
+    </BlockBase>
+    <BlockBase xsi:type="ScriptBlock">
+      <Id>25</Id>
+      <BlockTypeId xsi:nil="true" />
+      <CreatedInTaskGuid>1dfb1055-aaf3-4722-8b6f-9d85c64b32aa</CreatedInTaskGuid>
+      <Title>Установить флаг NeedReview</Title>
+      <CustomProperties />
+      <ParameterOperations />
+    </BlockBase>
+  </Blocks>
+  <Edges>
+    <Edge>
+      <Id>12</Id>
+      <Source>1</Source>
+      <Target>9</Target>
+    </Edge>
+    <Edge>
+      <Id>31</Id>
+      <Source>9</Source>
+      <Target>11</Target>
+    </Edge>
+    <Edge>
+      <Id>34</Id>
+      <Source>24</Source>
+      <Target>10</Target>
+      <Value>False</Value>
+    </Edge>
+    <Edge>
+      <Id>35</Id>
+      <Source>24</Source>
+      <Target>25</Target>
+      <Value>True</Value>
+    </Edge>
+    <Edge>
+      <Id>37</Id>
+      <Source>11</Source>
+      <Target>24</Target>
+      <Value>Complete</Value>
+    </Edge>
+    <Edge>
+      <Id>38</Id>
+      <Source>10</Source>
+      <Target>2</Target>
+    </Edge>
+    <Edge>
+      <Id>39</Id>
+      <Source>25</Source>
+      <Target>2</Target>
+    </Edge>
+  </Edges>
+  <Layout>
+    <BlocksLayout>
+      <BlockLayout>
+        <BlockId>1</BlockId>
+        <Bounds>
+          <Location>
+            <X>5</X>
+            <Y>-416.53954724408595</Y>
+          </Location>
+          <Size>
+            <Width>48</Width>
+            <Height>48</Height>
+          </Size>
+          <X>5</X>
+          <Y>-416.53954724408595</Y>
+          <Width>48</Width>
+          <Height>48</Height>
+        </Bounds>
+      </BlockLayout>
+      <BlockLayout>
+        <BlockId>2</BlockId>
+        <Bounds>
+          <Location>
+            <X>5</X>
+            <Y>196.29209055118281</Y>
+          </Location>
+          <Size>
+            <Width>48</Width>
+            <Height>48</Height>
+          </Size>
+          <X>5</X>
+          <Y>196.29209055118281</Y>
+          <Width>48</Width>
+          <Height>48</Height>
+        </Bounds>
+      </BlockLayout>
+      <BlockLayout>
+        <BlockId>9</BlockId>
+        <Bounds>
+          <Location>
+            <X>-96</X>
+            <Y>-333.68278346456179</Y>
+          </Location>
+          <Size>
+            <Width>250</Width>
+            <Height>70</Height>
+          </Size>
+          <X>-96</X>
+          <Y>-333.68278346456179</Y>
+          <Width>250</Width>
+          <Height>70</Height>
+        </Bounds>
+      </BlockLayout>
+      <BlockLayout>
+        <BlockId>10</BlockId>
+        <Bounds>
+          <Location>
+            <X>-96</X>
+            <Y>63.29209055118281</Y>
+          </Location>
+          <Size>
+            <Width>250</Width>
+            <Height>70</Height>
+          </Size>
+          <X>-96</X>
+          <Y>63.29209055118281</Y>
+          <Width>250</Width>
+          <Height>70</Height>
+        </Bounds>
+      </BlockLayout>
+      <BlockLayout>
+        <BlockId>11</BlockId>
+        <Bounds>
+          <Location>
+            <X>-96</X>
+            <Y>-228.68278346456179</Y>
+          </Location>
+          <Size>
+            <Width>250</Width>
+            <Height>70</Height>
+          </Size>
+          <X>-96</X>
+          <Y>-228.68278346456179</Y>
+          <Width>250</Width>
+          <Height>70</Height>
+        </Bounds>
+      </BlockLayout>
+      <BlockLayout>
+        <BlockId>24</BlockId>
+        <Bounds>
+          <Location>
+            <X>-6</X>
+            <Y>-108.09860236219617</Y>
+          </Location>
+          <Size>
+            <Width>70</Width>
+            <Height>109</Height>
+          </Size>
+          <X>-6</X>
+          <Y>-108.09860236219617</Y>
+          <Width>70</Width>
+          <Height>109</Height>
+        </Bounds>
+      </BlockLayout>
+      <BlockLayout>
+        <BlockId>25</BlockId>
+        <Bounds>
+          <Location>
+            <X>154</X>
+            <Y>-38.098602362196175</Y>
+          </Location>
+          <Size>
+            <Width>250</Width>
+            <Height>70</Height>
+          </Size>
+          <X>154</X>
+          <Y>-38.098602362196175</Y>
+          <Width>250</Width>
+          <Height>70</Height>
+        </Bounds>
+      </BlockLayout>
+    </BlocksLayout>
+    <EdgesLayout>
+      <EdgeLayout>
+        <DestinationAnchor>3</DestinationAnchor>
+        <EdgeId>12</EdgeId>
+        <EndPoint>
+          <X>29</X>
+          <Y>-333.68278346456179</Y>
+        </EndPoint>
+        <OriginAnchor>3</OriginAnchor>
+        <Points>
+          <Point>
+            <X>29</X>
+            <Y>-368.53954724408595</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>-333.68278346456179</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>-333.68278346456179</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>29</X>
+          <Y>-368.53954724408595</Y>
+        </StartPoint>
+      </EdgeLayout>
+      <EdgeLayout>
+        <DestinationAnchor>3</DestinationAnchor>
+        <EdgeId>31</EdgeId>
+        <EndPoint>
+          <X>29</X>
+          <Y>-228.68278346456179</Y>
+        </EndPoint>
+        <OriginAnchor>10</OriginAnchor>
+        <Points>
+          <Point>
+            <X>29</X>
+            <Y>-263.68278346456179</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>-228.68278346456179</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>-228.68278346456179</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>29</X>
+          <Y>-263.68278346456179</Y>
+        </StartPoint>
+      </EdgeLayout>
+      <EdgeLayout>
+        <DestinationAnchor>3</DestinationAnchor>
+        <EdgeId>34</EdgeId>
+        <EndPoint>
+          <X>29</X>
+          <Y>63.29209055118281</Y>
+        </EndPoint>
+        <OriginAnchor>0</OriginAnchor>
+        <Points>
+          <Point>
+            <X>-6</X>
+            <Y>-73.098602362196175</Y>
+          </Point>
+          <Point>
+            <X>-71</X>
+            <Y>-73.098602362196175</Y>
+          </Point>
+          <Point>
+            <X>-71</X>
+            <Y>37.096744094493317</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>37.096744094493317</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>63.29209055118281</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>-6</X>
+          <Y>-73.098602362196175</Y>
+        </StartPoint>
+      </EdgeLayout>
+      <EdgeLayout>
+        <DestinationAnchor>3</DestinationAnchor>
+        <EdgeId>35</EdgeId>
+        <EndPoint>
+          <X>279</X>
+          <Y>-38.098602362196175</Y>
+        </EndPoint>
+        <OriginAnchor>2</OriginAnchor>
+        <Points>
+          <Point>
+            <X>64</X>
+            <Y>-73.098602362196175</Y>
+          </Point>
+          <Point>
+            <X>279</X>
+            <Y>-73.098602362196175</Y>
+          </Point>
+          <Point>
+            <X>279</X>
+            <Y>-38.098602362196175</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>64</X>
+          <Y>-73.098602362196175</Y>
+        </StartPoint>
+      </EdgeLayout>
+      <EdgeLayout>
+        <DestinationAnchor>1</DestinationAnchor>
+        <EdgeId>37</EdgeId>
+        <EndPoint>
+          <X>29</X>
+          <Y>-108.09860236219617</Y>
+        </EndPoint>
+        <OriginAnchor>10</OriginAnchor>
+        <Points>
+          <Point>
+            <X>29</X>
+            <Y>-158.68278346456179</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>-108.09860236219617</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>-108.09860236219617</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>29</X>
+          <Y>-158.68278346456179</Y>
+        </StartPoint>
+      </EdgeLayout>
+      <EdgeLayout>
+        <DestinationAnchor>1</DestinationAnchor>
+        <EdgeId>38</EdgeId>
+        <EndPoint>
+          <X>29</X>
+          <Y>196.29209055118281</Y>
+        </EndPoint>
+        <OriginAnchor>10</OriginAnchor>
+        <Points>
+          <Point>
+            <X>29</X>
+            <Y>133.29209055118281</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>196.29209055118281</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>196.29209055118281</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>29</X>
+          <Y>133.29209055118281</Y>
+        </StartPoint>
+      </EdgeLayout>
+      <EdgeLayout>
+        <DestinationAnchor>1</DestinationAnchor>
+        <EdgeId>39</EdgeId>
+        <EndPoint>
+          <X>29</X>
+          <Y>196.29209055118281</Y>
+        </EndPoint>
+        <OriginAnchor>10</OriginAnchor>
+        <Points>
+          <Point>
+            <X>279</X>
+            <Y>31.901397637803825</Y>
+          </Point>
+          <Point>
+            <X>279</X>
+            <Y>159.79209055118281</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>159.79209055118281</Y>
+          </Point>
+          <Point>
+            <X>29</X>
+            <Y>196.29209055118281</Y>
+          </Point>
+        </Points>
+        <StartPoint>
+          <X>279</X>
+          <Y>31.901397637803825</Y>
+        </StartPoint>
+      </EdgeLayout>
+    </EdgesLayout>
+  </Layout>
+</RouteScheme>

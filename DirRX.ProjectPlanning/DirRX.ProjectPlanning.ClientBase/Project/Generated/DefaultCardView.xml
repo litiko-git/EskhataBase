@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <collapsableTree FormGuid="9b10a477-66fb-4c59-8132-bc8d29cb09f2">
+    <Layout>
+      <IsDocked>true</IsDocked>
+    </Layout>
+  </collapsableTree>
+  <layout FormGuid="9b10a477-66fb-4c59-8132-bc8d29cb09f2">
+    <GridViewSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ColumnWidths>
+        <string>*</string>
+        <string>Auto</string>
+        <string>*</string>
+      </ColumnWidths>
+      <RowHeights />
+      <Width>1140</Width>
+      <Height>250</Height>
+    </GridViewSettings>
+  </layout>
+</settings>

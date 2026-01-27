@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Контрольная точка</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Контрольную точку</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Контрольные точки</value>
+  </data>
+  <data name="Property_Level" xml:space="preserve">
+    <value>Уровень</value>
+  </data>
+  <data name="Enum_Level_Critical" xml:space="preserve">
+    <value>КТ-0</value>
+  </data>
+  <data name="Enum_Level_Key" xml:space="preserve">
+    <value>КТ-1</value>
+  </data>
+  <data name="Enum_Level_Operational" xml:space="preserve">
+    <value>КТ-2</value>
+  </data>
+  <data name="Property_PlanDate" xml:space="preserve">
+    <value>Дата (план)</value>
+  </data>
+  <data name="Property_ActualDate" xml:space="preserve">
+    <value>Дата (факт)</value>
+  </data>
+  <data name="Property_Owner" xml:space="preserve">
+    <value>Владелец</value>
+  </data>
+  <data name="Property_Performer" xml:space="preserve">
+    <value>Ответственный</value>
+  </data>
+  <data name="Property_Supervisor" xml:space="preserve">
+    <value>Контролер</value>
+  </data>
+  <data name="Property_Assessment" xml:space="preserve">
+    <value>Прогноз</value>
+  </data>
+  <data name="Enum_Assessment_OnTime" xml:space="preserve">
+    <value>В срок</value>
+  </data>
+  <data name="Enum_Assessment_Threat" xml:space="preserve">
+    <value>Под угрозой</value>
+  </data>
+  <data name="Enum_Assessment_MinorRisks" xml:space="preserve">
+    <value>Несущественные риски</value>
+  </data>
+  <data name="Property_Note" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="ControlGroup_a574cee3277342fbb14558b59da1d003" xml:space="preserve">
+    <value>Срок</value>
+  </data>
+  <data name="ControlGroup_7388306986424e548b8d28a25da4acfb" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="Property_Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Property_IsPassed" xml:space="preserve">
+    <value>Достигнута</value>
+  </data>
+  <data name="Form_2970f71fd0854102865fd4b131b62b09" xml:space="preserve">
+    <value>Связанные вехи</value>
+  </data>
+  <data name="Property_Documents" xml:space="preserve">
+    <value>Документы</value>
+  </data>
+  <data name="ControlGroup_749c5f77e33e42acae8865b3fd1332dd" xml:space="preserve">
+    <value>Подтверждающие документы</value>
+  </data>
+  <data name="Action_DeleteEntity" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Action_DeleteEntityHint" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+</root>

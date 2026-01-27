@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleDisplayName" xml:space="preserve">
+    <value>Portfolios and Programs</value>
+  </data>
+  <data name="ShipmentRisk" xml:space="preserve">
+    <value>Shipment risk</value>
+  </data>
+  <data name="PlanningRisk" xml:space="preserve">
+    <value>Planning risk</value>
+  </data>
+  <data name="SecurityRisk" xml:space="preserve">
+    <value>Security risk</value>
+  </data>
+  <data name="FinancialRisk" xml:space="preserve">
+    <value>Financial risk</value>
+  </data>
+  <data name="CommunicationRisk" xml:space="preserve">
+    <value>Communication risk</value>
+  </data>
+  <data name="BusinessRisk" xml:space="preserve">
+    <value>Business risk</value>
+  </data>
+  <data name="QualityRisk" xml:space="preserve">
+    <value>Quality risk</value>
+  </data>
+  <data name="RiskWillNotOccur" xml:space="preserve">
+    <value>Risk will not occur</value>
+  </data>
+  <data name="RiskIsUnlikelyToOccur" xml:space="preserve">
+    <value>Risk is unlikely to occur</value>
+  </data>
+  <data name="ProbabilitiesOfRiskAreTheSame" xml:space="preserve">
+    <value>Probabilities of risk occurrence and non-occurrence are the same</value>
+  </data>
+  <data name="RiskIsLikelyToOccur" xml:space="preserve">
+    <value>Risk is likely to occur</value>
+  </data>
+  <data name="RiskWillMostCertainlyOccur" xml:space="preserve">
+    <value>Risk will most certainly occur</value>
+  </data>
+  <data name="ImpactDescriptionMinimal" xml:space="preserve">
+    <value>Minimal (minor changes in cost and duration)</value>
+  </data>
+  <data name="ImpactDescriptionAcceptable" xml:space="preserve">
+    <value>Acceptable (cost increases by less than 10%, duration increases by less than 5%)</value>
+  </data>
+  <data name="ImpactDescriptionSignificant" xml:space="preserve">
+    <value>Significant (cost increases by 10-20%, duration increases by 5-10%)</value>
+  </data>
+  <data name="ImpactDescriptionCritical" xml:space="preserve">
+    <value>Critical, may result in significant losses or project suspension (cost increases by 20-40%, duration increases by 10-20%)</value>
+  </data>
+  <data name="ImpactDescriptionDisastrous" xml:space="preserve">
+    <value>Disastrous, may result in project termination (cost increases by more than 40%, duration increases by more than 20%)</value>
+  </data>
+  <data name="ImpactContentChangeMinimal" xml:space="preserve">
+    <value>Minor reduction of content</value>
+  </data>
+  <data name="ImpactContentChangeAcceptable" xml:space="preserve">
+    <value>Affects non-essential project content</value>
+  </data>
+  <data name="ImpactContentChangeSignificant" xml:space="preserve">
+    <value>Affects main project content</value>
+  </data>
+  <data name="ImpactContentChangeCritical" xml:space="preserve">
+    <value>Content reduction is not acceptable for sponsors</value>
+  </data>
+  <data name="ImpactContentChangeDiasastrous" xml:space="preserve">
+    <value>End product is likely to be unusable</value>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="RoadmapIsNotAvailableWitoutPortfolioProgramLicense" xml:space="preserve">
+    <value>To work with the Roadmap report, you need a license to module "Portfolios and Programs".</value>
+  </data>
+</root>

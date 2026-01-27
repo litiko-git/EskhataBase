@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_StartDate" xml:space="preserve">
+    <value>Дата начала (план)</value>
+  </data>
+  <data name="Property_EndDate" xml:space="preserve">
+    <value>Дата окончания (план)</value>
+  </data>
+  <data name="Property_ActualStartDate" xml:space="preserve">
+    <value>Дата начала (факт)</value>
+  </data>
+  <data name="Property_ActualFinishDate" xml:space="preserve">
+    <value>Дата окончания (факт)</value>
+  </data>
+  <data name="Property_Status" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="Enum_Status_Active" xml:space="preserve">
+    <value>Действующий</value>
+  </data>
+  <data name="Enum_Status_Closed" xml:space="preserve">
+    <value>Закрыт</value>
+  </data>
+  <data name="Property_TeamMembers" xml:space="preserve">
+    <value>Участники</value>
+  </data>
+  <data name="Property_ExecutionPercent" xml:space="preserve">
+    <value>% выполнения</value>
+  </data>
+  <data name="Property_BaselineWork" xml:space="preserve">
+    <value>План. трудоемкость</value>
+  </data>
+  <data name="Property_PlannedCosts" xml:space="preserve">
+    <value>Запланированные затраты</value>
+  </data>
+  <data name="Property_FactualCosts" xml:space="preserve">
+    <value>Фактические затраты</value>
+  </data>
+  <data name="Property_IsCopy" xml:space="preserve">
+    <value>Проект создается копированием</value>
+  </data>
+  <data name="Action_ReadLastVersion" xml:space="preserve">
+    <value>Читать</value>
+  </data>
+  <data name="Action_ReadLastVersionHint" xml:space="preserve">
+    <value>Открыть проект для чтения </value>
+  </data>
+  <data name="Action_ReadLastVersionDescription" xml:space="preserve">
+    <value>Открыть проект для чтения </value>
+  </data>
+  <data name="Action_EditLastVersion" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="Action_EditLastVersionHint" xml:space="preserve">
+    <value>Открыть проект для редактирования</value>
+  </data>
+  <data name="Action_EditLastVersionDescription" xml:space="preserve">
+    <value>Открыть проект для редактирования</value>
+  </data>
+  <data name="Action_CopyVersionHint" xml:space="preserve">
+    <value>Создать копию версии документа</value>
+  </data>
+  <data name="Action_CopyVersionDescription" xml:space="preserve">
+    <value>Создание копии выделенной версии документа.</value>
+  </data>
+  <data name="Action_CopyVersion" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersion" xml:space="preserve">
+    <value>Создать версию</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersionHint" xml:space="preserve">
+    <value>Создать версию документа</value>
+  </data>
+  <data name="Action_CopyVersionFromLastVersionDescription" xml:space="preserve">
+    <value>Создание версии электронного документа на основе последней версии.</value>
+  </data>
+  <data name="Action_ImportVersionCustom" xml:space="preserve">
+    <value>Импортировать</value>
+  </data>
+  <data name="Action_ImportVersionCustomHint" xml:space="preserve">
+    <value>Импортировать версию документа</value>
+  </data>
+  <data name="Action_ImportVersionCustomDescription" xml:space="preserve">
+    <value>Импорт версии электронного документа</value>
+  </data>
+  <data name="Action_ShowProject" xml:space="preserve">
+    <value>Показать проект</value>
+  </data>
+  <data name="Action_ShowProjectHint" xml:space="preserve">
+    <value>Показать связанный проект</value>
+  </data>
+  <data name="Action_ShowProjectDescription" xml:space="preserve">
+    <value>Показать связанный с планом проект</value>
+  </data>
+  <data name="Ribbon_Creating_cb883527379b49b7a0a09252ea80b441" xml:space="preserve">
+    <value>Создание</value>
+  </data>
+  <data name="ControlGroup_406e14dc17444a7f85d8f6eef8abaa3f" xml:space="preserve">
+    <value>Основное</value>
+  </data>
+  <data name="Resource_fc50c88831554ff196e8ff7064894ead" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_fc50c88831554ff196e8ff7064894ead_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_ddf41ead829a4a3f8d12d40a52b7440c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ddf41ead829a4a3f8d12d40a52b7440c_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_e3dbd9c92b1a40f583dcfabe162041d4" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="Ribbon_Project_bb7c1dc665004ace8e4419f030ff7fee" xml:space="preserve">
+    <value>Проект</value>
+  </data>
+  <data name="ControlGroup_03fde41782544f08950cd543871033a8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateFromFile" xml:space="preserve">
+    <value>Создать из файла</value>
+  </data>
+  <data name="Action_CreateFromFileHint" xml:space="preserve">
+    <value>Создать план из файла</value>
+  </data>
+  <data name="Action_CreateFromTemplate" xml:space="preserve">
+    <value>Создать из шаблона</value>
+  </data>
+  <data name="Action_CreateFromFileDescription" xml:space="preserve">
+    <value>Создание плана проекта из файла.</value>
+  </data>
+  <data name="Action_CreateFromTemplateHint" xml:space="preserve">
+    <value>Создать из шаблона</value>
+  </data>
+  <data name="Action_CreateFromTemplateDescription" xml:space="preserve">
+    <value>Создание плана проекта из шаблона</value>
+  </data>
+  <data name="FilterPanel_StartPeriodThisMonth_fc1426b3701e4a9dbccdb1e658882771" xml:space="preserve">
+    <value>В текущем месяце</value>
+  </data>
+  <data name="FilterPanel_StartPeriodManual_27a1e4075555496781ec7d10cfd4199e" xml:space="preserve">
+    <value>Произвольный период:</value>
+  </data>
+  <data name="FilterPanel_FinishGroup_be9b945a582f44e9b4a51ef710436772" xml:space="preserve">
+    <value>Дата окончания</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodThisMonth_9b844318e64c4ae497fe5d6fe85f53ec" xml:space="preserve">
+    <value>В текущем месяце</value>
+  </data>
+  <data name="FilterPanel_FinishPeriodManual_2176d40a45e7458bbe2c0244eeb19d0e" xml:space="preserve">
+    <value>Произвольный период:</value>
+  </data>
+  <data name="FilterPanel_Status_105eda7a405449b882c18f4da431fecd" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="FilterPanel_Active_a26a32674d554b55927385d05b2536c9" xml:space="preserve">
+    <value>Исполнение</value>
+  </data>
+  <data name="FilterPanel_Obsolete_896b760bb83743eca8d25dbe98e49fd0" xml:space="preserve">
+    <value>Завершен</value>
+  </data>
+  <data name="FilterPanel_StartGroup_2fbff1388e254ea68799ff9840be2464" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="FilterPanel_Main_bb9442904bd24f7e977036a8b5556da6" xml:space="preserve">
+    <value>Основное</value>
+  </data>
+  <data name="FilterPanel_ProjectKind_48a5f832bbb04fcab13110fd2f5f33ba" xml:space="preserve">
+    <value>Вид проекта</value>
+  </data>
+  <data name="FilterPanel_ProjectManager_7fe4d329d34f4ee2a34e882d2b8b815e" xml:space="preserve">
+    <value>Руководитель проекта</value>
+  </data>
+  <data name="FilterPanel_InternalCustomer_13de538a105144a083a534b0447451a9" xml:space="preserve">
+    <value>Внутренний</value>
+  </data>
+  <data name="FilterPanel_ExternalCustomer_752de41141e34541a48d40666c0fac24" xml:space="preserve">
+    <value>Внешний</value>
+  </data>
+  <data name="FilterPanel_LeadingProject_c9290415888a4d76acf2d9bc2ffaded4" xml:space="preserve">
+    <value>Ведущий проект</value>
+  </data>
+  <data name="FilterPanel_Customers_f034aa13851d4b989f2465d19ef675f6" xml:space="preserve">
+    <value>Заказчики</value>
+  </data>
+  <data name="FilterPanel_Draft_2f4663f91e3f42adaeb4a2ed029d35c4" xml:space="preserve">
+    <value>Инициация</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>План проекта</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>План проекта</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Реестр планов проектов</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreatePlanFromFile" xml:space="preserve">
+    <value>Создать из файла</value>
+  </data>
+  <data name="Action_CreatePlanFromFileHint" xml:space="preserve">
+    <value>Создать план из файла</value>
+  </data>
+  <data name="Action_CreatePlanFromFileDescription" xml:space="preserve">
+    <value>Создание плана проекта из файла.</value>
+  </data>
+  <data name="Action_CreateEmptyPlan" xml:space="preserve">
+    <value>Создать пустой план</value>
+  </data>
+  <data name="Action_CreateEmptyPlanHint" xml:space="preserve">
+    <value>Создать пустой план</value>
+  </data>
+  <data name="Action_CreateEmptyPlanDescription" xml:space="preserve">
+    <value>Создание пустого плана проекта</value>
+  </data>
+  <data name="Action_ExportLastVersionToRXPP" xml:space="preserve">
+    <value>В формате RXPP</value>
+  </data>
+  <data name="Action_ExportLastVersionToMSProject" xml:space="preserve">
+    <value>В формате MS Project</value>
+  </data>
+  <data name="Action_ExportPlanVersion" xml:space="preserve">
+    <value>Экспортировать</value>
+  </data>
+  <data name="Action_ExportLastVersionToMSProjectHint" xml:space="preserve">
+    <value>Экпортировать план в формате MS Project XML</value>
+  </data>
+  <data name="Action_ExportLastVersionToMSProjectDescription" xml:space="preserve">
+    <value>Экcпорт плана в формате MS Project XML</value>
+  </data>
+  <data name="Action_ExportLastVersionToRXPPHint" xml:space="preserve">
+    <value>Экcпортировать план во встроенном формате RXPP</value>
+  </data>
+  <data name="Action_ExportLastVersionToRXPPDescription" xml:space="preserve">
+    <value>Экcпорт плана во встроенном формате RXPP</value>
+  </data>
+  <data name="Action_ExportPlanVersionHint" xml:space="preserve">
+    <value>Экспорт версии плана проекта</value>
+  </data>
+  <data name="Action_ExportPlanVersionDescription" xml:space="preserve">
+    <value>Экспорт версии плана проекта</value>
+  </data>
+  <data name="Action_ExportVersion" xml:space="preserve">
+    <value>Экспортировать в RXPP</value>
+  </data>
+  <data name="Action_ExportVersionHint" xml:space="preserve">
+    <value>Экспортировать версию плана во встроенном формте RXPP</value>
+  </data>
+  <data name="Action_ExportVersionDescription" xml:space="preserve">
+    <value>Экспорт версии плана во встроенном формате RXPP</value>
+  </data>
+  <data name="Ribbon_ExportGroup_3e3db5b1ef7d4b09b5861d0df99e8140" xml:space="preserve">
+    <value>Экспортировать</value>
+  </data>
+  <data name="Ribbon_ExportPage_cce3494b0d0f408fb8564a17587df8df" xml:space="preserve">
+    <value>Экспортировать</value>
+  </data>
+  <data name="Ribbon_ExportPage_22b055969e694a54b68ceea58acd666d" xml:space="preserve">
+    <value>Экспортировать</value>
+  </data>
+  <data name="Ribbon_ExportGroup_764c9fa27c544302b243110e3c3d3cbe" xml:space="preserve">
+    <value>Экспортировать</value>
+  </data>
+  <data name="Property_ResponsibleNotices" xml:space="preserve">
+    <value>Назначение ответственных</value>
+  </data>
+  <data name="Property_PlanDateNotices" xml:space="preserve">
+    <value>Плановые даты</value>
+  </data>
+  <data name="Form_8a7955d8c410424e8f715d1946d07000" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Control_e859e6deab154820b2c00d6931d596ae_DisplayValue" xml:space="preserve">
+    <value>Восстановить настройки по умолчанию</value>
+  </data>
+  <data name="Property_OtherNotices" xml:space="preserve">
+    <value>Прочие</value>
+  </data>
+  <data name="ControlGroup_6c190527e0ad48f789613e6244f0d08f" xml:space="preserve">
+    <value>Назначение ответственных</value>
+  </data>
+  <data name="ControlGroup_1713ebfe191941ecb2b9c3debf5107c9" xml:space="preserve">
+    <value>Плановые даты</value>
+  </data>
+  <data name="ControlGroup_f5684966922349b492f179b1d9b51615" xml:space="preserve">
+    <value>Прочие</value>
+  </data>
+  <data name="Action_ShowProgressReport" xml:space="preserve">
+    <value>Отчет о ходе работ</value>
+  </data>
+  <data name="Action_ShowProgressReportHint" xml:space="preserve">
+    <value>Формирование отчета о ходе работ по плану проекта</value>
+  </data>
+  <data name="Action_ShowProgressReportDescription" xml:space="preserve">
+    <value>Формирование отчета о ходе работ по плану проекта</value>
+  </data>
+  <data name="Property_EnableReviewAssignmentFlag" xml:space="preserve">
+    <value>Отправлять задания на приемку работ в рамках задач по этапам</value>
+  </data>
+  <data name="Property_ActualWorkload" xml:space="preserve">
+    <value>Факт. трудоемкость</value>
+  </data>
+  <data name="Property_IsEnableAutoSendingTasks" xml:space="preserve">
+    <value>Автоматически запускать задачи по этапам плана проекта</value>
+  </data>
+</root>

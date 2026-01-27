@@ -1,0 +1,136 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "27167dd7-5a7c-4b60-b299-00e9a64d011a",
+  "Name": "TeamsNoticesSettingsRecipients",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "TeamsNoticesS1",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "5ef792d9-2fe8-41b4-889d-6e6e60cd8721",
+      "Name": "TeamsNoticesSettings",
+      "CanBeSearch": false,
+      "Code": "TeamsNoticesSe",
+      "EntityGuid": "e5fd1e1e-5678-43ad-9bc6-3efdf4e351d8",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c741d849-a087-4c67-9bf0-f5b3d58549b3",
+      "Name": "RecipientType",
+      "CanBeSearch": false,
+      "Code": "RecipientType",
+      "DirectValues": [
+        {
+          "NameGuid": "006ab867-c2f5-4ca6-8d56-7cfb887c0996",
+          "Name": "ProjectLead",
+          "Code": "ProjectLead"
+        },
+        {
+          "NameGuid": "259db7ae-207e-402e-9392-3cf7e2479253",
+          "Name": "RepSection",
+          "Code": "RepSection"
+        },
+        {
+          "NameGuid": "eb09e53b-12c8-47dd-9a8d-2fb2a888a751",
+          "Name": "ActivityRep",
+          "Code": "ActivityRep"
+        },
+        {
+          "NameGuid": "e6596ca0-3e6c-4a44-997b-f9163c3c0179",
+          "Name": "ProjectAdmin",
+          "Code": "ProjectAdmin"
+        },
+        {
+          "NameGuid": "b2a44026-8d6f-42f1-9cc2-e2983960beae",
+          "Name": "CustomerInterna",
+          "Code": "CustomerInterna"
+        },
+        {
+          "NameGuid": "bcd4b82c-60bd-4c56-aa0f-cd31b437afc8",
+          "Name": "Participant",
+          "Code": "Participant"
+        },
+        {
+          "NameGuid": "42b81392-d559-4abc-ba45-94bc1424b706",
+          "Name": "MgmntTeam",
+          "Code": "MgmntTeam"
+        },
+        {
+          "NameGuid": "1e7e6928-d6f7-4455-a953-fab4547e2439",
+          "Name": "Observers",
+          "Code": "Observers"
+        },
+        {
+          "NameGuid": "4d69d410-fc48-4c39-bc80-9fba24b6e364",
+          "Name": "Author",
+          "Code": "Author"
+        },
+        {
+          "NameGuid": "13dae031-9d34-4631-bd59-6021f653dcf5",
+          "Name": "Executor",
+          "Code": "Executor"
+        },
+        {
+          "NameGuid": "37f2a3dc-3b06-473c-a661-2b431cfc211d",
+          "Name": "AllParticipants",
+          "Code": "AllParticipants"
+        }
+      ],
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+      "PreviousPropertyGuid": "5ef792d9-2fe8-41b4-889d-6e6e60cd8721"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "661fc83e-835d-4656-8b60-e7a5ceacaf59",
+      "Name": "NotifyCondition",
+      "CanBeSearch": false,
+      "Code": "NotifyConditio",
+      "EntityGuid": "98c48a14-3f00-4301-ab7d-57f1c42e53c2",
+      "FlatListInStandaloneLookup": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "417fe732-c5e7-4138-958c-270576aa1b55"
+    },
+    {
+      "$type": "Sungero.Metadata.TextPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "0fcde2bb-ed21-4dcd-bde0-cda95a8b9f62",
+      "Name": "Recipient",
+      "CanBeSearch": false,
+      "Code": "Recipient",
+      "IsShowedInList": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultilineStringEditorToTextBinder",
+      "PreviousPropertyGuid": "661fc83e-835d-4656-8b60-e7a5ceacaf59"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "523e43d4-adb0-4bcc-8423-c5c8f28e6c53",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "5a21a20d-66ac-4db1-bac4-19e19f1ab30b",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 12
+    }
+  ]
+}

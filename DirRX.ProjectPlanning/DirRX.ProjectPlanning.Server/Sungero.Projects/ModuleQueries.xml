@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="GetSubProjectIds">
+    <mssql><![CDATA[WITH project_ids(id) AS (
+    SELECT  @projectId as porject_id
+    UNION ALL
+        SELECT p.Id
+        FROM
+            Sungero_Docflow_Project p
+        INNER JOIN project_ids pi ON p.LeadingProject_Project_Sungero = pi.id
+)
+SELECT * FROM project_ids;]]></mssql>
+    <postgres><![CDATA[WITH recursive project_ids(id) AS (  
+    SELECT @projectId as Id  
+    UNION ALL
+    SELECT p.Id  
+    FROM
+        Sungero_Docflow_Project p  
+    INNER JOIN project_ids pi ON p.LeadingProject_Project_Sungero = pi.id  
+)  
+SELECT * FROM project_ids;]]></postgres>
+  </query>
+</queries>

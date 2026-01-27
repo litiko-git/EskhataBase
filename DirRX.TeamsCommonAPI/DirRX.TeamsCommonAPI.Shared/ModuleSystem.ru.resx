@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="sf_86e79c89_c11e_4d7d_b9be_11ea15159daf" xml:space="preserve">
+    <value>Команда и проекты</value>
+  </data>
+  <data name="sf_d0756b04_e78e_42c2_a1e8_f30be8976f8f" xml:space="preserve">
+    <value>Команда и проекты</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Уведомления команды и проектов</value>
+  </data>
+  <data name="JobDisplayName_1040ce6e1c8245beafe66b333c00c828" xml:space="preserve">
+    <value>Команда и проекты. Отправка сводных уведомлений</value>
+  </data>
+  <data name="JobDescription_1040ce6e1c8245beafe66b333c00c828" xml:space="preserve">
+    <value>Отправка сводных уведомлений о событиях Agile-досок, планов проектов и базы знаний.</value>
+  </data>
+  <data name="FilterPanel_PeriodGroup_538de5f30adc40a89660e1b53557691a" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="FilterPanel_Period_23a31c6b5c3947098ff0a79316c2780e" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FilterPanel_Today_42de351fa2214787b06d3c891a2dd8af" xml:space="preserve">
+    <value>Получены сегодня</value>
+  </data>
+  <data name="FilterPanel_Unread_47d4ef95e4c54286a20d8b22f82ee7c1" xml:space="preserve">
+    <value>Не прочитаны</value>
+  </data>
+  <data name="FilterPanel_All_2dfbcad4e36f4505b2ef2f9699acbe19" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="sf_07be1690_d2ae_40c4_8ec5_4fbcf1609ff8" xml:space="preserve">
+    <value>Отладка - Исходящие по планам и проектам</value>
+  </data>
+</root>

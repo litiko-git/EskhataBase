@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path opacity="0.1" d="M2 6V26H29V10L25 6H2Z" fill="white"/>
+<path d="M24 6L29 11V26H2V6H24ZM24.5 4H1C0.734784 4 0.48043 4.10536 0.292893 4.29289C0.105357 4.48043 0 4.73478 0 5L0 27C0 27.2652 0.105357 27.5196 0.292893 27.7071C0.48043 27.8946 0.734784 28 1 28H30C30.2652 28 30.5196 27.8946 30.7071 27.7071C30.8946 27.5196 31 27.2652 31 27V10.5L24.5 4Z" fill="#9DA2A5"/>
+<path d="M29 10H25V6L29 10ZM23 4V11C23 11.2652 23.1054 11.5196 23.2929 11.7071C23.4804 11.8946 23.7348 12 24 12H31L23 4Z" fill="#9DA2A5"/>
+<path d="M17 9H10V13H17V9Z" fill="#407FB9"/>
+<path d="M23 14H10V18H23V14Z" fill="#D65633"/>
+<path d="M28 19H12V23H28V19Z" fill="#75AD15"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14 26L14 6H16V26H14Z" fill="#FFB800"/>
+<rect x="15" y="7" width="5" height="3" fill="#FFB800"/>
+<rect x="8" y="6" width="1" height="20" fill="#ADB1B2"/>
+<rect x="3" y="8" width="4" height="2" fill="#ADB1B2"/>
+<rect x="3" y="11" width="4" height="2" fill="#ADB1B2"/>
+<rect x="3" y="14" width="4" height="2" fill="#ADB1B2"/>
+<rect x="3" y="17" width="4" height="2" fill="#ADB1B2"/>
+<rect x="3" y="20" width="4" height="2" fill="#ADB1B2"/>
+<rect x="3" y="23" width="4" height="2" fill="#ADB1B2"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IncorrectBaselineWork" xml:space="preserve">
+    <value>Трудоемкость может принимать только неотрицательное значение.</value>
+  </data>
+  <data name="DisableProperty" xml:space="preserve">
+    <value>По проекту уже созданы этапы, изменение значения поля запрещено.</value>
+  </data>
+  <data name="ProjectsWithActivitiesNotFound" xml:space="preserve">
+    <value>Нет проектов с этапами для копирования.</value>
+  </data>
+  <data name="ErrorFindSite" xml:space="preserve">
+    <value>Не найден адрес сервиса диаграммы Ганта.</value>
+  </data>
+  <data name="NotFillStartDate" xml:space="preserve">
+    <value>Заполните поле {0}</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Произошла ошибка. Обратитесь к администратору системы.</value>
+  </data>
+  <data name="TitleProjectPlan" xml:space="preserve">
+    <value>План проекта "{0}"</value>
+  </data>
+  <data name="NotFoundProjectPlan" xml:space="preserve">
+    <value>Не найдено связанных с этим проектом планов. Создать новый?</value>
+  </data>
+  <data name="CloseProjectErrorT" xml:space="preserve">
+    <value>Невозможно изменить состояние проекта. Карточка плана проекта заблокирована пользователем {0}.</value>
+  </data>
+  <data name="ReopenProjectError" xml:space="preserve">
+    <value>Невозможно переоткрыть проект. Карточка плана проекта заблокирована пользователем {0}.</value>
+  </data>
+  <data name="CannotPerformSavePlan" xml:space="preserve">
+    <value>Нет прав на папку проекта. Сохранены изменения только в плане проекта.</value>
+  </data>
+  <data name="CloseProjectDialogMessage" xml:space="preserve">
+    <value>Закрыть проект и перенести в архив?</value>
+  </data>
+  <data name="CloseProjectDialogDescription" xml:space="preserve">
+    <value>Проект, а также его подпроекты будут закрыты. Папка проекта будет перенесена в папку "Архив проектов".</value>
+  </data>
+  <data name="LeadingProjectCyclicReference" xml:space="preserve">
+    <value>Выбран дочерний портфель, программа или проект по отношению к текущему проекту. Укажите другое значение.</value>
+  </data>
+  <data name="ReopenProjectDialogMessage" xml:space="preserve">
+    <value>Переоткрыть проект и извлечь из архива?</value>
+  </data>
+  <data name="ReopenProjectDialogDescription" xml:space="preserve">
+    <value>Проект будет открыт. При этом его подпроекты не будут открыты. Папка проекта будет перенесена в папку "Проекты".</value>
+  </data>
+  <data name="ProjectPlanCreateErrorMessage" xml:space="preserve">
+    <value>Чтобы создать план, необходимы права на папку проекта типа "Изменение содержимого" и выше. Запросите права у руководителя или администратора проекта.</value>
+  </data>
+  <data name="ProjectPlanChangeErrorMessage" xml:space="preserve">
+    <value>Чтобы выбрать другой план, необходимы права на папку проекта типа "Изменение содержимого" и выше. Запросите права у руководителя или администратора проекта.</value>
+  </data>
+  <data name="IncorrectPlanDates" xml:space="preserve">
+    <value>Плановая дата окончания должна быть позже плановой даты начала.</value>
+  </data>
+  <data name="IncorrectActDates" xml:space="preserve">
+    <value>Фактическая дата окончания должна быть позже фактической даты начала.</value>
+  </data>
+  <data name="ClassifiersOrMembersAlreadyConfigured" xml:space="preserve">
+    <value>Структура папок или роли участников проекта уже настроены. Соответствующие настройки вида проекта не будут применены.</value>
+  </data>
+  <data name="ProjectKindCastError" xml:space="preserve">
+    <value>Не удалось преобразовать вид документа {0} к DirRX.ProjectPlanning.ProjectKind.</value>
+  </data>
+  <data name="ProjectPlanNotExists" xml:space="preserve">
+    <value>Перед формированием отчета создайте план проекта.</value>
+  </data>
+</root>

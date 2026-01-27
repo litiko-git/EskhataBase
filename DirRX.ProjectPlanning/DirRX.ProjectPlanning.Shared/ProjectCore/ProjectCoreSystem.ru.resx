@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_ProjectKind" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="Property_Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Property_Manager" xml:space="preserve">
+    <value>Руководитель</value>
+  </data>
+  <data name="Property_Administrator" xml:space="preserve">
+    <value>Администратор</value>
+  </data>
+  <data name="Property_LeadingProject" xml:space="preserve">
+    <value>Входит в</value>
+  </data>
+  <data name="Property_Priority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Enum_Priority_Low" xml:space="preserve">
+    <value>Низкий</value>
+  </data>
+  <data name="Enum_Priority_Medium" xml:space="preserve">
+    <value>Средний</value>
+  </data>
+  <data name="Enum_Priority_High" xml:space="preserve">
+    <value>Высокий</value>
+  </data>
+  <data name="Property_StatusIssues" xml:space="preserve">
+    <value>Статус проблем</value>
+  </data>
+  <data name="Enum_StatusIssues_NoIssues" xml:space="preserve">
+    <value>Нет проблем</value>
+  </data>
+  <data name="Enum_StatusIssues_NotSpecified" xml:space="preserve">
+    <value>Не указан</value>
+  </data>
+  <data name="ControlGroup_ab0d039d1cf949aea7fa6756f64635c3" xml:space="preserve">
+    <value>Сроки</value>
+  </data>
+  <data name="ControlGroup_c45f3bb48e80474a97be56d5b5cda28c" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="ControlGroup_f73c485555ef452a8456ec09adc01721" xml:space="preserve">
+    <value>Заказчики</value>
+  </data>
+  <data name="Enum_StatusIssues_UnderControl" xml:space="preserve">
+    <value>Под контролем</value>
+  </data>
+  <data name="Enum_StatusIssues_NeedAssistance" xml:space="preserve">
+    <value>Требуется помощь</value>
+  </data>
+  <data name="Form_821eca5695474b18832ace8f6b54374d" xml:space="preserve">
+    <value>Структура</value>
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Открыть карточку портфеля, программы или проекта</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Открыть карточку портфеля, программы или проекта.</value>
+  </data>
+  <data name="FilterPanel_LeadingProject_a3b992f3988c4dffb8f0de16116b918d" xml:space="preserve">
+    <value>Входит в</value>
+  </data>
+  <data name="FilterPanel_StatusIssues_628463be93bb43f9a3a2b9e52a71e472" xml:space="preserve">
+    <value>Статус проблем</value>
+  </data>
+  <data name="FilterPanel_NeedAssistance_68b181bc877746f7ad26ef58ce428431" xml:space="preserve">
+    <value>Требуется помощь</value>
+  </data>
+  <data name="FilterPanel_UnderControl_f0e7902581c84c3c92d39b32c4d34d7a" xml:space="preserve">
+    <value>Под контролем</value>
+  </data>
+  <data name="FilterPanel_Any_676c3789c3b9476b9a5a154912a78c3d" xml:space="preserve">
+    <value>Любой</value>
+  </data>
+  <data name="FilterPanel_ProjectManager_e9b5b1fbeeb54019838164718971afe1" xml:space="preserve">
+    <value>Руководитель</value>
+  </data>
+  <data name="FilterPanel_ManagementTeam_4ef2130885b441988d45f0dd02b85092" xml:space="preserve">
+    <value>В команде управления</value>
+  </data>
+  <data name="FilterPanel_Me_96747fdd831a45a187b524e497e39613" xml:space="preserve">
+    <value>Я</value>
+  </data>
+  <data name="FilterPanel_MySubordinates_536b42bde3954625a8ad2fd5dc17b4b4" xml:space="preserve">
+    <value>Мои подчиненные</value>
+  </data>
+  <data name="FilterPanel_AnyRecipient_1a743ccf4aa949ed87efd2ea456684f5" xml:space="preserve">
+    <value>Любой</value>
+  </data>
+  <data name="FilterPanel_Employee_d184cd214b3640d48b8f67941e9011cd" xml:space="preserve">
+    <value>Сотрудник</value>
+  </data>
+  <data name="FilterPanel_Type_b73c8e002933450bb6d65e20f904fb6a" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="FilterPanel_Project_a4f0571591834158862ff953f1cde9fc" xml:space="preserve">
+    <value>Проект</value>
+  </data>
+  <data name="FilterPanel_Program_0301effbdc0642ecb15b795c5e959c30" xml:space="preserve">
+    <value>Программа</value>
+  </data>
+  <data name="FilterPanel_Portfolio_7d54745ec86a4820a57dbe1e909b3c83" xml:space="preserve">
+    <value>Портфель</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>Руководитель: [Manager]</value>
+  </data>
+  <data name="Property_GatesDirRX" xml:space="preserve">
+    <value>Контрольные точки</value>
+  </data>
+  <data name="Form_3e92c5067ef9431482a12dcae217124a" xml:space="preserve">
+    <value>Контрольные точки</value>
+  </data>
+  <data name="Action_CreateGateDirRX" xml:space="preserve">
+    <value>Контрольную точку</value>
+  </data>
+  <data name="Action_CreateGateDirRXDescription" xml:space="preserve">
+    <value>Создать контрольную точку</value>
+  </data>
+  <data name="Action_CreateGateDirRXHint" xml:space="preserve">
+    <value>Создать контрольную точку</value>
+  </data>
+  <data name="Ribbon_Create_0f742a5eb2ca42998e6ee4d8006f9af5" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysis" xml:space="preserve">
+    <value>Анализ загрузки</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysisDescription" xml:space="preserve">
+    <value>Сводный отчет по загрузке сотрудников на проектах.</value>
+  </data>
+  <data name="Action_ShowWorkloadAnalysisHint" xml:space="preserve">
+    <value>Анализ загрузки</value>
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRX" xml:space="preserve">
+    <value>Портфель</value>
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRXDescription" xml:space="preserve">
+    <value>Создать дочерний портфель</value>
+  </data>
+  <data name="Action_CreateSubProjectAsPortfolioDirRXHint" xml:space="preserve">
+    <value>Создать дочерний портфель</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRX" xml:space="preserve">
+    <value>Программу</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRXDescription" xml:space="preserve">
+    <value>Создать дочернюю программу</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProgramDirRXHint" xml:space="preserve">
+    <value>Создать дочернюю программу</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRX" xml:space="preserve">
+    <value>Проект</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRXDescription" xml:space="preserve">
+    <value>Создать дочерний проект</value>
+  </data>
+  <data name="Action_CreateSubProjectAsProjectDirRXHint" xml:space="preserve">
+    <value>Создать дочерний проект</value>
+  </data>
+  <data name="Ribbon_CreateSubProject_3b221ec77eec420da7a5e164490c6529" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="Action_ShowRoadmapDirRX" xml:space="preserve">
+    <value>Дорожная карта</value>
+  </data>
+  <data name="Action_ShowRoadmapDirRXDescription" xml:space="preserve">
+    <value>Дорожная карта по контрольным точкам портфелей, программ и проектов.</value>
+  </data>
+  <data name="Action_ShowRoadmapDirRXHint" xml:space="preserve">
+    <value>Дорожная карта</value>
+  </data>
+  <data name="Ribbon_ReportsActions_7ba146f934224c44b3eca8f677cd26b1" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="Ribbon_StaticDropDownButtonDirRX_c12029966f0146ca8c3ddf2230df8949" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="Ribbon_ReportsCommands_15e4bf0570e24b55a712256cf321a401" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="Enum_Stage_Planning" xml:space="preserve">
+    <value>Планирование</value>
+  </data>
+  <data name="FilterPanel_Planning_1fb8e4fe29aa4e16b6acd7fc6da9213c" xml:space="preserve">
+    <value>Планирование</value>
+  </data>
+  <data name="Action_RisksDirRXDescription" xml:space="preserve">
+    <value>Открытие реестра с актуальными и предстоящими рисками</value>
+  </data>
+  <data name="Action_RisksDirRXHint" xml:space="preserve">
+    <value>Открытие реестра с актуальными и предстоящими рисками</value>
+  </data>
+  <data name="Action_RisksDirRX" xml:space="preserve">
+    <value>Риски</value>
+  </data>
+  <data name="Ribbon_RisksDirRX_79043ca97f804e8caab5875e77bd4eff" xml:space="preserve">
+    <value>Риски</value>
+  </data>
+</root>
