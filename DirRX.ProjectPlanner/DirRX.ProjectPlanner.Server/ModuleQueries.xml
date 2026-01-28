@@ -1,0 +1,1123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectDocflowParamsValue">
+    <mssql><![CDATA[SELECT Value FROM Sungero_Docflow_Params WHERE ([Key] = '{0}')]]></mssql>
+    <postgres><![CDATA[SELECT Value FROM Sungero_Docflow_Params WHERE (Key = '{0}')]]></postgres>
+  </query>
+  <query key="InsertOrUpdateDocflowParamsValue">
+    <mssql><![CDATA[if not exists(select 1 from [dbo].[Sungero_Docflow_Params] where [Key] = '{0}')
+  insert [Sungero_Docflow_Params] ([Key],Value) values ('{0}', '{1}')
+else UPDATE Sungero_Docflow_Params SET Value = '{1}' WHERE ([Key] = '{0}')]]></mssql>
+    <postgres><![CDATA[do $$
+begin
+  if not exists(select 1 from Sungero_Docflow_Params where Key = '{0}')
+  then
+    insert into Sungero_Docflow_Params (Key, Value) values ('{0}', '{1}');
+  else
+    UPDATE Sungero_Docflow_Params SET Value = '{1}' WHERE (Key = '{0}');
+  end if;
+end$$;]]></postgres>
+  </query>
+  <query key="RestorePlanLinks">
+    <mssql><![CDATA[IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'temp_projectplanner')
+BEGIN
+  EXEC('
+    UPDATE DirRX_Projec1_PrjctActivity
+    SET DirRX_Projec1_PrjctActivity.ProjectPlan = temp_projectplanner.projectplan_name
+    FROM temp_projectplanner, DirRX_Projec1_PrjctActivity
+    WHERE temp_projectplanner.id = DirRX_Projec1_PrjctActivity.id;
+
+    TRUNCATE TABLE temp_projectplanner
+  ');
+END;
+
+IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'temp_projectplanner_projects')
+BEGIN
+  EXEC('
+    UPDATE Sungero_Docflow_Project 
+    SET Sungero_Docflow_Project.ProjectPlanDir_Project_DirRX = temp_projectplanner_projects.projectplan_name
+    FROM temp_projectplanner_projects, Sungero_Docflow_Project
+    WHERE temp_projectplanner_projects.id = Sungero_Docflow_Project.id;
+    
+    TRUNCATE TABLE temp_projectplanner_projects
+  ');
+END;]]></mssql>
+    <postgres><![CDATA[DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'temp_projectplanner')
+  THEN
+    BEGIN
+      UPDATE DirRX_Projec1_PrjctActivity
+      SET ProjectPlan = temp_projectplanner.projectplan_name
+      FROM temp_projectplanner
+      WHERE temp_projectplanner.id = DirRX_Projec1_PrjctActivity.id;
+
+      TRUNCATE TABLE temp_projectplanner;
+    END;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'temp_projectplanner_projects')
+  THEN
+    BEGIN
+      UPDATE Sungero_Docflow_Project
+      SET ProjectPlanDir_Project_DirRX = temp_projectplanner_projects.projectplan_name
+      FROM temp_projectplanner_projects
+      WHERE temp_projectplanner_projects.id = Sungero_Docflow_Project.id;
+
+      TRUNCATE TABLE temp_projectplanner_projects;
+    END;
+  END IF;
+END $$]]></postgres>
+  </query>
+  <query key="GetPlanOldTasks">
+    <default><![CDATA[select DISTINCT MainTask from Sungero_WF_Attachment 
+ where AttachmentTypeGuid = '647a920e-ebf5-47b3-8aa6-bd9f2831515c' and AttachmentId = {0}]]></default>
+  </query>
+  <query key="CreateResourceLinksIfNotExist">
+    <mssql><![CDATA[if not exists (select * from sysobjects where name='ResourceLinks')
+    CREATE TABLE ResourceLinks (
+   project_activity_id bigint NOT NULL,
+   resource_id bigint NOT NULL,
+   average_busy real NOT NULL
+);
+]]></mssql>
+    <postgres><![CDATA[CREATE TABLE IF NOT EXISTS ResourceLinks (
+   project_activity_id bigint NOT NULL,
+   resource_id bigint NOT NULL,
+   average_busy real NOT NULL
+);]]></postgres>
+  </query>
+  <query key="CheckResourceLinksTable">
+    <mssql><![CDATA[select COUNT(*) FROM sysobjects WHERE name = 'ResourceLinks']]></mssql>
+    <postgres><![CDATA[select COUNT(*) from information_schema.tables where table_name = 'ResourceLinks']]></postgres>
+  </query>
+  <query key="GetCapacity">
+    <mssql><![CDATA[WITH DateRange(DateData) AS 
+(
+	SELECT CAST(@startDate AS DATE)
+	UNION ALL
+	SELECT DATEADD(d,1,DateData)
+	FROM DateRange 
+	WHERE DateData < CAST(@endDate AS DATE)
+),
+AllResourcesData AS
+(
+	SELECT *
+	FROM resourcelinks resourceLink  
+	INNER JOIN dirrx_projec1_prjctactivity projectActivity
+		ON projectActivity.id = resourceLink.project_activity_id
+	WHERE (enddate >= @startDate OR startdate <= DATEADD(d,-1,@endDate))
+		AND resourceLink.resource_id IN (@resource_ids)
+		AND average_busy <> 0 
+		AND projectActivity.projectplan <> @projectplan_id
+),
+AllPlanIds AS
+(
+	SELECT DISTINCT ProjectPlan
+	FROM AllResourcesData
+),
+AllSigns AS
+(
+	SELECT vs.EntityId, sp.ChildEntityId
+	FROM Sungero_Core_Sign vs
+		INNER JOIN AllPlanIds pids on vs.EntityId = vs.EntityId
+		INNER JOIN Sungero_Core_SignedProperty sp on vs.Id = sp.SignId
+	WHERE vs.SignatureType = 0
+),
+AllVersionInfo AS
+(
+	SELECT DISTINCT
+		ProjectPlanVersion.EDoc AS ProjectPlanId,
+		projectPlanVersion.Number AS VersionNumber,
+		case when signs.EntityId is null then 0 else 1 end as IsSigned
+	FROM Sungero_Content_EDocVersion projectPlanVersion
+		INNER JOIN AllPlanIds pids
+			ON pids.ProjectPlan = ProjectPlanVersion.EDoc
+		LEFT JOIN AllSigns signs
+			ON signs.EntityId = ProjectPlanVersion.EDoc and ProjectPlanVersion.Id = signs.ChildEntityId
+),
+SignedVersions AS
+(
+	SELECT
+		ProjectPlanId,
+		MAX(VersionNumber) as VersionNumber
+	FROM AllVersionInfo
+	WHERE IsSigned = 1
+	GROUP BY ProjectPlanId
+),
+NotSignedVersions AS
+(
+	SELECT
+		ProjectPlanId,
+		MAX(VersionNumber) as VersionNumber
+	FROM AllVersionInfo
+	WHERE IsSigned = 0 AND ProjectPlanId not in (select ProjectPlanId from SignedVersions)
+	GROUP BY ProjectPlanId
+),
+ActualProjectPlanVersionNumbers AS
+(
+	SELECT ProjectPlanId, VersionNumber AS ActualVersionNumber FROM SignedVersions
+	UNION
+	SELECT * FROM NotSignedVersions
+)
+SELECT resourceLink.resource_id,  
+	SUM(resourceLink.average_busy),
+	d.DateData
+ FROM AllResourcesData resourceLink  
+INNER JOIN ActualProjectPlanVersionNumbers actualVersionsNumber
+	ON ProjectPlan = actualVersionsNumber.ProjectPlanId
+		AND NumberVersion = actualVersionsNumber.ActualVersionNumber
+INNER JOIN DateRange d
+	ON StartDate <= d.DateData AND DATEADD(d,-1,EndDate) >= d.DateData
+
+ GROUP BY d.DateData, resourceLink.resource_id
+ ORDER BY resourceLink.resource_id
+ OPTION (maxrecursion 32000)]]></mssql>
+    <postgres><![CDATA[WITH RECURSIVE DateRange(DateData) AS 
+(
+	SELECT CAST(@startDate AS DATE)
+	UNION ALL
+	SELECT CAST(DateData + INTERVAL '1 day' as Date)
+	FROM DateRange 
+	WHERE DateData < CAST(@endDate AS DATE)
+),
+AllResourcesData AS
+(
+	SELECT *
+	FROM resourcelinks resourceLink  
+	INNER JOIN dirrx_projec1_prjctactivity projectActivity
+		ON projectActivity.id = resourceLink.project_activity_id
+	WHERE (enddate >= @startDate OR startdate <= CAST(@endDate - INTERVAL '1 day' as Date))
+		AND resourceLink.resource_id IN (@resource_ids)
+		AND average_busy <> 0 
+		AND projectActivity.projectplan <> @projectplan_id
+),
+AllPlanIds AS
+(
+	SELECT DISTINCT ProjectPlan
+	FROM AllResourcesData
+),
+AllSigns AS
+(
+	SELECT vs.EntityId, sp.ChildEntityId
+	FROM Sungero_Core_Sign vs
+		INNER JOIN AllPlanIds pids on vs.EntityId = vs.EntityId
+		INNER JOIN Sungero_Core_SignedProperty sp on vs.Id = sp.SignId
+	WHERE vs.SignatureType = 0
+),
+AllVersionInfo AS
+(
+	SELECT DISTINCT
+		ProjectPlanVersion.EDoc AS ProjectPlanId,
+		projectPlanVersion.Number AS VersionNumber,
+		case when signs.EntityId is null then 0 else 1 end as IsSigned
+	FROM Sungero_Content_EDocVersion projectPlanVersion
+		INNER JOIN AllPlanIds pids
+			ON pids.ProjectPlan = ProjectPlanVersion.EDoc
+		LEFT JOIN AllSigns signs
+			ON signs.EntityId = ProjectPlanVersion.EDoc and ProjectPlanVersion.Id = signs.ChildEntityId
+),
+SignedVersions AS
+(
+	SELECT
+		ProjectPlanId,
+		MAX(VersionNumber) as VersionNumber
+	FROM AllVersionInfo
+	WHERE IsSigned = 1
+	GROUP BY ProjectPlanId
+),
+NotSignedVersions AS
+(
+	SELECT
+		ProjectPlanId,
+		MAX(VersionNumber) as VersionNumber
+	FROM AllVersionInfo
+	WHERE IsSigned = 0 AND ProjectPlanId not in (select ProjectPlanId from SignedVersions)
+	GROUP BY ProjectPlanId
+),
+ActualProjectPlanVersionNumbers AS
+(
+	SELECT ProjectPlanId, VersionNumber AS ActualVersionNumber FROM SignedVersions
+	UNION
+	SELECT * FROM NotSignedVersions
+)
+SELECT resourceLink.resource_id,  
+	SUM(resourceLink.average_busy),
+	d.DateData
+ FROM AllResourcesData resourceLink  
+INNER JOIN ActualProjectPlanVersionNumbers actualVersionsNumber
+	ON ProjectPlan = actualVersionsNumber.ProjectPlanId
+		AND NumberVersion = actualVersionsNumber.ActualVersionNumber
+INNER JOIN DateRange d
+	ON StartDate <= d.DateData AND CAST(EndDate - INTERVAL '1 day' as Date) >= d.DateData
+
+ GROUP BY d.DateData, resourceLink.resource_id
+ ORDER BY resourceLink.resource_id]]></postgres>
+  </query>
+  <query key="GetResourceAverageBusy">
+    <default><![CDATA[select rl.average_busy, pa.StartDate, pa.EndDate, rl.resource_id
+from ResourceLinks rl
+join DirRX_Projec1_PrjctActivity pa on pa.id = rl.project_activity_id 
+where NOT(pa.ProjectPlan = @projectPlanId AND pa.NumberVersion = @VersionNum) AND (pa.EndDate >= @StartDate AND @EndDate >= pa.StartDate)]]></default>
+  </query>
+  <query key="GetActualProjectPlanVersionNumber">
+    <default><![CDATA[WITH AllSigns AS
+(
+	SELECT vs.EntityId
+			,sp.ChildEntityId
+	FROM Sungero_Core_Sign vs
+		INNER JOIN Sungero_Core_SignedProperty sp 
+			ON vs.Id = sp.SignId
+	WHERE vs.SignatureType = 0
+		and EntityId = @projectPlanId
+),
+AllVersionInfo AS
+(
+SELECT DISTINCT
+		ProjectPlanVersion.EDoc AS ProjectPlanId
+		,projectPlanVersion.Number AS VersionNumber
+		,case when signs.EntityId is null then 0 else 1 end as IsSigned
+	FROM Sungero_Content_EDocVersion projectPlanVersion
+		LEFT JOIN AllSigns signs
+			ON signs.EntityId = ProjectPlanVersion.EDoc
+			and ProjectPlanVersion.Id = signs.ChildEntityId
+	WHERE ProjectPlanVersion.EDoc = @projectPlanId
+),
+SignedVersions AS
+(
+	SELECT ProjectPlanId
+			,MAX(VersionNumber) AS VersionNumber
+	FROM AllVersionInfo
+	WHERE IsSigned = 1
+	GROUP BY ProjectPlanId
+),
+NotSignedVersions AS
+(
+	SELECT MAX(VersionNumber) AS VersionNumber
+	FROM AllVersionInfo
+	WHERE IsSigned = 0
+		AND ProjectPlanId NOT IN (SELECT ProjectPlanId FROM SignedVersions)
+	GROUP BY ProjectPlanId
+),
+ActualProjectPlanVersionNumbers AS
+(
+	SELECT VersionNumber AS ActualVersionNumber
+	FROM SignedVersions
+	UNION
+	SELECT *
+	FROM NotSignedVersions
+)
+SELECT ActualVersionNumber
+FROM ActualProjectPlanVersionNumbers]]></default>
+  </query>
+  <query key="GetOlapPlanReportData">
+    <mssql><![CDATA[WITH project_ids(id) AS (SELECT @project_id as Id
+                        UNION All
+                        SELECT p.Id
+                        FROM Sungero_Docflow_Project p
+                                 INNER JOIN project_ids pi ON p.LeadingProject_Project_Sungero = pi.id),
+    resource_data as (select resource_id,
+                             r.employee_projec1_dirrx as recipient_id,
+                             average_busy,
+                             pa.id as activity_id,
+                             case when projectplan in (@allPlans) then pa.name else null end as activity_name,
+                             projectplan,
+                             startdate,
+                             DATEADD(d,-1,enddate) as enddate,
+                             duration,
+                             pr.id as project_id,
+                             rm.name as manager,
+                             numberVersion
+                      from resourcelinks rl
+                               inner join dirrx_projec1_prjctactivity pa on rl.project_activity_id = pa.id
+                               inner join Sungero_Docflow_Project pr on pr.projectplandir_project_dirrx = pa.projectplan
+                               inner join Sungero_Core_Recipient r on r.id  = rl.resource_id
+                               left join Sungero_Core_Recipient rm on rm.id  = pr.manager_project_sungero
+                      where pr.id = ANY (select * from project_ids)),
+    all_plan_ids as
+   (
+  	 select distinct projectplan
+  	 from resource_data
+   ),
+   all_signs as
+   (
+  	 select vs.EntityId, sp.ChildEntityId
+  	 from Sungero_Core_Sign vs
+  		 inner join all_plan_ids pids on vs.EntityId = vs.EntityId
+  		 inner join Sungero_Core_SignedProperty sp on vs.Id = sp.SignId
+  	 where vs.SignatureType = 0
+   ),
+   all_version_info as
+   (
+  	 select distinct
+  		 ProjectPlanVersion.EDoc AS ProjectPlanId,
+  		 projectPlanVersion.Number AS VersionNumber,
+  		 case when signs.EntityId is null then 0 else 1 end as IsSigned
+  	 from Sungero_Content_EDocVersion projectPlanVersion
+  		 inner join all_plan_ids pids
+  			 on pids.ProjectPlan = ProjectPlanVersion.EDoc
+  		 left join all_signs signs
+  			 on signs.EntityId = ProjectPlanVersion.EDoc and ProjectPlanVersion.Id = signs.ChildEntityId
+   ),
+   signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 1
+  	 group by ProjectPlanId
+   ),
+   not_signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 0 and ProjectPlanId not in (select ProjectPlanId from signed_versions)
+  	 group by ProjectPlanId
+   ),
+   actual_pp_version_numbers as
+   (
+  	 select ProjectPlanId, VersionNumber as ActualVersionNumber from signed_versions
+  	 union
+  	 select * from not_signed_versions
+   ),
+    data_with_access as (select *
+                         from resource_data
+                         where project_id in (@all_projects_with_access)),
+    data_without_access as (select resource_id,
+                            recipient_id,
+                            average_busy,
+                            activity_id,
+                            null as activity_name,
+                            projectplan,
+                            startdate,
+                            enddate,
+                            duration,
+                            -1 as project_id,
+                            null as manager,
+                            numberVersion
+                     from resource_data
+                     where project_id not in (@all_projects_with_access)),
+    secured_data as (
+        select *
+        from data_with_access
+        union all 
+        select *
+        from data_without_access
+    ),
+	    secured_data_actual_version as (
+      select * 
+      from secured_data
+      inner join  actual_pp_version_numbers actualVersionsNumber
+	     on ProjectPlan = actualVersionsNumber.ProjectPlanId
+		    and NumberVersion = actualVersionsNumber.ActualVersionNumber   
+    ),
+  data AS (
+  select resource_id, recipient_id, average_busy, activity_id, activity_name, projectplan, project_id, manager, startdate AS date, enddate
+  from secured_data_actual_version
+  union ALL
+  select resource_id, recipient_id, average_busy, activity_id, activity_name, projectplan, project_id, manager, DATEADD(d, 1, date) AS date, enddate
+  from data
+  where DATEADD(d, 1, date) <= enddate
+)
+select resource_id, recipient_id, average_busy as busy, activity_id, activity_name, projectplan, project_id, manager, date
+from data
+where date >= @startDatePeriod and date <= @endDatePeriod and average_busy <> 0
+order by resource_id, date
+option (maxrecursion 32000)]]></mssql>
+    <postgres><![CDATA[WITH
+    recursive
+    project_ids(id) AS (SELECT @project_id as Id
+                        UNION All
+                        SELECT p.Id
+                        FROM Sungero_Docflow_Project p
+                                 INNER JOIN project_ids pi ON p.LeadingProject_Project_Sungero = pi.id),
+    resource_data as (select resource_id,
+                             r.employee_projec1_dirrx as recipient_id,
+                             average_busy,
+                             pa.id as activity_id,
+                             case when projectplan in (@allPlans) then pa.name else null end as activity_name,
+                             projectplan,
+                             startdate,
+                             enddate - '1 day'::interval as enddate,
+                             duration,
+                             pr.id as project_id,
+                             rm.name as manager,
+                             numberVersion
+                      from resourcelinks rl
+                               inner join dirrx_projec1_prjctactivity pa on rl.project_activity_id = pa.id
+                               inner join Sungero_Docflow_Project pr on pr.projectplandir_project_dirrx = pa.projectplan
+                               inner join Sungero_Core_Recipient r on r.id  = rl.resource_id
+                               left join Sungero_Core_Recipient rm on rm.id  = pr.manager_project_sungero
+                      where pr.id = ANY (select * from project_ids)),
+   all_plan_ids as
+   (
+  	 select distinct projectplan
+  	 from resource_data
+   ),
+   all_signs as
+   (
+  	 select vs.EntityId, sp.ChildEntityId
+  	 from Sungero_Core_Sign vs
+  		 inner join all_plan_ids pids on vs.EntityId = vs.EntityId
+  		 inner join Sungero_Core_SignedProperty sp on vs.Id = sp.SignId
+  	 where vs.SignatureType = 0
+   ),
+   all_version_info as
+   (
+  	 select distinct
+  		 ProjectPlanVersion.EDoc AS ProjectPlanId,
+  		 projectPlanVersion.Number AS VersionNumber,
+  		 case when signs.EntityId is null then 0 else 1 end as IsSigned
+  	 from Sungero_Content_EDocVersion projectPlanVersion
+  		 inner join all_plan_ids pids
+  			 on pids.ProjectPlan = ProjectPlanVersion.EDoc
+  		 left join all_signs signs
+  			 on signs.EntityId = ProjectPlanVersion.EDoc and ProjectPlanVersion.Id = signs.ChildEntityId
+   ),
+   signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 1
+  	 group by ProjectPlanId
+   ),
+   not_signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 0 and ProjectPlanId not in (select ProjectPlanId from signed_versions)
+  	 group by ProjectPlanId
+   ),
+   actual_pp_version_numbers as
+   (
+  	 select ProjectPlanId, VersionNumber as ActualVersionNumber from signed_versions
+  	 union
+  	 select * from not_signed_versions
+   ),
+    data_with_access as (select *
+                         from resource_data
+                         where project_id IN (@all_projects_with_access)),
+    data_without_access as (select resource_id,
+                            recipient_id,
+                            average_busy,
+                            activity_id,
+                            null as activity_name,
+                            projectplan,
+                            startdate,
+                            enddate,
+                            duration,
+                            -1 as project_id,
+                            null as manager,
+                            numberVersion
+                     from resource_data
+                     where project_id NOT IN (@all_projects_with_access)),
+    secured_data as (
+        select *
+        from data_with_access
+        union all 
+        select *
+        from data_without_access
+    ),
+    secured_data_actual_version as (
+        select * 
+        from secured_data
+        inner join  actual_pp_version_numbers actualVersionsNumber
+  	     on ProjectPlan = actualVersionsNumber.ProjectPlanId
+  		    and NumberVersion = actualVersionsNumber.ActualVersionNumber   
+    ),
+    by_date as (
+        select resource_id,
+               recipient_id,
+               average_busy as busy,
+               activity_id,
+               activity_name,
+               projectplan,
+               project_id,
+               manager,
+               generate_series(startdate::date, enddate::date, '1 day'::interval)::date as date
+        from secured_data_actual_version
+    )
+select *
+from by_date
+where date >= @startDatePeriod and date <= @endDatePeriod and busy <> 0]]></postgres>
+  </query>
+  <query key="GetOlapPlanReportDataOrg">
+    <mssql><![CDATA[WITH employees(id) as (
+  select emp.id
+  from Sungero_Core_Recipient emp
+  where emp.Department_Company_Sungero in (@allSubDepartmentIds)
+),
+resource_data as (select resource_id,
+                             r.employee_projec1_dirrx as recipient_id,
+                             average_busy,
+                             pa.id as activity_id,
+                             case when projectplan in (@allPlans) then pa.name else null end as activity_name,
+                             projectplan,
+                             startdate,
+                             DATEADD(d,-1,enddate) as enddate,
+                             duration,
+                             pr.id as project_id,
+                             rm.name as manager,
+                             numberVersion
+                      from resourcelinks rl
+                               inner join dirrx_projec1_prjctactivity pa on rl.project_activity_id = pa.id
+                               left join Sungero_Docflow_Project pr on pr.projectplandir_project_dirrx = pa.projectplan
+                               inner join Sungero_Core_Recipient r on r.id = rl.resource_id
+                               left join Sungero_Core_Recipient rm on rm.id = pr.manager_project_sungero
+                      where r.employee_projec1_dirrx in (select * from employees)),
+    all_plan_ids as
+   (
+  	 select distinct projectplan
+  	 from resource_data
+   ),
+   all_signs as
+   (
+  	 select vs.EntityId, sp.ChildEntityId
+  	 from Sungero_Core_Sign vs
+  		 inner join all_plan_ids pids on vs.EntityId = vs.EntityId
+  		 inner join Sungero_Core_SignedProperty sp on vs.Id = sp.SignId
+  	 where vs.SignatureType = 0
+   ),
+   all_version_info as
+   (
+  	 select distinct
+  		 ProjectPlanVersion.EDoc AS ProjectPlanId,
+  		 projectPlanVersion.Number AS VersionNumber,
+  		 case when signs.EntityId is null then 0 else 1 end as IsSigned
+  	 from Sungero_Content_EDocVersion projectPlanVersion
+  		 inner join all_plan_ids pids
+  			 on pids.ProjectPlan = ProjectPlanVersion.EDoc
+  		 left join all_signs signs
+  			 on signs.EntityId = ProjectPlanVersion.EDoc and ProjectPlanVersion.Id = signs.ChildEntityId
+   ),
+   signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 1
+  	 group by ProjectPlanId
+   ),
+   not_signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 0 and ProjectPlanId not in (select ProjectPlanId from signed_versions)
+  	 group by ProjectPlanId
+   ),
+   actual_pp_version_numbers as
+   (
+  	 select ProjectPlanId, VersionNumber as ActualVersionNumber from signed_versions
+  	 union
+  	 select * from not_signed_versions
+   ),
+    data_with_access as (select *
+                         from resource_data
+                         where project_id in (@all_projects_with_access) or project_id is null),
+    data_without_access as (select resource_id,
+                            recipient_id,
+                            average_busy,
+                            activity_id,
+                            activity_name,
+                            projectplan,
+                            startdate,
+                            enddate,
+                            duration,
+                            -1 as project_id,
+                            null as manager,
+                            numberVersion
+                     from resource_data
+                     where project_id not in (@all_projects_with_access)),
+    secured_data as (
+        select *
+        from data_with_access
+        union all 
+        select *
+        from data_without_access
+    ),
+	    secured_data_actual_version as (
+      select * 
+      from secured_data
+      inner join  actual_pp_version_numbers actualVersionsNumber
+	     on ProjectPlan = actualVersionsNumber.ProjectPlanId
+		    and NumberVersion = actualVersionsNumber.ActualVersionNumber   
+    ),
+  data AS (
+  select resource_id, recipient_id, average_busy, activity_id, activity_name, projectplan, project_id, manager, startdate AS date, enddate
+  from secured_data_actual_version
+  union ALL
+  select resource_id, recipient_id, average_busy, activity_id, activity_name, projectplan, project_id, manager, DATEADD(d, 1, date) AS date, enddate
+  from data
+  where DATEADD(d, 1, date) <= enddate
+)
+select resource_id, recipient_id, average_busy as busy, activity_id, activity_name, projectplan, project_id, manager, date
+from data
+where date >= @startDatePeriod and date <= @endDatePeriod and average_busy <> 0
+order by resource_id, date
+option (maxrecursion 32000)]]></mssql>
+    <postgres><![CDATA[WITH
+    recursive
+    employees(id) as (
+      select emp.id
+      from Sungero_Core_Recipient emp
+      where emp.Department_Company_Sungero in (@allSubDepartmentIds)
+    ),
+    resource_data as (select resource_id,
+                             r.employee_projec1_dirrx as recipient_id,
+                             average_busy,
+                             pa.id as activity_id,
+                             case when projectplan in (@allPlans) then pa.name else null end as activity_name,
+                             projectplan,
+                             startdate,
+                             enddate - '1 day'::interval as enddate,
+                             duration,
+                             pr.id as project_id,
+                             rm.name as manager,
+                             numberVersion
+                      from resourcelinks rl
+                               inner join dirrx_projec1_prjctactivity pa on rl.project_activity_id = pa.id
+                               left join Sungero_Docflow_Project pr on pr.projectplandir_project_dirrx = pa.projectplan
+                               inner join Sungero_Core_Recipient r on r.id  = rl.resource_id
+                               left join Sungero_Core_Recipient rm on rm.id  = pr.manager_project_sungero
+                      where r.employee_projec1_dirrx in (select * from employees)),
+   all_plan_ids as
+   (
+  	 select distinct projectplan
+  	 from resource_data
+   ),
+   all_signs as
+   (
+  	 select vs.EntityId, sp.ChildEntityId
+  	 from Sungero_Core_Sign vs
+  		 inner join all_plan_ids pids on vs.EntityId = vs.EntityId
+  		 inner join Sungero_Core_SignedProperty sp on vs.Id = sp.SignId
+  	 where vs.SignatureType = 0
+   ),
+   all_version_info as
+   (
+  	 select distinct
+  		 ProjectPlanVersion.EDoc AS ProjectPlanId,
+  		 projectPlanVersion.Number AS VersionNumber,
+  		 case when signs.EntityId is null then 0 else 1 end as IsSigned
+  	 from Sungero_Content_EDocVersion projectPlanVersion
+  		 inner join all_plan_ids pids
+  			 on pids.ProjectPlan = ProjectPlanVersion.EDoc
+  		 left join all_signs signs
+  			 on signs.EntityId = ProjectPlanVersion.EDoc and ProjectPlanVersion.Id = signs.ChildEntityId
+   ),
+   signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 1
+  	 group by ProjectPlanId
+   ),
+   not_signed_versions as
+   (
+  	 select
+  		 ProjectPlanId,
+  		 max(VersionNumber) as VersionNumber
+  	 from all_version_info
+  	 where IsSigned = 0 and ProjectPlanId not in (select ProjectPlanId from signed_versions)
+  	 group by ProjectPlanId
+   ),
+   actual_pp_version_numbers as
+   (
+  	 select ProjectPlanId, VersionNumber as ActualVersionNumber from signed_versions
+  	 union
+  	 select * from not_signed_versions
+   ),
+    data_with_access as (select *
+                         from resource_data
+                         where project_id IN (@all_projects_with_access) or project_id is null),
+    data_without_access as (select resource_id,
+                            recipient_id,
+                            average_busy,
+                            activity_id,
+                            activity_name,
+                            projectplan,
+                            startdate,
+                            enddate,
+                            duration,
+                            -1 as project_id,
+                            null as manager,
+                            numberVersion
+                     from resource_data
+                     where project_id NOT IN (@all_projects_with_access)),
+    secured_data as (
+        select *
+        from data_with_access
+        union all 
+        select *
+        from data_without_access
+    ),
+    secured_data_actual_version as (
+        select * 
+        from secured_data
+        inner join  actual_pp_version_numbers actualVersionsNumber
+  	     on ProjectPlan = actualVersionsNumber.ProjectPlanId
+  		    and NumberVersion = actualVersionsNumber.ActualVersionNumber   
+    ),
+    by_date as (
+        select resource_id,
+               recipient_id,
+               average_busy as busy,
+               activity_id,
+               activity_name,
+               projectplan,
+               project_id,
+               manager,
+               generate_series(startdate::date, enddate::date, '1 day'::interval)::date as date
+        from secured_data_actual_version
+    )
+select *
+from by_date
+where date >= @startDatePeriod and date <= @endDatePeriod and busy <> 0]]></postgres>
+  </query>
+  <query key="GetSubDepartments">
+    <mssql><![CDATA[WITH departments AS (
+  select id
+  from Sungero_Core_recipient
+  where id in (@departmentIds) 
+  union all
+  select d.id
+  from Sungero_Core_recipient d
+  inner join departments dp on d.HeadOffice_Company_Sungero = dp.id
+)
+select distinct *
+from departments;]]></mssql>
+    <postgres><![CDATA[WITH
+recursive
+  departments(id) as (
+    select unnest(ARRAY[@departmentIds]::bigint[]) as id
+    union
+    select d.id
+    from Sungero_Core_Recipient d
+    inner join departments dp on dp.id = d.HeadOffice_Company_Sungero
+  )
+select * 
+from departments]]></postgres>
+  </query>
+  <query key="GetActivitiesWithInheritedResponsibles">
+    <mssql><![CDATA[WITH RecursiveActivityHierarchy AS (
+  SELECT a.Id, 
+         a.Responsible, 
+         a.LeadingActivit,
+         a.RefId
+  FROM DirRX_Projec1_PrjctActivity a
+  WHERE a.RefId IN (@changedActivityRefIds) AND 
+        a.NumberVersion = @numberVersion AND 
+        a.TypeActivity = 'Section'
+  UNION ALL
+  SELECT a.Id, 
+         COALESCE(a.Responsible, h.Responsible) AS Responsible,
+         a.LeadingActivit,
+         a.RefId
+  FROM DirRX_Projec1_PrjctActivity a
+  INNER JOIN
+        RecursiveActivityHierarchy h ON a.LeadingActivit = h.Id
+  WHERE a.Responsible IS NULL
+)
+SELECT DISTINCT a.RefId
+FROM RecursiveActivityHierarchy a;]]></mssql>
+    <postgres><![CDATA[WITH recursive RecursiveActivityHierarchy AS (
+  SELECT a.Id, 
+         a.Responsible, 
+         a.LeadingActivit,
+         a.RefId
+  FROM DirRX_Projec1_PrjctActivity a
+  WHERE a.RefId IN (@changedActivityRefIds) AND 
+        a.NumberVersion = @numberVersion AND 
+        a.TypeActivity = 'Section'
+  UNION ALL
+  SELECT a.Id, 
+         COALESCE(a.Responsible, h.Responsible) AS Responsible,
+         a.LeadingActivit,
+         a.RefId
+  FROM DirRX_Projec1_PrjctActivity a
+  INNER JOIN
+        RecursiveActivityHierarchy h ON a.LeadingActivit = h.Id
+  WHERE a.Responsible IS NULL
+)
+SELECT DISTINCT a.RefId
+FROM RecursiveActivityHierarchy a;]]></postgres>
+  </query>
+  <query key="GetPlanLastVersionsAutoSendingTasks">
+    <mssql><![CDATA[select plans.id, max(versions.number) as number
+from sungero_content_edoc plans
+left join sungero_content_edocversion versions on plans.id = versions.edoc
+where plans.discriminator = 'a319de81-7897-43e0-8f52-3eefbc011f91' and 
+      plans.status1_projec1_dirrx != 'Closed' and 
+      plans.isenableautose_projec1_dirrx = 1 and 
+      hasversions = 1
+group by plans.id;]]></mssql>
+    <postgres><![CDATA[select plans.id, max(versions.number) as number
+from sungero_content_edoc plans
+left join sungero_content_edocversion versions on plans.id = versions.edoc
+where plans.discriminator = 'a319de81-7897-43e0-8f52-3eefbc011f91' and 
+      plans.status1_projec1_dirrx != 'Closed' and 
+      plans.isenableautose_projec1_dirrx = true and 
+      hasversions = true
+group by plans.id;]]></postgres>
+  </query>
+  <query key="GetPlanCalculatedData">
+    <mssql><![CDATA[WITH ShortListSigns AS
+(
+  SELECT * FROM sungero_core_sign WHERE signaturetype = 0 AND entityid IN (@projectPlanIds)
+)
+, AllSigns AS
+(
+  SELECT vs.entityid, sp.childentityid
+  FROM sungero_core_signedproperty sp
+    INNER JOIN ShortListSigns vs ON vs.id = sp.signid
+)
+, ShortListVersions AS
+(
+  SELECT id, edoc, number FROM sungero_content_edocversion WHERE edoc IN (@projectPlanIds)
+)
+, AllVersionInfo AS
+(
+  SELECT DISTINCT edocs.edoc projectplanid, edocs.number versionnumber
+    , CASE WHEN signs.entityid IS NULL THEN 0 ELSE 1 END AS issigned
+  FROM ShortListVersions edocs
+    LEFT JOIN AllSigns signs ON signs.EntityId = edocs.edoc
+      AND edocs.id = signs.childentityid
+)
+, SignedVersions AS
+(
+  SELECT projectplanid, MAX(versionnumber) AS versionnumber
+  FROM AllVersionInfo
+  WHERE issigned = 1
+  GROUP BY projectplanid
+)
+, NotSignedVersions AS
+(
+  SELECT projectplanid, MAX(versionnumber) AS versionnumber
+  FROM AllVersionInfo
+  WHERE issigned = 0
+    AND projectplanid NOT IN (SELECT projectplanid FROM SignedVersions)
+  GROUP BY projectplanid
+)
+, ActualProjectPlanVersionNumbers AS
+(
+  SELECT *
+  FROM SignedVersions
+  UNION
+  SELECT *
+  FROM NotSignedVersions
+)
+, PlannedActivityData AS
+(
+  SELECT a.projectplan plan_id
+    , COALESCE(SUM(a.plannedcosts), 0) plan_cost
+    , COALESCE(SUM(a.baselinework), 0) plan_workload
+    , CONVERT(DATE, (MIN(a.startdate))) plan_start_date
+    , CONVERT(DATE, (MAX(DATEADD(DAY, -1, a.enddate)))) plan_end_date 
+  FROM dirrx_projec1_prjctactivity a
+    JOIN ActualProjectPlanVersionNumbers v ON a.projectplan = v.projectplanid
+  WHERE (a.typeactivity = 'Task' OR a.typeactivity = 'Milestone')
+    AND a.numberversion = v.versionnumber
+    AND a.projectplan IN (@projectPlanIds)
+  GROUP BY a.projectplan
+)
+, RootTaskIds AS
+(
+  SELECT MIN(id) id FROM sungero_wf_task
+  WHERE discriminator = '1dfb1055-aaf3-4722-8b6f-9d85c64b32aa'
+    AND projectplan_projec1_dirrx IN (@projectPlanIds)
+  GROUP BY activityrefid_projec1_dirrx
+)
+, CompletedTasks AS
+(
+  SELECT t.id, t.activityrefid_projec1_dirrx refid, CONVERT(DATE, MAX(h.historydate)) enddate
+  FROM sungero_wf_task t
+    LEFT JOIN sungero_wf_workflowhistory h ON t.id = h.entityid
+  WHERE t.id IN (SELECT id FROM RootTaskIds)
+    AND t.status = 'Completed'
+    AND h.operation = 'CompleteTask'
+  GROUP BY t.id, t.activityrefid_projec1_dirrx
+)
+, StartedTasks as
+(
+  SELECT t.id
+	, t.activityrefid_projec1_dirrx refid
+	, t.started startdate
+	, t.ActualWorkload_Projec1_DirRX actualworkload
+	, t.FactualCosts_Projec1_DirRX factualcosts
+	, t.ExecutionPerce_Projec1_DirRX executionpercent
+  FROM sungero_wf_task t 
+  WHERE t.id IN (SELECT id FROM RootTaskIds)
+    AND t.status NOT IN ('Draft', 'Aborted')
+)
+, FactualActivityData AS
+(
+  SELECT a.projectplan plan_id
+    , SUM(CASE WHEN started.refid IS NOT NULL THEN COALESCE(started.factualcosts, a.factualcosts, 0) ELSE COALESCE(a.factualcosts, 0) END) AS fact_cost
+    , SUM(CASE WHEN started.refid IS NOT NULL THEN COALESCE(started.actualworkload, a.actualworkload, 0) ELSE COALESCE(a.actualworkload, 0) END) AS fact_workload
+    , ROUND(AVG(CASE WHEN started.refid IS NOT NULL THEN COALESCE(started.executionpercent, 0) ELSE COALESCE(a.executionperce, 0) END), 0) AS fact_percent
+    , CONVERT(DATE, COALESCE(MIN(started.startdate), MIN(a.startdate))) AS fact_start_date
+    , CONVERT(DATE,  MAX(COALESCE(completed.enddate, DATEADD(DAY, -1, a.enddate)))) fact_end_date 
+  FROM dirrx_projec1_prjctactivity a
+    JOIN (SELECT ProjectPlanId, MAX(VersionNumber) lastversion FROM AllVersionInfo GROUP BY ProjectPlanId) v ON a.projectplan = v.ProjectPlanId
+    LEFT JOIN StartedTasks started ON a.refid = started.refid
+    LEFT JOIN CompletedTasks completed ON a.refid = completed.refid
+  WHERE (a.typeactivity = 'Task' OR a.typeactivity = 'Milestone')
+    AND a.numberversion = v.lastversion
+    AND a.projectplan IN (@projectPlanIds)
+  GROUP BY a.projectplan
+)
+SELECT p.plan_id, fact_percent,  plan_cost, fact_cost, plan_workload, fact_workload, plan_start_date, fact_start_date, plan_end_date, fact_end_date
+FROM PlannedActivityData p JOIN FactualActivityData f ON p.plan_id = f.plan_id;]]></mssql>
+    <postgres><![CDATA[WITH ShortListSigns AS
+(
+  SELECT * FROM sungero_core_sign WHERE signaturetype = 0 AND entityid IN (@projectPlanIds)
+)
+, AllSigns AS
+(
+  SELECT vs.entityid, sp.childentityid
+  FROM sungero_core_signedproperty sp
+    INNER JOIN ShortListSigns vs ON vs.id = sp.signid
+)
+, ShortListVersions AS
+(
+  SELECT id, edoc, number FROM sungero_content_edocversion WHERE edoc IN (@projectPlanIds)
+)
+, AllVersionInfo AS
+(
+  SELECT DISTINCT edocs.edoc projectplanid, edocs.number versionnumber
+    , CASE WHEN signs.entityid IS NULL THEN 0 ELSE 1 END AS issigned
+  FROM ShortListVersions edocs
+    LEFT JOIN AllSigns signs ON signs.EntityId = edocs.edoc
+      AND edocs.id = signs.childentityid
+)
+, SignedVersions AS
+(
+  SELECT projectplanid, MAX(versionnumber) AS versionnumber
+  FROM AllVersionInfo
+  WHERE issigned = 1
+  GROUP BY projectplanid
+)
+, NotSignedVersions AS
+(
+  SELECT projectplanid, MAX(versionnumber) AS versionnumber
+  FROM AllVersionInfo
+  WHERE issigned = 0
+    AND projectplanid NOT IN (SELECT projectplanid FROM SignedVersions)
+  GROUP BY projectplanid
+)
+, ActualProjectPlanVersionNumbers AS
+(
+  SELECT *
+  FROM SignedVersions
+  UNION
+  SELECT *
+  FROM NotSignedVersions
+)
+, PlannedActivityData AS
+(
+  SELECT a.projectplan plan_id
+    , COALESCE(SUM(a.plannedcosts), 0) plan_cost
+    , COALESCE(SUM(a.baselinework), 0) plan_workload
+    , DATE(MIN(a.startdate)) plan_start_date
+    , DATE(MAX(a.enddate - INTERVAL '1' DAY)) plan_end_date
+  FROM dirrx_projec1_prjctactivity a
+    JOIN ActualProjectPlanVersionNumbers v ON a.projectplan = v.projectplanid
+  WHERE (a.typeactivity = 'Task' OR a.typeactivity = 'Milestone')
+    AND a.numberversion = v.versionnumber
+    AND a.projectplan IN (@projectPlanIds)
+  GROUP BY plan_id
+)
+, RootTaskIds AS
+(
+  SELECT MIN(id) id FROM sungero_wf_task
+  WHERE discriminator = '1dfb1055-aaf3-4722-8b6f-9d85c64b32aa'
+    AND projectplan_projec1_dirrx IN (@projectPlanIds)
+  GROUP BY activityrefid_projec1_dirrx
+)
+, CompletedTasks AS
+(
+  SELECT t.id, t.activityrefid_projec1_dirrx refid, DATE(MAX(h.historydate)) enddate
+  FROM sungero_wf_task t
+    LEFT JOIN sungero_wf_workflowhistory h ON t.id = h.entityid
+  WHERE t.id IN (SELECT id FROM RootTaskIds)
+    AND t.status = 'Completed'
+    AND h.operation = 'CompleteTask'
+  GROUP BY t.id
+)
+, StartedTasks as
+(
+  SELECT t.id
+	, t.activityrefid_projec1_dirrx refid
+	, t.started startdate
+	, t.ActualWorkload_Projec1_DirRX actualworkload
+	, t.FactualCosts_Projec1_DirRX factualcosts
+	, t.ExecutionPerce_Projec1_DirRX executionpercent
+  FROM sungero_wf_task t 
+  WHERE t.id IN (SELECT id FROM RootTaskIds)
+    AND t.status NOT IN ('Draft', 'Aborted')
+)
+, FactualActivityData AS
+(
+  SELECT a.projectplan plan_id
+    , SUM(CASE WHEN started.refid IS NOT NULL THEN COALESCE(started.factualcosts, a.factualcosts, 0) ELSE COALESCE(a.factualcosts, 0) END) AS fact_cost
+    , SUM(CASE WHEN started.refid IS NOT NULL THEN COALESCE(started.actualworkload, a.actualworkload, 0) ELSE COALESCE(a.actualworkload, 0) END) AS fact_workload
+    , ROUND(AVG(CASE WHEN started.refid IS NOT NULL THEN COALESCE(started.executionpercent, 0) ELSE COALESCE(a.executionperce, 0) END)) AS fact_percent
+    , DATE(COALESCE(MIN(started.startdate), MIN(a.startdate))) AS fact_start_date
+    , DATE(MAX(COALESCE(completed.enddate, (a.enddate - INTERVAL '1' DAY)))) fact_end_date
+  FROM dirrx_projec1_prjctactivity a
+    JOIN (SELECT ProjectPlanId, MAX(VersionNumber) lastversion FROM AllVersionInfo GROUP BY ProjectPlanId) v ON a.projectplan = v.ProjectPlanId
+    LEFT JOIN StartedTasks started ON a.refid = started.refid
+    LEFT JOIN CompletedTasks completed ON a.refid = completed.refid
+  WHERE (a.typeactivity = 'Task' OR a.typeactivity = 'Milestone')
+    AND a.numberversion = v.lastversion
+    AND a.projectplan IN (@projectPlanIds)
+  GROUP BY plan_id
+)
+SELECT p.plan_id, fact_percent,  plan_cost, fact_cost, plan_workload, fact_workload, plan_start_date, fact_start_date, plan_end_date, fact_end_date
+FROM PlannedActivityData p JOIN FactualActivityData f ON p.plan_id = f.plan_id;]]></postgres>
+  </query>
+  <query key="CreateModifiedPlanIfNotExists">
+    <mssql><![CDATA[IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DirRX_PP_Modified_Plans')
+    BEGIN;
+        CREATE TABLE DirRX_PP_Modified_Plans (
+            id bigint IDENTITY(1,1) PRIMARY KEY,
+            plan_id bigint NOT NULL
+        )
+    END;]]></mssql>
+    <postgres><![CDATA[CREATE TABLE IF NOT EXISTS DirRX_PP_Modified_Plans (
+   id SERIAL PRIMARY KEY,
+   plan_id bigint NOT NULL
+);]]></postgres>
+  </query>
+  <query key="InsertPlanIdInModifiedPlans">
+    <mssql><![CDATA[IF NOT EXISTS (SELECT 1 FROM DirRX_PP_Modified_Plans WHERE plan_Id = @planId)
+BEGIN
+  INSERT INTO DirRX_PP_Modified_Plans (plan_Id)
+  VALUES (@planId);
+END]]></mssql>
+    <postgres><![CDATA[INSERT INTO DirRX_PP_Modified_Plans (plan_Id)
+SELECT @planId
+WHERE NOT EXISTS (SELECT 1 FROM DirRX_PP_Modified_Plans WHERE plan_Id = @planId);]]></postgres>
+  </query>
+  <query key="GetModifiedPlanProjectIds">
+    <default><![CDATA[SELECT plans.plan_id, projects.Id
+FROM DirRX_PP_Modified_Plans plans
+LEFT JOIN Sungero_Docflow_Project projects ON plans.plan_id = projects.ProjectPlanDir_Project_DirRX]]></default>
+  </query>
+  <query key="DeleteModifiedPlanIds">
+    <default><![CDATA[DELETE FROM DirRX_PP_Modified_Plans 
+WHERE plan_id in (@planIds)]]></default>
+  </query>
+</queries>

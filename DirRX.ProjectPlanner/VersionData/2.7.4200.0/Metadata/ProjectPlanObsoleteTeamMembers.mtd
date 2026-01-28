@@ -1,0 +1,89 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "a20a4daf-da37-459d-baf3-8aa864f38024",
+  "Name": "ProjectPlanObsoleteTeamMembers",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ProjectPlanObs",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "5a6899cc-d7fe-41aa-94bd-0cce7b7246cb",
+      "Name": "ProjectPlanObsolete",
+      "CanBeSearch": false,
+      "Code": "EDoc",
+      "EntityGuid": "b0af2406-a454-48d5-8e94-e9f69012c8a1",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "08cd54a1-57b7-408f-935d-b4f402526343",
+      "Name": "Member",
+      "CanBeSearch": false,
+      "Code": "Member",
+      "EntityGuid": "c612fc41-44a3-428b-a97c-433c333d78e9",
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "5a6899cc-d7fe-41aa-94bd-0cce7b7246cb",
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "3cddbd3a-4f35-4fa0-a3d1-fbc1c2255f2a",
+      "Name": "Group",
+      "CanBeSearch": false,
+      "Code": "Group",
+      "DirectValues": [
+        {
+          "NameGuid": "24270129-91d4-440f-a2e1-379ea7886992",
+          "Name": "Change",
+          "Code": "Change"
+        },
+        {
+          "NameGuid": "10607f8a-3865-4161-9fcb-f11dd07b9a07",
+          "Name": "Read",
+          "Code": "Read"
+        },
+        {
+          "NameGuid": "668bb420-a966-4f0d-ab4a-bafb90a9ac0e",
+          "Name": "Management",
+          "Code": "Management"
+        }
+      ],
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+      "PreviousPropertyGuid": "08cd54a1-57b7-408f-935d-b4f402526343",
+      "Versions": []
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "f6186f2e-ecda-4f7b-878e-602131606b74",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "780dd730-2301-414f-b199-a1cc8e4391b8",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 11
+    }
+  ]
+}

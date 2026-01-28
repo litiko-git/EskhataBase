@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Localization&#13;&#10;Sungero.Declension&#13;&#10;Sungero.Content.Shared&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;Sungero.Workflow.Interfaces&#13;&#10;DirRX.ProjectPlanner.Shared&#13;&#10;DirRX.ProjectPlanner.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using DirRX.ProjectPlanner;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = DirRX.ProjectPlanner.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void IncrementCountTable_AfterData(object sender, EventArgs e)
+    {
+     Report.SetParameterValue(&quot;CountTable&quot;, (int)Report.GetParameterValue(&quot;CountTable&quot;) + 1);
+    }
+
+    private void Page1_StartPage(object sender, EventArgs e)
+    {
+      if((bool)Report.GetParameterValue(&quot;IsIncludeAgile&quot;) != true)
+      {
+        CompletedTicketsPage.Visible = false;
+        CurrentTicketsPage.Visible = false;
+        StubTextPage.Visible = false;
+      }
+      
+      if((bool)Report.GetParameterValue(&quot;HasAgileProject&quot;) != true)
+      {
+        CompletedTicketsPage.Visible = false;
+        CurrentTicketsPage.Visible = false;
+      }
+      else
+      {
+         StubTextPage.Visible = false;
+      }
+    }
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="Milestones" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectMilestones}">
+        <Column Name="Name" DataType="System.String" PropName="Id"/>
+        <Column Name="Date" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="Status" DataType="System.String" PropName="Column"/>
+        <Column Name="Responsible" DataType="System.String" PropName="Column"/>
+        <Column Name="Id" DataType="System.Int64" PropName="Column"/>
+        <Column Name="Wbs" DataType="System.String" PropName="Column"/>
+        <Column Name="NumberVersion" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="OverdueStages" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectOverdueStages}">
+        <Column Name="IdStage" DataType="System.Int64" PropName="Column"/>
+        <Column Name="Wbs" DataType="System.String" PropName="Column"/>
+        <Column Name="NameStage" DataType="System.String" PropName="Column"/>
+        <Column Name="StartDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="EndDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="ExecutionPercent" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Responsible" DataType="System.String" PropName="Column"/>
+        <Column Name="NumberVersion" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="CompletedStages" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectCompletedStages}">
+        <Column Name="NameStage" DataType="System.String" PropName="Column"/>
+        <Column Name="StartDate" DataType="System.DateTime" PropName="Column1"/>
+        <Column Name="EndDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="ExecutionPercent" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Responsible" DataType="System.String" PropName="Column"/>
+        <Column Name="TaskName" DataType="System.String" PropName="Column"/>
+        <Column Name="IdStage" DataType="System.Int64" PropName="Column"/>
+        <Column Name="Wbs" DataType="System.String" PropName="Column"/>
+        <Column Name="NumberVersion" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table3" Alias="CurrentStages" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectCurrentStages}">
+        <Column Name="NameStage" DataType="System.String" PropName="Column"/>
+        <Column Name="StartDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="EndDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="ExecutionPercent" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Responsible" DataType="System.String" PropName="Column"/>
+        <Column Name="TaskName" DataType="System.String" PropName="Column"/>
+        <Column Name="IdStage" DataType="System.Int64" PropName="Column"/>
+        <Column Name="Wbs" DataType="System.String" PropName="Column"/>
+        <Column Name="NumberVersion" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table4" Alias="CompletedTickets" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectCompletedTickets}">
+        <Column Name="BoardName" DataType="System.String" PropName="Column"/>
+        <Column Name="ColumnName" DataType="System.String" PropName="Column"/>
+        <Column Name="TicketName" DataType="System.String" PropName="Column"/>
+        <Column Name="Performer" DataType="System.String" PropName="Column"/>
+        <Column Name="Workload" DataType="System.Double" PropName="Column"/>
+        <Column Name="CompletedDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="TicketId" DataType="System.Int64" PropName="Column"/>
+        <Column Name="BoardId" DataType="System.Int64" PropName="Column"/>
+        <Column Name="Uid" DataType="System.String" PropName="Column"/>
+        <Column Name="IndexColumn" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ProjectId" DataType="11" IsDbType="true" Expression="[ProjectId]"/>
+        <CommandParameter Name="StartDate" DataType="6" IsDbType="true" Expression="[StartDate]"/>
+        <CommandParameter Name="CurrentDate" DataType="6" IsDbType="true" Expression="[CurrentDate]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table5" Alias="CurrentTickets" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectCurrentTickets}">
+        <Column Name="BoardName" DataType="System.String" PropName="Column"/>
+        <Column Name="ColumnName" DataType="System.String" PropName="Column"/>
+        <Column Name="TicketName" DataType="System.String" PropName="Column"/>
+        <Column Name="Performer" DataType="System.String" PropName="Column"/>
+        <Column Name="Workload" DataType="System.Double" PropName="Column"/>
+        <Column Name="CompletedDate" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="TicketId" DataType="System.Int64" PropName="Column"/>
+        <Column Name="BoardId" DataType="System.Int64" PropName="Column"/>
+        <Column Name="Uid" DataType="System.String" PropName="Column"/>
+        <Column Name="IndexColumn" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ProjectId" DataType="11" IsDbType="true" Expression="[ProjectId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="05125dfa-cbd4-448b-b292-4b833ab6f629" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="StartDate" Id="2ed8d6b3-e52b-4100-9633-9c10fa9fe872" IsRequired="true" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="CurrentDate" Id="47111c90-5367-4577-9dfb-41217c415990" IsRequired="true" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ProjectPlanRX" Id="7dde7462-555f-40db-b79c-ff09e536e191" IsRequired="true" IsCollection="false" InternalDataType="DirRX.ProjectPlanner.IProjectPlanRX, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="a319de81-7897-43e0-8f52-3eefbc011f91"/>
+    <SungeroParameter Name="ProjectPlanRXLink" Id="45427f77-3d0f-4fca-ac3b-43ec6d5848d0" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ProjectCharterLink" Id="4922af60-a63e-449e-8a5a-75033f553abe" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ProjectFolderLink" Id="d8491bdf-fe7a-4379-8bef-45e59b5c3782" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="WorkloadApproved" Id="310d27c6-feff-4638-bc70-f21d5ca81658" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DurationFact" Id="773aa1a8-ec30-4cf6-ba20-e99e85aabcca" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DurationApproved" Id="a48971c6-b528-457e-984a-5016ab5da969" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BudgetFact" Id="5156b463-c3ee-4d73-bf06-38fc938ccbd8" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BudgetApproved" Id="c5ccacba-e38d-4b03-b3b6-561ac4e0cb04" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="EndDate" Id="df79a9ee-ba14-478c-9934-0e00e76c2930" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="b04dd371-6b6e-4508-aa34-13e3f193ca06" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="CountTable" Id="f64f0edb-b3ca-4ebc-9bc4-e33891327b87" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="IsIncludeAgile" Id="9e973dce-a0ff-4f51-8f80-ee53d3024fca" IsRequired="true" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ProjectId" Id="90bacfab-f278-4381-a57a-b12c36b0a801" IsRequired="false" IsCollection="false" InternalDataType="System.Int64" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="HasAgileProject" Id="c3867b50-b157-43d1-a2c9-e33fc5be5146" IsRequired="false" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ProjectCharter" Id="38e85a33-5d21-46d7-a9d4-b3dc859e108d" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ProjectFolder" Id="28aa0600-fdc8-4f7d-8f85-dd7616fdd30f" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="WorkloadFact" Id="369bfdfc-5cc6-4851-bae7-478c0a43d872" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BudgetTitle" Id="753f4d19-0a9e-4cc7-8251-c8eddd76d45e" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="WorkloadPredictTotal" Id="84316e13-cb34-413c-972a-85422598f02e" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DurationPredictTotal" Id="5593b4ff-a8a2-4019-8824-07e798ae243c" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BudgetPredictTotal" Id="69663617-ccf4-41c5-950a-c3c0e54eb08d" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="WorkloadApprovedTotal" Id="e2ef9666-d9d9-467a-90b6-570da4391cd3" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DurationApprovedTotal" Id="6015d272-7edb-4291-b09d-8d175ff659ea" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BudgetApprovedTotal" Id="c9f07bf2-5e41-4616-9081-dea0e88081ea" IsRequired="false" IsCollection="false" InternalDataType="System.Double" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="ProjectFeaturesPage" Guides="0,0" Watermark.Font="Arial, 60pt" StartPageEvent="Page1_StartPage">
+    <ReportTitleBand Name="ReportTitle" Width="718.2" Height="453.6" Guides="56.7,56.7,56.7,56.7,56.7,56.7,56.7,56.7,56.7">
+      <TextObject Name="TitleReport" Top="9.45" Width="718.2" Height="18.9" Border.Lines="Bottom" Border.Color="31, 73, 125" Border.Width="2" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProgressReportTitle] [ProjectPlanRX] [StartDate] — [CurrentDate]" HorzAlign="Justify" VertAlign="Center" Font="Arial, 20pt" TextFill.Color="31, 73, 125">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+          <DateFormat/>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="ProjectPlanName" Top="56.7" Width="96.39" Height="18.9" CanGrow="true" CanShrink="true" CanBreak="false" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectPlanName]: " VertAlign="Center" WordWrap="false" Font="Arial, 10pt">
+        <Formats>
+          <GeneralFormat/>
+          <GeneralFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="CharterName" Top="75.6" Width="103.95" Height="18.9" Text="[IIf([ProjectCharter] == null, null,DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectCharterName)] " VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="ProjectCharacteristicsName" Top="151.2" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectCharacteristicsName]" Font="Arial, 18pt" TextFill.Color="31, 73, 125"/>
+      <TextObject Name="PresValueTableTitle" Left="217.35" Top="198.45" Width="217.35" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PredictValueName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="FeaturesTableTitle" Top="198.45" Width="217.35" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CharacteristicName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="PlanValueTableTitle" Left="434.7" Top="198.45" Width="283.5" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PlannedValues]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="ComplexityTableTitle" Top="226.8" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ComplexityProjectTitle]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="WorkloadCurrentValue" Left="217.35" Top="226.8" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[WorkloadPredictTotal]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="WorkloadValue" Left="434.7" Top="226.8" Width="283.5" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[WorkloadApprovedTotal]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="DurationTableTitle" Top="245.7" Width="217.35" Height="18.9" Border.Lines="All" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectDurationTitle]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="DurationValue" Left="217.35" Top="245.7" Width="217.35" Height="18.9" Border.Lines="All" Text="[DurationPredictTotal]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="DurationApprovedValue" Left="434.7" Top="245.7" Width="283.5" Height="18.9" Border.Lines="All" Text="[DurationApprovedTotal]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="BudgetTableTitle" Top="264.6" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[BudgetTitle]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="BudgetValue" Left="217.35" Top="264.6" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[BudgetPredictTotal]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="BudgetApprovedValue" Left="434.7" Top="264.6" Width="283.5" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[BudgetApprovedTotal]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="ProjectPlan" Left="96.39" Top="56.7" Width="623.7" Height="18.9" Hyperlink.Expression="[ProjectPlanRXLink]" CanBreak="false" Text="[ProjectPlanRX]" HorzAlign="Justify" VertAlign="Center" WordWrap="false" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <TextObject Name="Charter" Left="103.95" Top="75.6" Width="614.25" Height="18.9" Hyperlink.Expression="[ProjectCharterLink]" CanBreak="false" Text="[IIf([ProjectCharter] == null, null,[ProjectCharter])]" AutoWidth="true" HorzAlign="Justify" VertAlign="Center" WordWrap="false" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <TextObject Name="Folder" Left="103.95" Top="94.5" Width="614.25" Height="18.9" Hyperlink.Expression="[ProjectCharterLink]" CanBreak="false" Text="[IIf([ProjectFolder] == null, null,[ProjectFolder])]" AutoWidth="true" HorzAlign="Justify" VertAlign="Center" WordWrap="false" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <TextObject Name="FolderName" Top="94.5" Width="103.95" Height="18.9" Text="[IIf([ProjectFolder] == null, null,DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectFolderName)]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CountTable1" Left="623.7" Top="179.55" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      <TextObject Name="Text125" Top="302.4" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectCurrentStateName]" Font="Arial, 18pt" TextFill.Color="31, 73, 125"/>
+      <TextObject Name="Text126" Left="217.35" Top="349.65" Width="217.35" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.FactValueName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text127" Top="349.65" Width="217.35" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CharacteristicName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text128" Left="434.7" Top="349.65" Width="283.5" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PlannedValues]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text129" Top="378" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ComplexityProjectTitle]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text130" Left="217.35" Top="378" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[WorkloadFact]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text131" Left="434.7" Top="378" Width="283.5" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[WorkloadApproved]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text132" Top="396.9" Width="217.35" Height="18.9" Border.Lines="All" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProjectDurationTitle]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text133" Left="217.35" Top="396.9" Width="217.35" Height="18.9" Border.Lines="All" Text="[DurationFact]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text134" Left="434.7" Top="396.9" Width="283.5" Height="18.9" Border.Lines="All" Text="[DurationApproved]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text135" Top="415.8" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[BudgetTitle]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text136" Left="217.35" Top="415.8" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[BudgetFact]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text137" Left="434.7" Top="415.8" Width="283.5" Height="18.9" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[BudgetApproved]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text138" Left="623.7" Top="330.75" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <DataBand Name="MilestonesData" Top="537.2" Width="718.2" Height="18.9" DataSource="Table">
+      <TextObject Name="MilestonesNameTableValue" Left="85.05" Width="217.35" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[Milestones.Name]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="MilestonesStatusTableValue" Left="415.8" Width="151.2" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[Milestones.Status]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="MilestonesPerformerTableValue" Left="567" Width="151.2" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[Milestones.Responsible]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="MilestonesDateTableValue" Left="302.4" Width="113.4" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[Milestones.Date]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="MilestoneWbs" Width="85.05" Height="18.9" Border.Lines="All" Hyperlink.Expression="DirRX.ProjectPlanner.PublicFunctions.Module.GetLinkActivity([ProjectPlanRX].Id,[Milestones.Id],[Milestones.NumberVersion])" Text="[Milestones.Wbs]" Duplicates="Merge" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <DataHeaderBand Name="MilestonesDataHeader" Top="457.6" Width="718.2" Height="75.6">
+        <TextObject Name="MilestoneTableTitle" Left="85.05" Top="56.7" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.MilestoneName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="MilestonesDateTableTitle" Left="302.4" Top="56.7" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.DateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="MilestonesStatusTableTitle" Left="415.8" Top="56.7" Width="151.2" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StatusName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="MilestonesPerformerTableTitle" Left="567" Top="56.7" Width="151.2" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PerformerName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="MilestonesTitle" Top="9.45" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.MilestonesName]" Font="Arial, 18pt" TextFill.Color="31, 73, 125"/>
+        <TextObject Name="MilestoneWbsTitle" Top="56.7" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.WbsName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CountTable2" Left="623.7" Top="37.8" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      </DataHeaderBand>
+      <Sort>
+        <Sort Expression="[Milestones.Date]"/>
+      </Sort>
+    </DataBand>
+  </ReportPage>
+  <ReportPage Name="ProgressPage" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitleProgressPage" Width="718.2" Height="47.25" Guides="37.8">
+      <TextObject Name="ProgressPageTitle" Top="9.45" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProgressTitle]" Font="Arial, 18pt" TextFill.Color="31, 73, 125"/>
+      <TextObject Name="DateTitle" Top="28.35" Width="718.2" Height="18.9" Text="[StartDate] - [CurrentDate]" Font="Arial, 18pt" TextFill.Color="31, 73, 125">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </ReportTitleBand>
+    <DataBand Name="OverdueStagesData" Top="149.75" Width="718.2" Height="28.35" DataSource="Table1">
+      <TextObject Name="OverduePercentValueTable" Left="463.05" Width="94.5" Height="28.35" Border.Lines="All" Text="[OverdueStages.ExecutionPercent]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="OverdueStartDateValueTable" Left="292.95" Width="85.05" Height="28.35" Border.Lines="All" Text="[OverdueStages.StartDate]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="OverdueStageValueTable" Left="75.6" Width="217.35" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[OverdueStages.NameStage]" Font="Arial, 10pt"/>
+      <TextObject Name="OverdueStageWbs" Width="75.6" Height="28.35" Border.Lines="All" Hyperlink.Expression="DirRX.ProjectPlanner.PublicFunctions.Module.GetLinkActivity([ProjectPlanRX].Id,[OverdueStages.IdStage],[OverdueStages.NumberVersion])" GrowToBottom="true" Text="[OverdueStages.Wbs]" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <TextObject Name="OverdueResponsibleValueTable" Left="557.55" Width="160.65" Height="28.35" Border.Lines="All" Text="[OverdueStages.Responsible]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="OverdueEndDateValueTable" Left="378" Width="85.05" Height="28.35" Border.Lines="All" Text="[OverdueStages.EndDate]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <ChildBand Name="OverdueStagesDataChild" Top="182.1" Width="718.2" Height="85.05" PrintIfDatabandEmpty="true">
+        <TextObject Name="TextEmptyOverdueStages" Top="66.15" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TextEmptyOverdueStages]" Font="Arial, 10pt"/>
+        <TextObject Name="OverdueStagesTitleChild" Top="28.35" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.OverdueStagesName]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+      </ChildBand>
+      <DataHeaderBand Name="OverdueStagesDataHeader" Top="51.25" Width="718.2" Height="94.5">
+        <TextObject Name="OverdueStagesTitle" Top="28.35" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.OverdueStagesName]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+        <TextObject Name="OverdueStageNameTitleTable" Left="75.6" Top="75.6" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StageName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="OverdueStartDateTitleTable" Left="292.95" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StartDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="OverdueEndDateTitleTable" Left="378" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.EndDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="OverduePercentTitleTable" Left="463.05" Top="75.6" Width="94.5" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PercentCompletedName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="OverdueSrageWbsTitle" Top="75.6" Width="75.6" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.WbsName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="OverduePerformerTitleTable" Left="557.55" Top="75.6" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PerformerName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CountTable3" Left="623.7" Top="56.7" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      </DataHeaderBand>
+      <Sort>
+        <Sort Expression="[OverdueStages.Wbs]"/>
+      </Sort>
+    </DataBand>
+    <DataBand Name="CompletedStagesData" Top="369.65" Width="718.2" Height="28.35" DataSource="Table2">
+      <TextObject Name="CompletedResponsibleValueTable" Left="557.55" Width="160.65" Height="28.35" Border.Lines="All" Text="[CompletedStages.Responsible]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CompletedStageValueTable" Left="75.6" Width="217.35" Height="28.35" Border.Lines="All" Text="[CompletedStages.NameStage]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CompletedStartDateValueTable" Left="292.95" Width="85.05" Height="28.35" Border.Lines="All" Text="[CompletedStages.StartDate]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="CompletedEndDateValueTable" Left="378" Width="85.05" Height="28.35" Border.Lines="All" Text="[CompletedStages.EndDate]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="CompletedPercentValueTable" Left="463.05" Width="94.5" Height="28.35" Border.Lines="All" Text="[CompletedStages.ExecutionPercent]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CompletedStageWbs" Width="75.6" Height="28.35" Border.Lines="All" Hyperlink.Expression="DirRX.ProjectPlanner.PublicFunctions.Module.GetLinkActivity([ProjectPlanRX].Id,[CompletedStages.IdStage],[CompletedStages.NumberVersion])" Text="[CompletedStages.Wbs]" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <ChildBand Name="CompletedStagesDataChild" Top="402" Width="718.2" Height="85.05" PrintIfDatabandEmpty="true">
+        <TextObject Name="CompletedStagesTitleChild" Top="28.35" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CompletedStagesName]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+        <TextObject Name="TextEmptyCompletedStages" Top="66.15" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TextEmptyCompletedStages]" Font="Arial, 10pt"/>
+      </ChildBand>
+      <DataHeaderBand Name="CompletedStagesDataHeader" Top="271.15" Width="718.2" Height="94.5">
+        <TextObject Name="CompletedStagesTitle" Top="28.35" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CompletedStagesName]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+        <TextObject Name="CompletedStageTitleTable" Left="75.6" Top="75.6" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StageName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CompletedStartDateTitleTable" Left="292.95" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StartDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CompletedEndDateTitleTable" Left="378" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.EndDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CompletedPercentTitleTable" Left="463.05" Top="75.6" Width="94.5" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PercentCompletedName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CompletedWbsTitle" Top="75.6" Width="75.6" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.WbsName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CompletedPerformerTitleTable" Left="557.55" Top="75.6" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PerformerName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CountTable4" Left="623.7" Top="56.7" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      </DataHeaderBand>
+      <Sort>
+        <Sort Expression="[CompletedStages.Wbs]"/>
+      </Sort>
+    </DataBand>
+    <DataBand Name="CurretStagesData" Top="589.55" Width="718.2" Height="28.35" DataSource="Table3">
+      <TextObject Name="CurrentResponsibleValueTable" Left="557.55" Width="160.65" Height="28.35" Border.Lines="All" Text="[CurrentStages.Responsible]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CurrentStageValueTable" Left="75.6" Width="217.35" Height="28.35" Border.Lines="All" Text="[CurrentStages.NameStage]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CurrentStartDateValueTable" Left="292.95" Width="85.05" Height="28.35" Border.Lines="All" Text="[CurrentStages.StartDate]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="CurrentEndDateValueTable" Left="378" Width="85.05" Height="28.35" Border.Lines="All" Text="[CurrentStages.EndDate]" HideZeros="true" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="CurrentPercentValueTable" Left="463.05" Width="94.5" Height="28.35" Border.Lines="All" Text="[CurrentStages.ExecutionPercent]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CurrentStageWbs" Width="75.6" Height="28.35" Border.Lines="All" Hyperlink.Expression="DirRX.ProjectPlanner.PublicFunctions.Module.GetLinkActivity([ProjectPlanRX].Id,[CurrentStages.IdStage],[CurrentStages.NumberVersion])" Text="[CurrentStages.Wbs]" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+      <ChildBand Name="CurrentStagesDataChild" Top="621.9" Width="718.2" Height="85.05" PrintIfDatabandEmpty="true">
+        <TextObject Name="CurrentStagesTitleChild" Top="28.35" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CurrentStagesName]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+        <TextObject Name="EmptyTextCurrentStages" Top="66.15" Width="718.2" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TextEmptyCurrentStages]" Font="Arial, 10pt"/>
+      </ChildBand>
+      <DataHeaderBand Name="CurrentStagesDataHeader" Top="491.05" Width="718.2" Height="94.5">
+        <TextObject Name="CurrentStagesTitle" Top="28.35" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CurrentStagesName]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+        <TextObject Name="CurrentWbsTitle" Top="75.6" Width="75.6" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.WbsName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CurrentStageTitleTable" Left="75.6" Top="75.6" Width="217.35" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StageName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CurrentStartDateTitleTable" Left="292.95" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StartDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CurrentEndDateTitleTable" Left="378" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.EndDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CurrentPercentTitleTable" Left="463.05" Top="75.6" Width="94.5" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PercentCompletedName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CurrentPerformerTitleTable" Left="557.55" Top="75.6" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PerformerName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="CountTable5" Left="623.7" Top="56.7" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      </DataHeaderBand>
+      <Sort>
+        <Sort Expression="[CurrentStages.Wbs]"/>
+      </Sort>
+    </DataBand>
+  </ReportPage>
+  <ReportPage Name="CompletedTicketsPage" Landscape="true" PaperWidth="297" PaperHeight="210" Watermark.Font="Arial, 60pt" StartPageEvent="Page3_StartPage">
+    <ReportTitleBand Name="ReportTitleCompletedTickets" Width="1047.06" Height="37.8">
+      <TextObject Name="ProgressAgileTitle" Top="9.45" Width="1048.95" Height="18.9" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.ProgressAgileTitle]" Font="Arial, 18pt" TextFill.Color="31, 73, 125"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeaderCompletedTickets" Top="41.8" Width="1047.06" Height="47.25">
+      <TextObject Name="CompletedTicketsTitle" Top="18.9" Width="1048.95" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CompletedTicketsTitle]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeaderCopletedTickets" Top="93.05" Width="1047.06" Height="47.25" Condition="null">
+      <TextObject Name="CompletedTicketsNameTitleTable" Top="18.9" Width="491.4" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TicketName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CompletedTicketsPerformerTitleTable" Left="491.4" Top="18.9" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PerformerTicketName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CompletedTicketsWorkloadTitleTable" Left="680.4" Top="18.9" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.WorkloadName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CompletedTicketsEndDateTitleTable" Left="869.4" Top="18.9" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CompletedDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CountTable6" Left="954.45" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      <GroupHeaderBand Name="GroupHeaderCompletedTicketsBoard" Top="144.3" Width="1047.06" Height="28.35" Condition="[CompletedTickets.BoardName]">
+        <TextObject Name="CompletedTicketsBoardTitleTable" Width="491.4" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[CompletedTickets.BoardName]" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="CompletedTicketsEmptyText2" Left="491.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+        <TextObject Name="Text104" Left="680.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+        <TextObject Name="Text105" Left="869.4" Width="179.55" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+        <GroupHeaderBand Name="GroupHeaderCompletedTicketsColumn" Top="176.65" Width="1047.06" Height="28.35" Condition="[CompletedTickets.IndexColumn]">
+          <TextObject Name="CompletedTicketsEmptyText3" Width="491.4" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[CompletedTickets.ColumnName]" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="CompletedTicketsEmptyText1" Left="491.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+          <TextObject Name="Text108" Left="680.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+          <TextObject Name="Text109" Left="869.4" Width="179.55" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+          <GroupHeaderBand Name="GroupHeaderCompletedTicketsTicket" Top="209" Width="1047.06" Condition="[CompletedTickets.TicketId]">
+            <DataBand Name="CompletedTicketsData" Top="213" Width="1047.06" Height="28.35" DataSource="Table4">
+              <TextObject Name="CompletedTicketsTicketTitleTable" Left="94.5" Width="396.9" Height="28.35" Border.Lines="All" AfterDataEvent="Text98_AfterData" CanBreak="false" Text="[CompletedTickets.TicketName]" Duplicates="Merge" VertAlign="Center" Font="Arial, 10pt"/>
+              <TextObject Name="CompletedTicketsPerformerValueTable" Left="491.4" Width="189" Height="28.35" Border.Lines="All" CanGrow="true" CanBreak="false" Text="[CompletedTickets.Performer]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+              <TextObject Name="CompletedTicketsWorkloadValueTable" Left="680.4" Width="189" Height="28.35" Border.Lines="All" CanGrow="true" CanBreak="false" Text="[CompletedTickets.Workload]" Duplicates="Merge" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+              <TextObject Name="CompletedTicketsEndDateValueTable" Left="869.4" Width="179.55" Height="28.35" Border.Lines="All" CanGrow="true" CanBreak="false" Text="[CompletedTickets.CompletedDate]" HideZeros="true" Duplicates="Merge" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+                <Formats>
+                  <DateFormat/>
+                  <GeneralFormat/>
+                </Formats>
+              </TextObject>
+              <TextObject Name="CompletedTicketsWbs" Width="94.5" Height="28.35" Border.Lines="All" Hyperlink.Expression="DirRX.ProjectPlanner.PublicFunctions.Module.GetLinkTicket([CompletedTickets.BoardId],[CompletedTickets.TicketId])" CanGrow="true" AfterDataEvent="Text98_AfterData" CanBreak="false" Text="[CompletedTickets.Uid]" Duplicates="Merge" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+              <Sort>
+                <Sort Expression="[CompletedTickets.CompletedDate]"/>
+              </Sort>
+            </DataBand>
+            <GroupFooterBand Name="GroupFooterCompletedTicketsTicket" Top="245.35" Width="1047.06" Height="9.45"/>
+          </GroupHeaderBand>
+        </GroupHeaderBand>
+      </GroupHeaderBand>
+    </GroupHeaderBand>
+  </ReportPage>
+  <ReportPage Name="CurrentTicketsPage" Landscape="true" PaperWidth="297" PaperHeight="210" Watermark.Font="Arial, 60pt">
+    <PageHeaderBand Name="PageHeaderCurrentTicketsPage" Width="1047.06" Height="37.8">
+      <TextObject Name="CurrentTicketsTitle" Top="9.45" Width="1048.95" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CurrentTicketsTitle]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeaderCurrentTickets" Top="41.8" Width="1047.06" Height="47.25" Condition="null">
+      <TextObject Name="CurrentTicketsNameTitleTable" Top="18.9" Width="491.4" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TicketName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CountTable7" Left="954.45" Width="94.5" Height="18.9" AfterDataEvent="IncrementCountTable_AfterData" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.TableName] [CountTable]" HorzAlign="Right" VertAlign="Bottom" Font="Arial, 10pt"/>
+      <TextObject Name="CurrentTicketsEndDateTitleTable" Left="869.4" Top="18.9" Width="179.55" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.CompletedDateName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CurrentTicketsWorkloadTitleTable" Left="680.4" Top="18.9" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.WorkloadName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="CurrentTicketsPerformerTitleTable" Left="491.4" Top="18.9" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.PerformerTicketName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <GroupHeaderBand Name="GroupHeaderCurrentTicketsBoard" Top="93.05" Width="1047.06" Height="28.35" Condition="[CurrentTickets.BoardName]">
+        <TextObject Name="CurrentTicketsBoardTitleTable" Width="491.4" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[CurrentTickets.BoardName]" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text117" Left="491.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+        <TextObject Name="Text118" Left="680.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+        <TextObject Name="Text119" Left="869.4" Width="179.55" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+        <GroupHeaderBand Name="GroupHeaderCurrentTicketsColumn" Top="125.4" Width="1047.06" Height="28.35" Condition="[CurrentTickets.IndexColumn]">
+          <TextObject Name="CurrentTicketsColumnTitleTable" Width="491.4" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Text="[CurrentTickets.ColumnName]" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text122" Left="491.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+          <TextObject Name="Text123" Left="680.4" Width="189" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+          <TextObject Name="Text124" Left="869.4" Width="179.55" Height="28.35" Border.Lines="All" Fill.Color="Gainsboro" Font="Arial, 10pt"/>
+          <GroupHeaderBand Name="GroupHeaderCurrentTicketsTicket" Top="157.75" Width="1047.06" Condition="[CurrentTickets.TicketId]">
+            <DataBand Name="CurrentTicketsData" Top="161.75" Width="1047.06" Height="28.35" DataSource="Table5">
+              <TextObject Name="CurrentTicketsTicketValueTable" Left="94.5" Width="396.9" Height="28.35" Border.Lines="All" CanBreak="false" Text="[CurrentTickets.TicketName]" Duplicates="Merge" VertAlign="Center" Font="Arial, 10pt"/>
+              <TextObject Name="CurrentTicketsPerformerValueTable" Left="491.4" Width="189" Height="28.35" Border.Lines="All" CanBreak="false" Text="[CurrentTickets.Performer]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+              <TextObject Name="CurrentTicketsWorkloadValueTable" Left="680.4" Width="189" Height="28.35" Border.Lines="All" CanBreak="false" Text="[CurrentTickets.Workload]" Duplicates="Merge" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+              <TextObject Name="CurrentTicketsEndDateValueTable" Left="869.4" Width="179.55" Height="28.35" Border.Lines="All" CanBreak="false" Text="[CurrentTickets.CompletedDate]" HideZeros="true" Duplicates="Merge" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+                <Formats>
+                  <DateFormat/>
+                  <GeneralFormat/>
+                </Formats>
+              </TextObject>
+              <TextObject Name="CurrentTicketsWbs" Width="94.5" Height="28.35" Border.Lines="All" Hyperlink.Expression="DirRX.ProjectPlanner.PublicFunctions.Module.GetLinkTicket([CurrentTickets.BoardId],[CurrentTickets.TicketId])" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[CurrentTickets.Uid]" Duplicates="Merge" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Highlight"/>
+            </DataBand>
+            <GroupFooterBand Name="GroupFooterCurrentTickets" Top="194.1" Width="1047.06" Height="9.45"/>
+          </GroupHeaderBand>
+        </GroupHeaderBand>
+      </GroupHeaderBand>
+    </GroupHeaderBand>
+  </ReportPage>
+  <ReportPage Name="StubTextPage" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitleStubTextPage" Width="718.2" Height="47.25">
+      <TextObject Name="StubTextAgileTitle" Top="18.9" Width="718.2" Height="18.9" Tag="HtmlTags" Text="[DirRX.ProjectPlanner.Reports.Resources.ProgressReport.StubTextAgile]" Font="Arial, 14pt" TextFill.Color="31, 73, 125"/>
+    </ReportTitleBand>
+  </ReportPage>
+</Report>

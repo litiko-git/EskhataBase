@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Property_FullNumber" xml:space="preserve">
+    <value>Полный номер</value>
+  </data>
+  <data name="Property_ProjectPlan" xml:space="preserve">
+    <value>План проекта</value>
+  </data>
+  <data name="Property_LeadingActivity" xml:space="preserve">
+    <value>Ведущий этап</value>
+  </data>
+  <data name="Property_StartDate" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="Property_EndDate" xml:space="preserve">
+    <value>Дата окончания</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Этап проекта</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Этап проекта</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Этапы проекта</value>
+  </data>
+  <data name="Property_Duration" xml:space="preserve">
+    <value>Длительность</value>
+  </data>
+  <data name="Property_BaselineWork" xml:space="preserve">
+    <value>План. трудоемкость</value>
+  </data>
+  <data name="Property_Predecessors" xml:space="preserve">
+    <value>Предшественники</value>
+  </data>
+  <data name="Property_ExecutionPercent" xml:space="preserve">
+    <value>% прогресс</value>
+  </data>
+  <data name="Property_Note" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="Action_SendToPerformers" xml:space="preserve">
+    <value>На исполнение</value>
+  </data>
+  <data name="Action_SendToPerformersDescription" xml:space="preserve">
+    <value>Отправить задание исполнителям</value>
+  </data>
+  <data name="Action_SendToPerformersHint" xml:space="preserve">
+    <value>Отправить на исполнение</value>
+  </data>
+  <data name="Action_ShowActivities" xml:space="preserve">
+    <value>Открыть подчиненные этапы</value>
+  </data>
+  <data name="Action_ShowActivitiesDescription" xml:space="preserve">
+    <value>Открыть подчиненные этапы</value>
+  </data>
+  <data name="Action_ShowActivitiesHint" xml:space="preserve">
+    <value>Открыть подчиненные этапы</value>
+  </data>
+  <data name="Property_Number" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="Property_SortIndex" xml:space="preserve">
+    <value>Индекс сортировки</value>
+  </data>
+  <data name="Enum_Status_Active" xml:space="preserve">
+    <value>Открыт</value>
+  </data>
+  <data name="Enum_Status_Closed" xml:space="preserve">
+    <value>Завершен</value>
+  </data>
+  <data name="Property_Priority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_TypeActivity" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Enum_TypeActivity_Task" xml:space="preserve">
+    <value>Задача</value>
+  </data>
+  <data name="Enum_TypeActivity_Section" xml:space="preserve">
+    <value>Раздел</value>
+  </data>
+  <data name="Enum_TypeActivity_Milestone" xml:space="preserve">
+    <value>Веха</value>
+  </data>
+  <data name="Property_PlannedCosts" xml:space="preserve">
+    <value>Планируемые затраты</value>
+  </data>
+  <data name="Property_FactualCosts" xml:space="preserve">
+    <value>Планируемые затраты</value>
+  </data>
+  <data name="Enum_Status_InWork" xml:space="preserve">
+    <value>В работе</value>
+  </data>
+  <data name="Action_OpenInNewTab" xml:space="preserve">
+    <value>Открыть в новой вкладке</value>
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Показать на плане</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Показать этап на плане</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Показать этап на плане.</value>
+  </data>
+  <data name="Property_Performers" xml:space="preserve">
+    <value>Список исполнителей</value>
+  </data>
+  <data name="Property_Responsible" xml:space="preserve">
+    <value>Ответственный</value>
+  </data>
+  <data name="ControlGroup_ebd7eb36e7734b4f996d1d9f032ff6e7" xml:space="preserve">
+    <value>Предшественники</value>
+  </data>
+  <data name="Action_ShowActivity" xml:space="preserve">
+    <value>Показать на плане</value>
+  </data>
+  <data name="Action_ShowActivityHint" xml:space="preserve">
+    <value>Показать этап на плане</value>
+  </data>
+  <data name="Action_ShowActivityDescription" xml:space="preserve">
+    <value>Показать этап на плане</value>
+  </data>
+  <data name="Property_RefId" xml:space="preserve">
+    <value>Идентификатор ссылки</value>
+  </data>
+  <data name="Property_Attachments" xml:space="preserve">
+    <value>Вложения</value>
+  </data>
+  <data name="Property_GateId" xml:space="preserve">
+    <value>ИД контрольной точки</value>
+  </data>
+  <data name="Property_ActualWorkload" xml:space="preserve">
+    <value>Факт. трудоемкость</value>
+  </data>
+</root>

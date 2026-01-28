@@ -1,0 +1,210 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "1d43aeae-77cf-41e0-a54f-a6c4ee80474e",
+  "Name": "PortfolioProgram",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.PortfolioProgram.Client",
+  "ClientBaseAssemblyName": "DirRX.PortfolioProgram.ClientBase",
+  "ClientBaseNamespace": "DirRX.PortfolioProgram.ClientBase",
+  "ClientNamespace": "DirRX.PortfolioProgram.Client",
+  "Code": "Portfol",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "bc30b234-9925-4e8f-8f94-2d3b20593541",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "b77857b8-5a26-4e98-bb39-fb3b7b643a8c",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "3b5df4f5-b2c7-4b70-a3af-67f45036bd4d",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "bce513a7-4787-4e7c-aa46-694622ec58b1",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "df83a2ea-8d43-4ec4-a34a-2e61863014df",
+      "MaxVersion": "",
+      "MinVersion": "4.6.27.1"
+    },
+    {
+      "Id": "356e6500-45bc-482b-9791-189b5adedc28",
+      "MaxVersion": "",
+      "MinVersion": "4.6.27.1"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "5eb207c5-a697-46b6-9015-1c67216f1cb1"
+    },
+    {
+      "ItemId": "50be5013-2dcc-4df9-95e5-098ee7e6ff5e",
+      "PreviousItemId": "5eb207c5-a697-46b6-9015-1c67216f1cb1"
+    },
+    {
+      "ItemId": "fb22f26f-a788-45e8-8c6d-899c03c1ba67",
+      "PreviousItemId": "50be5013-2dcc-4df9-95e5-098ee7e6ff5e"
+    },
+    {
+      "ItemId": "8d89d0bd-2975-47c5-a440-2c4484f6d342",
+      "PreviousItemId": "fb22f26f-a788-45e8-8c6d-899c03c1ba67"
+    },
+    {
+      "ItemId": "c6975c89-90f3-41ff-ad71-91215609a3d9",
+      "PreviousItemId": "8d89d0bd-2975-47c5-a440-2c4484f6d342"
+    },
+    {
+      "ItemId": "cbf3e494-8ef9-43df-b99a-0e57c38fe4e5",
+      "PreviousItemId": "c6975c89-90f3-41ff-ad71-91215609a3d9"
+    },
+    {
+      "ItemId": "586b8b3b-6518-4ad9-99d3-9fafd6f328f5",
+      "PreviousItemId": "cbf3e494-8ef9-43df-b99a-0e57c38fe4e5"
+    },
+    {
+      "ItemId": "bf90b08b-447d-4cad-b505-65e29f5258b7",
+      "PreviousItemId": "586b8b3b-6518-4ad9-99d3-9fafd6f328f5"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.PortfolioProgram",
+  "IsolatedAssemblyName": "DirRX.PortfolioProgram.Isolated",
+  "IsolatedNamespace": "DirRX.PortfolioProgram.Isolated",
+  "IsVisible": false,
+  "Overridden": [
+    "IsLicensed",
+    "IsVisible"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "ModluleFullName",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"DirRX.PortfolioProgram\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "PortfolioProgramModuleHasLicense",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.PortfolioProgram",
+  "ResourcesKeys": [
+    "ModuleDisplayName",
+    "ShipmentRisk",
+    "PlanningRisk",
+    "SecurityRisk",
+    "FinancialRisk",
+    "CommunicationRisk",
+    "BusinessRisk",
+    "QualityRisk",
+    "RiskWillNotOccur",
+    "RiskIsUnlikelyToOccur",
+    "ProbabilitiesOfRiskAreTheSame",
+    "RiskIsLikelyToOccur",
+    "RiskWillMostCertainlyOccur",
+    "ImpactDescriptionMinimal",
+    "ImpactDescriptionAcceptable",
+    "ImpactDescriptionSignificant",
+    "ImpactDescriptionCritical",
+    "ImpactDescriptionDisastrous",
+    "ImpactContentChangeMinimal",
+    "ImpactContentChangeAcceptable",
+    "ImpactContentChangeSignificant",
+    "ImpactContentChangeCritical",
+    "ImpactContentChangeDiasastrous",
+    "Undefined",
+    "RoadmapIsNotAvailableWitoutPortfolioProgramLicense"
+  ],
+  "ServerAssemblyName": "DirRX.PortfolioProgram.Server",
+  "ServerNamespace": "DirRX.PortfolioProgram.Server",
+  "SharedAssemblyName": "DirRX.PortfolioProgram.Shared",
+  "SharedNamespace": "DirRX.PortfolioProgram.Shared",
+  "SpecialFolders": [],
+  "Version": "2.9.4700.15",
+  "Widgets": [
+    {
+      "NameGuid": "462bc43b-2e8e-4c69-b3c0-160edaa2a3c2",
+      "Name": "HealthWidget",
+      "Color": "WidgetColor1",
+      "WidgetItems": [
+        {
+          "$type": "Sungero.Metadata.WidgetChartMetadata, Sungero.Metadata",
+          "NameGuid": "b99a1f04-5000-4a20-bf92-3dbb18d0bc6b",
+          "Name": "Chart",
+          "ChartHeight": 10,
+          "ChartType": "Pie",
+          "EntityGuid": "36ad7267-1338-464c-8def-07290bee74ab",
+          "HandledEvents": [
+            "FilteringServer",
+            "GetValueServer"
+          ]
+        }
+      ],
+      "WidgetParameters": [
+        {
+          "$type": "Sungero.Metadata.WidgetEnumParameterMetadata, Sungero.Metadata",
+          "NameGuid": "ba7138e7-97ce-4eee-8271-4086982bdaeb",
+          "Name": "ProjectType",
+          "DefaultValue": {
+            "NameGuid": "91adb6c2-31dc-417d-afec-72777f957266",
+            "Name": "All",
+            "Code": "All"
+          },
+          "DirectValues": [
+            {
+              "NameGuid": "91adb6c2-31dc-417d-afec-72777f957266",
+              "Name": "All",
+              "Code": "All"
+            },
+            {
+              "NameGuid": "d63473ef-a6a7-4920-8395-9b80a2abec22",
+              "Name": "Project",
+              "Code": "Project"
+            },
+            {
+              "NameGuid": "c1854138-81c9-441a-86f1-8745e436f1c6",
+              "Name": "Portfolio",
+              "Code": "Portfolio"
+            },
+            {
+              "NameGuid": "1f680a35-df5b-4ab4-949c-3d176de53211",
+              "Name": "Program",
+              "Code": "Program"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

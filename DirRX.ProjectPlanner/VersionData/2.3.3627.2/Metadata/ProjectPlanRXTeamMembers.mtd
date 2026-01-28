@@ -1,0 +1,96 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "3126468b-cc8c-4471-962c-7b06c0228e04",
+  "Name": "ProjectPlanRXTeamMembers",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ProjectPlanRXT",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c1df799e-4827-4e2e-a3f4-0b34ad1a3d9d",
+      "Name": "ProjectPlanRX",
+      "CanBeSearch": false,
+      "Code": "EDoc",
+      "EntityGuid": "a319de81-7897-43e0-8f52-3eefbc011f91",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "528f9dd5-0365-4599-93d0-1b984c010f00",
+      "Name": "Member",
+      "CanBeSearch": false,
+      "Code": "Member",
+      "EntityGuid": "c612fc41-44a3-428b-a97c-433c333d78e9",
+      "HandledEvents": [
+        "ValueInputClient",
+        "LookupServer"
+      ],
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "c1df799e-4827-4e2e-a3f4-0b34ad1a3d9d",
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "68a725b5-da3d-4b9a-829f-338d42125827",
+      "Name": "Group",
+      "CanBeSearch": false,
+      "Code": "Group",
+      "DirectValues": [
+        {
+          "NameGuid": "24270129-91d4-440f-a2e1-379ea7886992",
+          "Name": "Change",
+          "Code": "Change"
+        },
+        {
+          "NameGuid": "10607f8a-3865-4161-9fcb-f11dd07b9a07",
+          "Name": "Read",
+          "Code": "Read"
+        },
+        {
+          "NameGuid": "668bb420-a966-4f0d-ab4a-bafb90a9ac0e",
+          "Name": "Management",
+          "Code": "Management"
+        }
+      ],
+      "HandledEvents": [
+        "ValueInputClient"
+      ],
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+      "PreviousPropertyGuid": "528f9dd5-0365-4599-93d0-1b984c010f00",
+      "Versions": []
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "1e9c3d55-ef23-4f8f-810b-449ccc0e7c86",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "9281e233-6320-433c-a55c-51e0d04f4fef",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 11
+    }
+  ]
+}

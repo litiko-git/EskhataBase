@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Программа</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Программу</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Программы</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>Руководитель: [Manager]</value>
+  </data>
+  <data name="Property_WorkloadLimit" xml:space="preserve">
+    <value>Лимит трудоемкости</value>
+  </data>
+  <data name="Property_CostLimit" xml:space="preserve">
+    <value>Лимит затрат</value>
+  </data>
+  <data name="Resource_ea990064fa4c4971ac1a53ec48a689a7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ea990064fa4c4971ac1a53ec48a689a7_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_623c5d3554604bc0a403543a2c855029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_bbca20a1f1f34488b835c107cd110244" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_bbca20a1f1f34488b835c107cd110244_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_ab0d039d1cf949aea7fa6756f64635c3" xml:space="preserve">
+    <value>Сроки</value>
+  </data>
+  <data name="Resource_79423b56cae045b8ac8b9e9bce81699b" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_ab391200f1554ef9ae3c209add2c6ce8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_cd4f408183a34194803fe74e578076a0" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_01ea0939144e46ae86571e6d31c7e3bf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_c45f3bb48e80474a97be56d5b5cda28c" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="Resource_ad957de2de894fbe8a0835cf850c5ff5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ad957de2de894fbe8a0835cf850c5ff5_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_88c571d88352453681f0ac9e55f05bf6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_88c571d88352453681f0ac9e55f05bf6_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_7a51bfa3c4274bbbad4a7ec35746712c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_7a51bfa3c4274bbbad4a7ec35746712c_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_f73c485555ef452a8456ec09adc01721" xml:space="preserve">
+    <value>Заказчики</value>
+  </data>
+  <data name="Resource_5fce9b60eb654779a0be63fb2fce6675" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_5fce9b60eb654779a0be63fb2fce6675_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_b9e1831b69024aa29aa8bbdd1a0afd4c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_b9e1831b69024aa29aa8bbdd1a0afd4c_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_081364b76eef4a64ae2b35878d1729cf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_081364b76eef4a64ae2b35878d1729cf_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_2d140c6afec84614bac0c2dce3b7ff3a" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_2d140c6afec84614bac0c2dce3b7ff3a_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_a3c83fb0dc834f5e8b4fa30ddeb676d4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_8eba8a4c8b754450af36694fe24ea9f6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowFolder" xml:space="preserve">
+    <value>Папка программы</value>
+  </data>
+  <data name="Action_ShowFolderHint" xml:space="preserve">
+    <value>Папка программы</value>
+  </data>
+  <data name="Action_ShowFolderDescription" xml:space="preserve">
+    <value>Открыть папку программы</value>
+  </data>
+  <data name="Action_CloseProject" xml:space="preserve">
+    <value>Закрыть программу</value>
+  </data>
+  <data name="Action_ReopenProject" xml:space="preserve">
+    <value>Переоткрыть программу</value>
+  </data>
+  <data name="Action_ReopenProjectHint" xml:space="preserve">
+    <value>Переоткрыть программу и извлечь из архива</value>
+  </data>
+  <data name="Action_ReopenProjectDescription" xml:space="preserve">
+    <value>Программа будет открыта. При этом её дочерние проекты и программы не будут открыты. Папка программы будет перенесена в папку "Проекты".</value>
+  </data>
+  <data name="Action_ReopenProjectConfirmationDescription" xml:space="preserve">
+    <value>Программа будет открыта. При этом её дочерние проекты и программы не будут открыты. Папка программы будет перенесена в папку “Проекты”.</value>
+  </data>
+  <data name="Action_ReopenProjectConfirmationMessage" xml:space="preserve">
+    <value>Переоткрыть программу и извлечь из архива?</value>
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Открыть карточку программы</value>
+  </data>
+  <data name="ControlGroup_d4d0d738cb3744de9960f6d03c5f6c7e" xml:space="preserve">
+    <value>Структура папок программы</value>
+  </data>
+  <data name="Action_CloseProjectDescription" xml:space="preserve">
+    <value>Программа, а также ее дочерние проекты и программы будут закрыты. Папка программы будет перенесена в папку "Архив проектов".</value>
+  </data>
+  <data name="Action_CreateProjectDocument" xml:space="preserve">
+    <value>Документ</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Открыть карточку программы.</value>
+  </data>
+</root>

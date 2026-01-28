@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collection FormGuid="cddd4c25-da1e-45d4-ab4b-0250a22ce940">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ShowTotalSummary">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">752,-194</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="LinesPerRowMode">TwoLinesMode</property>
+          <property name="WaitIndicatorType">Panel</property>
+        </property>
+        <property name="GroupCount">0</property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="Columns" iskey="true" value="21">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="MinWidth">48</property>
+            <property name="FieldName">T</property>
+            <property name="FixedWidth">true</property>
+            <property name="Visible">true</property>
+            <property name="ExtendedVisibleIndex">13</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">48</property>
+            <property name="ActualWidth">5*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="FieldName">Id</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_Id</property>
+            <property name="ExtendedVisibleIndex">0</property>
+            <property name="Width">38</property>
+            <property name="ActualWidth">4*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="FieldName">Name</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanObsolete_Name</property>
+            <property name="ExtendedVisibleIndex">15</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">448</property>
+            <property name="ActualWidth">31*</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="FieldName">Author.DisplayValue</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanObsolete_Author</property>
+            <property name="ExtendedVisibleIndex">17</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">162</property>
+            <property name="ActualWidth">14*</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="FieldName">HasRelations</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanObsolete_HasRelations</property>
+            <property name="ExtendedVisibleIndex">14</property>
+            <property name="VisibleIndex">1</property>
+            <property name="ActualWidth">3*</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="FieldName">Created</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanObsolete_Created</property>
+            <property name="ExtendedVisibleIndex">16</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">124</property>
+            <property name="ActualWidth">12*</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="FieldName">Modified</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_Modified</property>
+            <property name="ExtendedVisibleIndex">18</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">124</property>
+            <property name="ActualWidth">13*</property>
+          </property>
+          <property name="Item8" isnull="true" iskey="true">
+            <property name="FieldName">StartDate</property>
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanObsolete_StartDate</property>
+            <property name="ExtendedVisibleIndex">19</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">16*</property>
+          </property>
+          <property name="Item9" isnull="true" iskey="true">
+            <property name="FieldName">EndDate</property>
+            <property name="Visible">true</property>
+            <property name="Name">ProjectPlanObsolete_EndDate</property>
+            <property name="ExtendedVisibleIndex">20</property>
+            <property name="VisibleIndex">6</property>
+            <property name="ActualWidth">19*</property>
+          </property>
+          <property name="Item10" isnull="true" iskey="true">
+            <property name="FieldName">ActualStartDate</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_ActualStartDate</property>
+            <property name="ExtendedVisibleIndex">1</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item11" isnull="true" iskey="true">
+            <property name="FieldName">ActualFinishDate</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_ActualFinishDate</property>
+            <property name="ExtendedVisibleIndex">2</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item12" isnull="true" iskey="true">
+            <property name="FieldName">Note</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_Note</property>
+            <property name="ExtendedVisibleIndex">3</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item13" isnull="true" iskey="true">
+            <property name="FieldName">Stage</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_Stage</property>
+            <property name="ExtendedVisibleIndex">4</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item14" isnull="true" iskey="true">
+            <property name="FieldName">ExecutionPercent</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_ExecutionPercent</property>
+            <property name="ExtendedVisibleIndex">5</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item15" isnull="true" iskey="true">
+            <property name="FieldName">BaselineWork</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_BaselineWork</property>
+            <property name="ExtendedVisibleIndex">6</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item16" isnull="true" iskey="true">
+            <property name="FieldName">BaselineWorkType</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_BaselineWorkType</property>
+            <property name="ExtendedVisibleIndex">7</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item17" isnull="true" iskey="true">
+            <property name="FieldName">PlannedCosts</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_PlannedCosts</property>
+            <property name="ExtendedVisibleIndex">8</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item18" isnull="true" iskey="true">
+            <property name="FieldName">FactualCosts</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_FactualCosts</property>
+            <property name="ExtendedVisibleIndex">9</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item19" isnull="true" iskey="true">
+            <property name="FieldName">IsCopy</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_IsCopy</property>
+            <property name="ExtendedVisibleIndex">10</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item20" isnull="true" iskey="true">
+            <property name="FieldName">DocumentKind.DisplayValue</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_DocumentKind</property>
+            <property name="ExtendedVisibleIndex">11</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item21" isnull="true" iskey="true">
+            <property name="FieldName">ProjectId</property>
+            <property name="Visible">false</property>
+            <property name="Name">ProjectPlanObsolete_ProjectId</property>
+            <property name="ExtendedVisibleIndex">12</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="1">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="FieldName">Created</property>
+            <property name="SortOrder">Descending</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection>
+</settings>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProgressReportTitle" xml:space="preserve">
+    <value>Отчет о ходе работ по плану проекта</value>
+  </data>
+  <data name="ProjectPlanName" xml:space="preserve">
+    <value>План проекта</value>
+  </data>
+  <data name="ProjectCharterName" xml:space="preserve">
+    <value>Устав проекта: </value>
+  </data>
+  <data name="ProjectFolderName" xml:space="preserve">
+    <value>Папка проекта: </value>
+  </data>
+  <data name="ProjectCostsTitle" xml:space="preserve">
+    <value>Затраты</value>
+  </data>
+  <data name="ProjectCharacteristicsName" xml:space="preserve">
+    <value>Характеристики проекта</value>
+  </data>
+  <data name="CharacteristicName" xml:space="preserve">
+    <value>Характеристика</value>
+  </data>
+  <data name="PlannedValues" xml:space="preserve">
+    <value>Плановые значения</value>
+  </data>
+  <data name="PredictableName" xml:space="preserve">
+    <value>Прогнозируемое</value>
+  </data>
+  <data name="FactValueName" xml:space="preserve">
+    <value>Фактические значения</value>
+  </data>
+  <data name="ComplexityProjectTitle" xml:space="preserve">
+    <value>Трудоемкость</value>
+  </data>
+  <data name="ProjectDurationTitle" xml:space="preserve">
+    <value>Длительность, р.д.</value>
+  </data>
+  <data name="ProjectCostsTitleCurrency" xml:space="preserve">
+    <value>Затраты, {0}</value>
+  </data>
+  <data name="MilestonesName" xml:space="preserve">
+    <value>Вехи проекта</value>
+  </data>
+  <data name="MilestoneName" xml:space="preserve">
+    <value>Веха</value>
+  </data>
+  <data name="DateName" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="StatusName" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="PerformerName" xml:space="preserve">
+    <value>Ответственный</value>
+  </data>
+  <data name="NoteName" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="WbsName" xml:space="preserve">
+    <value>ИСР</value>
+  </data>
+  <data name="DialogName" xml:space="preserve">
+    <value>Отчет о ходе работ</value>
+  </data>
+  <data name="ReportPeriodDialogName" xml:space="preserve">
+    <value>Период</value>
+  </data>
+  <data name="IncludeAgileDialogName" xml:space="preserve">
+    <value>Включить тикеты связанных Agile-досок</value>
+  </data>
+  <data name="ProgressTitle" xml:space="preserve">
+    <value>Ход работ по плану проекта</value>
+  </data>
+  <data name="OverdueStagesName" xml:space="preserve">
+    <value>Просроченные этапы</value>
+  </data>
+  <data name="StageName" xml:space="preserve">
+    <value>Этап</value>
+  </data>
+  <data name="StartDateName" xml:space="preserve">
+    <value>Начало</value>
+  </data>
+  <data name="EndDateName" xml:space="preserve">
+    <value>Окончание</value>
+  </data>
+  <data name="PercentCompletedName" xml:space="preserve">
+    <value>% завершения</value>
+  </data>
+  <data name="CompletedStagesName" xml:space="preserve">
+    <value>Выполненные в отчетном периоде этапы</value>
+  </data>
+  <data name="CurrentStagesName" xml:space="preserve">
+    <value>Текущие и ближайшие этапы</value>
+  </data>
+  <data name="TableName" xml:space="preserve">
+    <value>Таблица</value>
+  </data>
+  <data name="ProgressAgileTitle" xml:space="preserve">
+    <value>Ход работ на связанных Agile-досках</value>
+  </data>
+  <data name="CompletedTicketsTitle" xml:space="preserve">
+    <value>Выполненные тикеты</value>
+  </data>
+  <data name="TicketName" xml:space="preserve">
+    <value>Тикет</value>
+  </data>
+  <data name="WorkloadName" xml:space="preserve">
+    <value>Трудоемкость</value>
+  </data>
+  <data name="CompletedDateName" xml:space="preserve">
+    <value>Дата закрытия</value>
+  </data>
+  <data name="DeadlineName" xml:space="preserve">
+    <value>Срок</value>
+  </data>
+  <data name="PerformerTicketName" xml:space="preserve">
+    <value>Исполнитель</value>
+  </data>
+  <data name="StubTextAgile" xml:space="preserve">
+    <value>Не найдено ни одной связанной Agile-доски. Убедитесь, что план и нужные Agile-доски связаны с проектом.</value>
+  </data>
+  <data name="CurrentTicketsTitle" xml:space="preserve">
+    <value>Текущие тикеты</value>
+  </data>
+  <data name="MilestoneStatusDone" xml:space="preserve">
+    <value>Достигнута</value>
+  </data>
+  <data name="MilestoneStatusNotDone" xml:space="preserve">
+    <value>Не достигнута</value>
+  </data>
+  <data name="StartPeriodDateNotAvailable" xml:space="preserve">
+    <value>Дата начала отчетного периода должна быть раньше, чем текущая дата.</value>
+  </data>
+  <data name="TextEmptyCompletedStages" xml:space="preserve">
+    <value>В выбранном периоде нет завершенных этапов.</value>
+  </data>
+  <data name="TextEmptyOverdueStages" xml:space="preserve">
+    <value>В выбранном периоде нет просроченных этапов.</value>
+  </data>
+  <data name="TextEmptyCurrentStages" xml:space="preserve">
+    <value>В выбранном и в следующем отчетном периоде нет этапов.</value>
+  </data>
+  <data name="CustomDate" xml:space="preserve">
+    <value>С указанной даты</value>
+  </data>
+  <data name="EntirePlan" xml:space="preserve">
+    <value>Весь план</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="OneWeek" xml:space="preserve">
+    <value>Одна неделя</value>
+  </data>
+  <data name="Quarter" xml:space="preserve">
+    <value>Квартал</value>
+  </data>
+  <data name="TwoWeeks" xml:space="preserve">
+    <value>Две недели</value>
+  </data>
+  <data name="ReportVersionDialogName" xml:space="preserve">
+    <value>Версия плана проекта</value>
+  </data>
+  <data name="ReportVersionItemName" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="ProjectCurrentStateName" xml:space="preserve">
+    <value>Текущий статус</value>
+  </data>
+  <data name="PredictValueName" xml:space="preserve">
+    <value>Прогнозные значения</value>
+  </data>
+</root>

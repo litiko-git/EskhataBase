@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CollectiveTaskSubject" xml:space="preserve">
+    <value>Events of your team and projects on {0}</value>
+  </data>
+  <data name="PlanRespAssignNotifyText" xml:space="preserve">
+    <value>You are now responsible for project plan "{0}"</value>
+  </data>
+  <data name="SectionRespAssignNotifyText" xml:space="preserve">
+    <value>You are now responsible for section "{0}" of project plan "{1}"</value>
+  </data>
+  <data name="ActivityRespAssignNotifyText" xml:space="preserve">
+    <value>Responsible has been assigned to stage "{0}" of project plan "{1}"</value>
+  </data>
+  <data name="ActivityCannotStartNotifyText" xml:space="preserve">
+    <value>Cannot start stage "{0}" of project plan "{1}" because stage "{2}" has not been completed on time.</value>
+  </data>
+  <data name="ActivityMustEndedNotifyText" xml:space="preserve">
+    <value>Stage "{0}" of project plan "{1}" should be completed on {2}.</value>
+  </data>
+  <data name="ActivityMustStartNotifyText" xml:space="preserve">
+    <value>Stage "{0}" of project plan "{1}" should be started on {2}.</value>
+  </data>
+  <data name="ActivityOverdatedNotifyText" xml:space="preserve">
+    <value>Stage "{0}" of project plan "{1}" has not been completed on time.</value>
+  </data>
+  <data name="ActivityStatusChangedNotifyText" xml:space="preserve">
+    <value>The status of stage "{0}" in project plan "{1}" has changed</value>
+  </data>
+  <data name="MilestoneMustReachNotifyText" xml:space="preserve">
+    <value>Milestone "{0}" of project plan should be reached by {1}.</value>
+  </data>
+  <data name="MilestoneOverdatedNotifyText" xml:space="preserve">
+    <value>Milestone "{0}" of project plan "{1}" has not been reached on time.</value>
+  </data>
+  <data name="PlanMustEndedNotifyText" xml:space="preserve">
+    <value>Work on project plan "{0}" should be completed by {1}</value>
+  </data>
+  <data name="PlanMustStartedNotifyText" xml:space="preserve">
+    <value>Work on project plan "{0}" should be started on {1}</value>
+  </data>
+  <data name="PlanOverdatedNotifyText" xml:space="preserve">
+    <value>Work on project plan "{0}" has not been completed on time.</value>
+  </data>
+  <data name="PlanParticipantsAddedNotifyText" xml:space="preserve">
+    <value>You are now a participant of project plan "{0}"</value>
+  </data>
+  <data name="SectionMustStartNotifyText" xml:space="preserve">
+    <value>Section "{0}" of project plan "{1}" should be started on {2}.</value>
+  </data>
+  <data name="SectionMustEndNotifyText" xml:space="preserve">
+    <value>Section "{0}" of project plan "{1}" should be completed by {2}.</value>
+  </data>
+  <data name="SectionOverdatedNotifyText" xml:space="preserve">
+    <value>Section "{0}" of project plan "{1}" has not been completed on time.</value>
+  </data>
+  <data name="StartedActivityChangedNotifyText" xml:space="preserve">
+    <value>Stage "{0}" of project plan "{1}" has been changed: {2}, {3}</value>
+  </data>
+  <data name="AssignedTicketNotifyText" xml:space="preserve">
+    <value>The ticket "{0}" has an assignee {1}</value>
+  </data>
+  <data name="TicketCommentNotifyText" xml:space="preserve">
+    <value>A comment has been added to ticket "{0}".</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value><![CDATA[ ]]></value>
+  </data>
+  <data name="AddressNotFound" xml:space="preserve">
+    <value>Failed to get web client address</value>
+  </data>
+  <data name="MdEditorName" xml:space="preserve">
+    <value>Markdown documents editor</value>
+  </data>
+  <data name="MdExtension" xml:space="preserve">
+    <value>md</value>
+  </data>
+  <data name="RxmdEditorName" xml:space="preserve">
+    <value>Extended Markdown documents editor</value>
+  </data>
+  <data name="RxmdExtension" xml:space="preserve">
+    <value>rxmd</value>
+  </data>
+  <data name="TextDocuments" xml:space="preserve">
+    <value>Text documents</value>
+  </data>
+  <data name="SearchRecipientsException" xml:space="preserve">
+    <value>Failed recipients search for string {0}</value>
+  </data>
+  <data name="UnknownPropertyType" xml:space="preserve">
+    <value>Unknown type {0} skipped while object serialization</value>
+  </data>
+  <data name="IncorrectGuid" xml:space="preserve">
+    <value>Incorrect Guid format: {0}</value>
+  </data>
+  <data name="TypeByGuidNotFound" xml:space="preserve">
+    <value>Can't get entity type name by Guid: {0}</value>
+  </data>
+  <data name="EntityNotFound" xml:space="preserve">
+    <value>Can't get entity with Guid: {0} and Id: {1}</value>
+  </data>
+  <data name="ModuleNotFound" xml:space="preserve">
+    <value>Module  \"{0}\" does not exist.</value>
+  </data>
+  <data name="KnowledgeBaseRoleName" xml:space="preserve">
+    <value>Employees that have access to solution "Knowledge Base"</value>
+  </data>
+</root>

@@ -1,0 +1,161 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "3ee9a606-7954-4751-a27b-9633425427b9",
+  "Name": "ProjectCoreGatesDirRX",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ProjCoreGates",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "5deef773-aa2a-45ce-92a1-00da37cce683",
+      "Name": "ProjectCore",
+      "CanBeSearch": false,
+      "Code": "Project",
+      "EntityGuid": "36ad7267-1338-464c-8def-07290bee74ab",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "50d0b8ec-1226-4c09-a6d7-ecc959114eb6",
+      "Name": "Gate",
+      "CanBeSearch": false,
+      "Code": "Gate",
+      "EntityGuid": "4f931c4f-1331-4736-962a-0e6d1eb58abe",
+      "FlatListInStandaloneLookup": true,
+      "HandledEvents": [
+        "ChangedShared"
+      ],
+      "IsEnabled": false,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "5deef773-aa2a-45ce-92a1-00da37cce683"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "3c2ea09e-8cf0-4ca7-948f-5bfb51c51daf",
+      "Name": "Performer",
+      "CanBeSearch": false,
+      "Code": "Performer",
+      "EntityGuid": "b7905516-2be5-4931-961c-cb38d5677565",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "50d0b8ec-1226-4c09-a6d7-ecc959114eb6"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "2ac8fdc3-1d0d-4dbd-b339-6310ba7e6e9e",
+      "Name": "PlanDate",
+      "CanBeSearch": false,
+      "Code": "PlanDate",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "3c2ea09e-8cf0-4ca7-948f-5bfb51c51daf"
+    },
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "7335ee34-8695-4f69-b2cc-2e908bab3505",
+      "Name": "Assessment",
+      "Code": "Assessment",
+      "DirectValues": [
+        {
+          "NameGuid": "60d79cf3-6ad9-4143-9857-ea18f8fe0a59",
+          "Name": "OnTime",
+          "Code": "OnTime"
+        },
+        {
+          "NameGuid": "673fc028-4905-4260-a28b-53a630bac02a",
+          "Name": "MinorRisks",
+          "Code": "MinorRisks"
+        },
+        {
+          "NameGuid": "5efa3b2b-71aa-4f17-a78e-37304dc2bf75",
+          "Name": "Threat",
+          "Code": "Threat"
+        }
+      ],
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+      "PreviousPropertyGuid": "2ac8fdc3-1d0d-4dbd-b339-6310ba7e6e9e",
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "b89bb862-95b5-49c1-82d6-a35ad63768aa",
+      "Name": "Level",
+      "Code": "Level",
+      "DirectValues": [
+        {
+          "NameGuid": "b2ee2b7f-5d34-4b42-801c-f29629470b99",
+          "Name": "Critical",
+          "Code": "Critical"
+        },
+        {
+          "NameGuid": "2666b3a3-cda2-40b8-90f5-ac5720afd550",
+          "Name": "Key",
+          "Code": "Key"
+        },
+        {
+          "NameGuid": "deb3a2f6-81eb-4762-9fa0-b40d12adf3f9",
+          "Name": "Operational",
+          "Code": "Operational"
+        }
+      ],
+      "IsEnabled": false,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+      "PreviousPropertyGuid": "7335ee34-8695-4f69-b2cc-2e908bab3505",
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "224c6655-a84c-40d0-9eec-8a9a6f5aff19",
+      "Name": "ActualDate",
+      "Code": "ActualDate",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "b89bb862-95b5-49c1-82d6-a35ad63768aa",
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "6dc9cf65-4101-4cc1-b3a9-79ed2d32f81b",
+      "Name": "IsPassed",
+      "Code": "IsPassed",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "224c6655-a84c-40d0-9eec-8a9a6f5aff19",
+      "Versions": []
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "14e4a78e-e612-4f69-ba39-5fffc7c6905a",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "83db0f87-82b4-4d07-a271-5026f08a8015",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 12
+    }
+  ]
+}

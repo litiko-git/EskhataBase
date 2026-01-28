@@ -1,0 +1,235 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "bce513a7-4787-4e7c-aa46-694622ec58b1",
+  "Name": "ProjectPlanning",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.ProjectPlanning.Client",
+  "ClientBaseAssemblyName": "DirRX.ProjectPlanning.ClientBase",
+  "ClientBaseNamespace": "DirRX.ProjectPlanning.ClientBase",
+  "ClientNamespace": "DirRX.ProjectPlanning.Client",
+  "Code": "Project",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "c8b67370-1b3f-414c-9093-ed073a0c2474",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "496ac849-297e-413f-bbba-86d1e969e5dd",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "e653a4b2-5f40-4644-bf06-f8b17aa13d88",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "31dbf2da-5396-438a-b337-cb4bfb3f19f3"
+    },
+    {
+      "ItemId": "90b73694-ebe4-4982-ac5f-3612056739f9",
+      "PreviousItemId": "31dbf2da-5396-438a-b337-cb4bfb3f19f3"
+    },
+    {
+      "ItemId": "36ad7267-1338-464c-8def-07290bee74ab",
+      "PreviousItemId": "90b73694-ebe4-4982-ac5f-3612056739f9"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.ProjectPlanning",
+  "IsolatedAssemblyName": "DirRX.ProjectPlanning.Isolated",
+  "IsolatedNamespace": "DirRX.ProjectPlanning.Isolated",
+  "OrderedSpecialFolders": [],
+  "PublicFunctions": [
+    {
+      "Name": "BaseFilter",
+      "Parameters": [
+        {
+          "Name": "query",
+          "ParameterType": "global::System.Linq.IQueryable<global::DirRX.ProjectPlanning.IProjectCore>",
+          "ParameterTypeFullName": "System.Linq.IQueryable"
+        },
+        {
+          "Name": "isActive",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "isClosed",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "isClosing",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "isInitiation",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "projectManager",
+          "ParameterType": "global::Sungero.Company.IEmployee",
+          "ParameterTypeFullName": "Sungero.Company.IEmployee, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "leadingProject",
+          "ParameterType": "global::Sungero.Projects.IProjectCore",
+          "ParameterTypeFullName": "Sungero.Projects.IProjectCore, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "internalCustomer",
+          "ParameterType": "global::Sungero.Company.IEmployee",
+          "ParameterTypeFullName": "Sungero.Company.IEmployee, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "externalCustomer",
+          "ParameterType": "global::Sungero.Parties.ICounterparty",
+          "ParameterTypeFullName": "Sungero.Parties.ICounterparty, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "startDateRangeFrom",
+          "ParameterType": "global::System.Nullable<global::System.DateTime>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "startDateRangeTo",
+          "ParameterType": "global::System.Nullable<global::System.DateTime>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "finishDateRangeFrom",
+          "ParameterType": "global::System.Nullable<global::System.DateTime>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "finishDateRangeTo",
+          "ParameterType": "global::System.Nullable<global::System.DateTime>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "needAssistance",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "underControl",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "me",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "mySubordinates",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "employeeSelect",
+          "ParameterType": "global::Sungero.Company.IEmployee",
+          "ParameterTypeFullName": "Sungero.Company.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::System.Linq.IQueryable<global::DirRX.ProjectPlanning.IProjectCore>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "CreateConfirmDialog",
+      "Parameters": [
+        {
+          "Name": "dialogMessage",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dialogDescription",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "CommonLibrary.ITaskDialog"
+    },
+    {
+      "Name": "FilterProjectByKind",
+      "Parameters": [
+        {
+          "Name": "query",
+          "ParameterType": "global::System.Linq.IQueryable<global::DirRX.ProjectPlanning.IProjectCore>",
+          "ParameterTypeFullName": "System.Linq.IQueryable"
+        },
+        {
+          "Name": "projectKind",
+          "ParameterType": "global::Sungero.Projects.IProjectKind",
+          "ParameterTypeFullName": "Sungero.Projects.IProjectKind, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::System.Linq.IQueryable<global::DirRX.ProjectPlanning.IProjectCore>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "FilterProjectCoreByType",
+      "Parameters": [
+        {
+          "Name": "query",
+          "ParameterType": "global::System.Linq.IQueryable<global::DirRX.ProjectPlanning.IProjectCore>",
+          "ParameterTypeFullName": "System.Linq.IQueryable"
+        },
+        {
+          "Name": "isProject",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "isProgram",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "isPortfolio",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "ReturnType": "global::System.Linq.IQueryable<global::DirRX.ProjectPlanning.IProjectCore>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.ProjectPlanning",
+  "ResourcesKeys": [
+    "NoLicenseForModule"
+  ],
+  "ServerAssemblyName": "DirRX.ProjectPlanning.Server",
+  "ServerNamespace": "DirRX.ProjectPlanning.Server",
+  "SharedAssemblyName": "DirRX.ProjectPlanning.Shared",
+  "SharedNamespace": "DirRX.ProjectPlanning.Shared",
+  "SpecialFolders": [],
+  "Version": "2.8.4700.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

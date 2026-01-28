@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_ActivityRefId" xml:space="preserve">
+    <value>ActivityRefId</value>
+  </data>
+  <data name="Property_ProjectPlan" xml:space="preserve">
+    <value>Project plan</value>
+  </data>
+  <data name="Resource_035869ed2baa4573bdfe9e4f5e10c4b3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_035869ed2baa4573bdfe9e4f5e10c4b3_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_74e85eafe5944dc5b4724e791948b781" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_74e85eafe5944dc5b4724e791948b781_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_c69e0e28e0f74814857c390f47348c73_EmptyText" xml:space="preserve">
+    <value>Specify performers…</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Project Task</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Project Task</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Project Tasks</value>
+  </data>
+  <data name="Action_ShowActivityOnProjectPlan" xml:space="preserve">
+    <value>Show on plan</value>
+  </data>
+  <data name="Action_ShowActivityOnProjectPlanDescription" xml:space="preserve">
+    <value>Show activity on the plan</value>
+  </data>
+  <data name="Action_ShowActivityOnProjectPlanHint" xml:space="preserve">
+    <value>Show activity on the plan</value>
+  </data>
+  <data name="Action_ShowActivityOnProjectPlanConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowActivityOnProjectPlanConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_Responsible" xml:space="preserve">
+    <value>Responsible</value>
+  </data>
+  <data name="ControlGroup_47ecafd3c221452cb40facde72f53124" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_FactualCosts" xml:space="preserve">
+    <value>Actual costs</value>
+  </data>
+  <data name="Property_ExecutionPercent" xml:space="preserve">
+    <value>% complete</value>
+  </data>
+  <data name="Property_ActualWorkload" xml:space="preserve">
+    <value>Actual workload</value>
+  </data>
+</root>

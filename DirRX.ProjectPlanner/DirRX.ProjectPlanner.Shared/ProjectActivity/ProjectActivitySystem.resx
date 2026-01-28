@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Property_FullNumber" xml:space="preserve">
+    <value>Full number</value>
+  </data>
+  <data name="Property_ProjectPlan" xml:space="preserve">
+    <value>Project plan</value>
+  </data>
+  <data name="Property_LeadingActivity" xml:space="preserve">
+    <value>Leading activity</value>
+  </data>
+  <data name="Property_StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="Property_EndDate" xml:space="preserve">
+    <value>Finish date</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Project activity</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Project activity</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Project activities</value>
+  </data>
+  <data name="Property_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Property_BaselineWork" xml:space="preserve">
+    <value>Planned workload</value>
+  </data>
+  <data name="Property_Predecessors" xml:space="preserve">
+    <value>Predecessors</value>
+  </data>
+  <data name="Property_ExecutionPercent" xml:space="preserve">
+    <value>% progress</value>
+  </data>
+  <data name="Property_Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="ControlGroup_ab07315d44294880b6e522418a4eb869" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_SendToPerformers" xml:space="preserve">
+    <value>Send to performers</value>
+  </data>
+  <data name="Action_SendToPerformersDescription" xml:space="preserve">
+    <value>Send a assignment to the performers</value>
+  </data>
+  <data name="Action_SendToPerformersHint" xml:space="preserve">
+    <value>Send to the performers</value>
+  </data>
+  <data name="Action_SendToPerformersConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_SendToPerformersConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowActivities" xml:space="preserve">
+    <value>ShowActivities</value>
+  </data>
+  <data name="Action_ShowActivitiesDescription" xml:space="preserve">
+    <value>ShowActivities</value>
+  </data>
+  <data name="Action_ShowActivitiesHint" xml:space="preserve">
+    <value>ShowActivities</value>
+  </data>
+  <data name="Action_ShowActivitiesConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowActivitiesConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="ControlGroup_40b91d625e0644a2a22319d3cf805e50" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_SortIndex" xml:space="preserve">
+    <value>Sort Index</value>
+  </data>
+  <data name="Enum_Status_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Enum_Status_Closed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Property_Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Property_TypeActivity" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Enum_TypeActivity_Task" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="Enum_TypeActivity_Section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="Enum_TypeActivity_Milestone" xml:space="preserve">
+    <value>Milestone</value>
+  </data>
+  <data name="Property_PlannedCosts" xml:space="preserve">
+    <value>Planned costs</value>
+  </data>
+  <data name="Property_FactualCosts" xml:space="preserve">
+    <value>Factual costs</value>
+  </data>
+  <data name="Enum_Status_InWork" xml:space="preserve">
+    <value>In process</value>
+  </data>
+  <data name="Property_NumberVersion" xml:space="preserve">
+    <value>Номер версии проекта</value>
+  </data>
+  <data name="Action_OpenInNewTab" xml:space="preserve">
+    <value>Open in new tab</value>
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Show on plan</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Show project activity on the plan</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Show project activity on the plan.</value>
+  </data>
+  <data name="Property_Performers" xml:space="preserve">
+    <value>Performers</value>
+  </data>
+  <data name="Property_Responsible" xml:space="preserve">
+    <value>Responsible</value>
+  </data>
+  <data name="ControlGroup_ebd7eb36e7734b4f996d1d9f032ff6e7" xml:space="preserve">
+    <value>Predecessors</value>
+  </data>
+  <data name="Property_ResourcesCapacity" xml:space="preserve">
+    <value>ResourcesCapacity</value>
+  </data>
+  <data name="Action_ShowActivity" xml:space="preserve">
+    <value>Show on plan</value>
+  </data>
+  <data name="Action_ShowActivityDescription" xml:space="preserve">
+    <value>Show activity on the plan</value>
+  </data>
+  <data name="Action_ShowActivityHint" xml:space="preserve">
+    <value>Show activity on the plan</value>
+  </data>
+  <data name="Action_ShowActivityConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowActivityConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_RefId" xml:space="preserve">
+    <value>Reference Id</value>
+  </data>
+  <data name="Property_Attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="Property_GateId" xml:space="preserve">
+    <value>Gate Id</value>
+  </data>
+  <data name="Property_ActualWorkload" xml:space="preserve">
+    <value>Actual workload</value>
+  </data>
+</root>

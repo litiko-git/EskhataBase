@@ -1,0 +1,2972 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "f2894e4d-a950-497f-a311-1fd7e9665d28",
+  "Name": "ProjectPlanner",
+  "AsyncHandlers": [
+    {
+      "NameGuid": "a0deeb8b-b27e-411f-8069-705b2d911df0",
+      "Name": "ConvertPlanAsync",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "f5a0ea1a-ffed-45d8-b180-2623ffc67b3d",
+          "Name": "PlansGenerated",
+          "ParameterType": "Boolean"
+        }
+      ]
+    },
+    {
+      "NameGuid": "6bcda5b5-e885-4226-ae76-0a8a9e9fe9c7",
+      "Name": "GeneratePlanBody",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": []
+    },
+    {
+      "NameGuid": "5695ad2e-b325-4d25-b9b4-2deb7f80e52e",
+      "Name": "DeleteExportDocumentAsync",
+      "DelayPeriod": 1,
+      "DelayStrategy": "RegularDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "7edd2a71-6d56-4560-a88f-73bb200a62cd",
+          "Name": "documentId",
+          "ParameterType": "LongInteger"
+        }
+      ]
+    },
+    {
+      "NameGuid": "268c4e05-7fe3-44a3-ba0c-59932d149f92",
+      "Name": "UpdateProjectActivityTasksAsync",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "2b11815d-00a4-4dbc-b75f-45d8a0957749",
+          "Name": "ListChangedResponsibleActivityRefIds",
+          "ParameterType": "String"
+        },
+        {
+          "NameGuid": "2f655d4d-38d5-415b-bb60-a22bfdfbf45a",
+          "Name": "ListChangedStartDateActivityRefIds",
+          "ParameterType": "String"
+        },
+        {
+          "NameGuid": "518050fb-0d1c-47fc-9f0b-6da6afa5f330",
+          "Name": "ProjectPlanId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "6d93a831-ff62-4133-aa16-934ca1118c55",
+          "Name": "PlanSaveTime",
+          "ParameterType": "DateTime"
+        },
+        {
+          "NameGuid": "cb29e2c7-9249-4180-9df2-b4dbe0f14520",
+          "Name": "ListAllUpdatedActivityRefIds",
+          "ParameterType": "String"
+        },
+        {
+          "NameGuid": "f267178d-f5b4-4b0b-a380-d09de750ea35",
+          "Name": "NumberVersion",
+          "ParameterType": "Integer"
+        }
+      ]
+    },
+    {
+      "NameGuid": "f98cb874-5e75-4270-b14c-b5475fefa58c",
+      "Name": "LaunchTasksByPlanLastVersionAsync",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "9b65f9d6-77cb-4b78-bb18-4968f532c965",
+          "Name": "PlanId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "e73a0a40-b425-401f-aa39-733ab4498dd0",
+          "Name": "LastVersionNumber",
+          "ParameterType": "Integer"
+        }
+      ]
+    },
+    {
+      "NameGuid": "ebd6a54b-7759-4c12-92d7-3eee3a72ff66",
+      "Name": "UpdateProjectAssignmentFactData",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "12dcde7f-4343-4407-a98c-07266af781a3",
+          "Name": "TaskId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "f461f6f1-c35c-45f3-9390-cbdccaae1b9e",
+          "Name": "ExecutionPercent",
+          "ParameterType": "Integer"
+        }
+      ]
+    },
+    {
+      "NameGuid": "1aebdb7c-2268-4bdf-ab75-bd3f9c9d4b53",
+      "Name": "DeleteVersionAsyncHandler",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "4afd0d78-d8d6-4277-aa4e-04711a0313a2",
+          "Name": "NumberVersion",
+          "ParameterType": "Integer"
+        },
+        {
+          "NameGuid": "b3fc376c-7cc8-4842-82f7-8fc592fa0ad6",
+          "Name": "PlanId",
+          "ParameterType": "LongInteger"
+        }
+      ]
+    },
+    {
+      "NameGuid": "efdc250d-df51-4dfc-96f7-902ec529aec0",
+      "Name": "UpdateProjectTaskFactData",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "01cb92e3-a0e4-436e-b49e-5aae1ce4ce30",
+          "Name": "ExecutionPercent",
+          "ParameterType": "Integer"
+        },
+        {
+          "NameGuid": "11e66b22-63ae-4a4c-925d-3fb06917e1f6",
+          "Name": "ProjectPlanId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "1e20457e-990f-4c74-892a-15093223916e",
+          "Name": "ActualWorkload",
+          "ParameterType": "Double"
+        },
+        {
+          "NameGuid": "543145c2-1d7a-4731-bd69-e17baed88285",
+          "Name": "HasExecutionPercent",
+          "ParameterType": "Boolean"
+        },
+        {
+          "NameGuid": "65449a9c-c606-483b-b6aa-b7eb6b9f64d8",
+          "Name": "MainTaskId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "6ef8fb79-040b-4495-b6f6-df4d3970d7ff",
+          "Name": "HasActualWorkload",
+          "ParameterType": "Boolean"
+        },
+        {
+          "NameGuid": "a992b48f-db2f-438d-bf64-ddab937a43cf",
+          "Name": "HasFactualCosts",
+          "ParameterType": "Boolean"
+        },
+        {
+          "NameGuid": "b8921ba6-c178-43d3-9b74-0be8f9a8e2df",
+          "Name": "FactualCosts",
+          "ParameterType": "Double"
+        },
+        {
+          "NameGuid": "e7a4ecf5-9521-4c2c-85fb-31503b8a37c8",
+          "Name": "ActivityRefId",
+          "ParameterType": "LongInteger"
+        }
+      ]
+    }
+  ],
+  "ClientAssemblyName": "DirRX.ProjectPlanner.Client",
+  "ClientBaseAssemblyName": "DirRX.ProjectPlanner.ClientBase",
+  "ClientBaseNamespace": "DirRX.ProjectPlanner.ClientBase",
+  "ClientNamespace": "DirRX.ProjectPlanner.Client",
+  "Code": "Projec1",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "f899df5c-72c0-4190-aaa7-cc68979a27b1",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "608f438a-ba54-41d7-b5e5-86e129c9ea7f",
+        "Name": "ProgressReportAction",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "f328d84d-3d2b-4c88-9343-c30c3f1f4a12",
+        "IsVisibleInDesktopClient": false,
+        "ReportId": "6fa0e4f8-24ec-487e-8539-ddcaddd9031a"
+      }
+    ],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "3e20b03d-1094-4b70-a4bb-2ccf3c721340",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [
+      {
+        "NameGuid": "f328d84d-3d2b-4c88-9343-c30c3f1f4a12",
+        "Name": "Reports",
+        "BackgroundPosition": "Stretch"
+      }
+    ],
+    "Header": {
+      "NameGuid": "ead2c9b5-edf3-4fb7-9390-037f4698a260",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "bce513a7-4787-4e7c-aa46-694622ec58b1",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "356e6500-45bc-482b-9791-189b5adedc28",
+      "MaxVersion": "",
+      "MinVersion": "3.4.23.0"
+    },
+    {
+      "Id": "4e25caec-c722-4740-bcfd-c4f803840ac6",
+      "MaxVersion": "",
+      "MinVersion": "1.1.0.0"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "647a920e-ebf5-47b3-8aa6-bd9f2831515c"
+    },
+    {
+      "ItemId": "b0af2406-a454-48d5-8e94-e9f69012c8a1",
+      "PreviousItemId": "647a920e-ebf5-47b3-8aa6-bd9f2831515c"
+    },
+    {
+      "ItemId": "e176489c-b248-47b3-9017-07c8e23e870f",
+      "PreviousItemId": "b0af2406-a454-48d5-8e94-e9f69012c8a1"
+    },
+    {
+      "ItemId": "8bb517a6-3c6c-4848-8cd4-8f760360188d",
+      "PreviousItemId": "e176489c-b248-47b3-9017-07c8e23e870f"
+    },
+    {
+      "ItemId": "0adeff79-e4d2-4edf-8ec9-b8dd63990b0b",
+      "PreviousItemId": "8bb517a6-3c6c-4848-8cd4-8f760360188d"
+    },
+    {
+      "ItemId": "a319de81-7897-43e0-8f52-3eefbc011f91",
+      "PreviousItemId": "0adeff79-e4d2-4edf-8ec9-b8dd63990b0b"
+    },
+    {
+      "ItemId": "cc35d6f5-5220-4e5c-98ac-ea36a4c6bc3e",
+      "PreviousItemId": "a319de81-7897-43e0-8f52-3eefbc011f91"
+    },
+    {
+      "ItemId": "ca40bc93-e562-4a4f-9db0-23950fd61584",
+      "PreviousItemId": "cc35d6f5-5220-4e5c-98ac-ea36a4c6bc3e"
+    },
+    {
+      "ItemId": "1dfb1055-aaf3-4722-8b6f-9d85c64b32aa",
+      "PreviousItemId": "ca40bc93-e562-4a4f-9db0-23950fd61584"
+    },
+    {
+      "ItemId": "0e15f86c-ab7f-4466-8b49-08773985ecaa",
+      "PreviousItemId": "1dfb1055-aaf3-4722-8b6f-9d85c64b32aa"
+    },
+    {
+      "ItemId": "9874745c-b061-43bb-9378-013b60e551fb",
+      "PreviousItemId": "0e15f86c-ab7f-4466-8b49-08773985ecaa"
+    },
+    {
+      "ItemId": "4f931c4f-1331-4736-962a-0e6d1eb58abe",
+      "PreviousItemId": "9874745c-b061-43bb-9378-013b60e551fb"
+    },
+    {
+      "ItemId": "6fa0e4f8-24ec-487e-8539-ddcaddd9031a",
+      "PreviousItemId": "4f931c4f-1331-4736-962a-0e6d1eb58abe"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InitializationFunctions": [
+    {
+      "Name": "Init",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
+  ],
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.ProjectPlanner",
+  "IsolatedAssemblyName": "DirRX.ProjectPlanner.Isolated",
+  "IsolatedNamespace": "DirRX.ProjectPlanner.Isolated",
+  "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "60f15c6f-4015-4eae-844e-cfa0db83e6c3",
+      "Name": "SyncAccessRightsProjectPlanAndProject",
+      "Daily": "Repeat",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "TimePeriod": 3
+    },
+    {
+      "NameGuid": "ac83a8e6-20ae-4afb-80ff-47d028f12602",
+      "Name": "NoticeTriggerer",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    },
+    {
+      "NameGuid": "d0d44353-4374-44fa-a515-76a46706b5d4",
+      "Name": "LaunchAutoSendingTasksPP",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T06:00:00"
+    },
+    {
+      "NameGuid": "25419ca5-e317-4323-a01d-0509bffc62bd",
+      "Name": "SyncProjectPlanData",
+      "Daily": "Repeat",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "TimePeriod": 10
+    }
+  ],
+  "Libraries": [
+    {
+      "NameGuid": "c162182d-b69f-460a-824c-dc5a79131c73",
+      "Name": "PlannerApp",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "268460d4-dab7-480c-8f82-30a657ad1a63",
+      "Name": "ProjectPlan",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "5342ae7a-6bd5-4679-8940-e2c423150557",
+      "Name": "CentrifugoModel",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "6d415464-630e-4466-97ee-0820c629c7f6",
+      "Name": "Configs",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "c46c372d-0de2-42d9-aa31-1c9673fc325a",
+      "Name": "Utils",
+      "Scope": "Both"
+    }
+  ],
+  "Overridden": [
+    "IsVisible",
+    "IsLicensed"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "AgileClientAddress",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"agile\""
+    },
+    {
+      "Name": "Array",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"array\""
+    },
+    {
+      "Name": "Boolean",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"boolean\""
+    },
+    {
+      "Name": "Date",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"date\""
+    },
+    {
+      "Name": "DateRange",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"daterange\""
+    },
+    {
+      "Name": "DateScale",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"date_scales\""
+    },
+    {
+      "Name": "DateTime",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"datetime\""
+    },
+    {
+      "Name": "DateTimeRange",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"datetimerange\""
+    },
+    {
+      "Name": "DefaultPivotTableAddress",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"pivot-table\""
+    },
+    {
+      "Name": "Employee",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"employee\""
+    },
+    {
+      "Name": "Number",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"number\""
+    },
+    {
+      "Name": "ParentProjectTeam",
+      "ParentClasses": [
+        "Module",
+        "RoleGuid"
+      ],
+      "TypeName": "System.Guid",
+      "Value": "new System.Guid(\"2062682D-745C-4E02-AF2F-26AD229E8C61\")"
+    },
+    {
+      "Name": "PathLocaleResourcesReport",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"ProjectPlanner/GetLocaleResourcesReport\""
+    },
+    {
+      "Name": "PathResourcesReport",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"ProjectPlanner/ResourcesReport\""
+    },
+    {
+      "Name": "PathResourcesReportMetadata",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"data=ProjectPlanner/ResourcesReportMetadata{0}\""
+    },
+    {
+      "Name": "PathResourcesReportMetadataOrg",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"data=ProjectPlanner/ResourcesReportMetadataOrg{0}\""
+    },
+    {
+      "Name": "PathResourcesReportOrg",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"ProjectPlanner/ResourcesReportOrg\""
+    },
+    {
+      "Name": "ProjectPlanDocKindGuid",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.Guid",
+      "Value": "new System.Guid(\"a319de81-7897-43e0-8f52-3eefbc011f91\")"
+    },
+    {
+      "Name": "ProjectPlanObsoleteDocKindGuid",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.Guid",
+      "Value": "new System.Guid(\"b0af2406-a454-48d5-8e94-e9f69012c8a1\")"
+    },
+    {
+      "Name": "RoadmapClientAddress",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"roadmap\""
+    },
+    {
+      "Name": "String",
+      "ParentClasses": [
+        "Module",
+        "TypeData"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"string\""
+    },
+    {
+      "Name": "TimelineDays",
+      "ParentClasses": [
+        "Module",
+        "DateScale"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"days\""
+    },
+    {
+      "Name": "TimelineDays",
+      "ParentClasses": [
+        "Module",
+        "DateScaleKey"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"d\""
+    },
+    {
+      "Name": "TimelineMonths",
+      "ParentClasses": [
+        "Module",
+        "DateScale"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"months\""
+    },
+    {
+      "Name": "TimelineMonths",
+      "ParentClasses": [
+        "Module",
+        "DateScaleKey"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"m\""
+    },
+    {
+      "Name": "TimelineQuarters",
+      "ParentClasses": [
+        "Module",
+        "DateScale"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"quarters\""
+    },
+    {
+      "Name": "TimelineQuarters",
+      "ParentClasses": [
+        "Module",
+        "DateScaleKey"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"q\""
+    },
+    {
+      "Name": "TimelineWeeks",
+      "ParentClasses": [
+        "Module",
+        "DateScale"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"weeks\""
+    },
+    {
+      "Name": "TimelineWeeks",
+      "ParentClasses": [
+        "Module",
+        "DateScaleKey"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"w\""
+    },
+    {
+      "Name": "TimelineYears",
+      "ParentClasses": [
+        "Module",
+        "DateScale"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"years\""
+    },
+    {
+      "Name": "TimelineYears",
+      "ParentClasses": [
+        "Module",
+        "DateScaleKey"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"y\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "AddResourcesDemo",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "resourceId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "workload",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "CanUpdatePlan",
+      "Parameters": [
+        {
+          "Name": "planId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "Check",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "CheckPlanExists",
+      "Parameters": [
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numberVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "CheckProjectPlannerLicence",
+      "Placement": "Client",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "CreateDBConnectionPublic",
+      "ReturnType": "System.Data.IDbConnection"
+    },
+    {
+      "Name": "GetActualGates",
+      "Parameters": [
+        {
+          "Name": "dateFilter",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IGateDto>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetCapacityDto",
+      "Parameters": [
+        {
+          "Name": "resourceIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "startDate",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "endDate",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "planId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "planVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::DirRX.ProjectPlanner.Structures.Module.ICapacityResponseDto",
+      "ReturnTypeFullName": "DirRX.ProjectPlanner.Structures.Module.ICapacityResponseDto",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "GetDateRange",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "startDate",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        },
+        {
+          "Name": "endDate",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetJsonStringByUri",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "uriModel",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetLinkActivity",
+      "Parameters": [
+        {
+          "Name": "planId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numberVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetLinkTicket",
+      "Parameters": [
+        {
+          "Name": "boardId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "ticketId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetLocaleResourcesReport",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetModel",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numberVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetModel",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "project",
+          "ParameterType": "global::DirRX.ProjectPlanner.IProjectPlanRX",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.IProjectPlanRX, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "numberVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetOrCreateResource",
+      "Parameters": [
+        {
+          "Name": "employeeId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::DirRX.ProjectPlanner.Structures.ProjectsResource.IProjectResourceDto",
+      "ReturnTypeFullName": "DirRX.ProjectPlanner.Structures.ProjectsResource.IProjectResourceDto",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetPlanModelForGantt",
+      "Parameters": [
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numberVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetSignaturesInfo",
+      "Parameters": [
+        {
+          "Name": "planId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ISignatureDto>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetSubProjectsInfo",
+      "Parameters": [
+        {
+          "Name": "projectCoreIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetTasksByIds",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "tasksIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::Sungero.Workflow.ISimpleTask>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "GetUriResourceReport",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "projectCoreId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "dateRange",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateScaleKey",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Uri",
+      "ReturnTypeFullName": "System.Uri"
+    },
+    {
+      "Name": "GetUriResourceReportOrg",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "businessUnitIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "departmentIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "dateRange",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateScaleKey",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Uri",
+      "ReturnTypeFullName": "System.Uri"
+    },
+    {
+      "Name": "GetUriRoadmap",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.Uri",
+      "ReturnTypeFullName": "System.Uri"
+    },
+    {
+      "Name": "GetUriRoadmap",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "entityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Uri",
+      "ReturnTypeFullName": "System.Uri"
+    },
+    {
+      "Name": "GetWebSite",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetWebsiteLink",
+      "Parameters": [
+        {
+          "Name": "projectId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "userId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "isReadOnly",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetWebsiteLink",
+      "Parameters": [
+        {
+          "Name": "website",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "projectId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "userId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "isReadOnly",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetWorkingDays",
+      "Parameters": [
+        {
+          "Name": "activity",
+          "ParameterType": "global::DirRX.ProjectPlanner.IProjectActivity",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.IProjectActivity, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32"
+    },
+    {
+      "Name": "ResourcesReport",
+      "Parameters": [
+        {
+          "Name": "projectCoreId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "dateRange",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateScaleKey",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "ResourcesReportMetadata",
+      "Parameters": [
+        {
+          "Name": "projectCoreId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "dateRange",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateScaleKey",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "ResourcesReportMetadataOrg",
+      "Parameters": [
+        {
+          "Name": "businessUnitIds",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "departmentIds",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateRange",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateScaleKey",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "ResourcesReportOrg",
+      "Parameters": [
+        {
+          "Name": "businessUnitIds",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "departmentIds",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateRange",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "dateScaleKey",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "RunPlannerApp",
+      "Parameters": [
+        {
+          "Name": "projectId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "employeeId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "isReadOnly",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "RunPlannerApp",
+      "Parameters": [
+        {
+          "Name": "webSite",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "projectId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "employeeId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "isReadOnly",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "RunPlannerApp",
+      "Parameters": [
+        {
+          "Name": "projectId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "employeeId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "isReadOnly",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "RunPlannerApp",
+      "Parameters": [
+        {
+          "Name": "webSite",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "projectId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "employeeId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "isReadOnly",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SaveModelFromGanttService",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "model",
+          "ParameterType": "global::DirRX.ProjectPlanner.Structures.Module.IGanttProjectPlanDto",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.Structures.Module.IGanttProjectPlanDto"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "SaveModelFromGanttServiceNewVersion",
+      "Parameters": [
+        {
+          "Name": "model",
+          "ParameterType": "global::DirRX.ProjectPlanner.Structures.Module.IGanttProjectPlanDto",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.Structures.Module.IGanttProjectPlanDto"
+        }
+      ],
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "SaveModelFromString",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "modelJson",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "projectPlan",
+          "ParameterType": "global::DirRX.ProjectPlanner.IProjectPlanRX",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.IProjectPlanRX, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SaveProjectPlanFromTemplate",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "template",
+          "ParameterType": "global::DirRX.ProjectPlanning.IDocumentTemplate",
+          "ParameterTypeFullName": "DirRX.ProjectPlanning.IDocumentTemplate, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "projectPlan",
+          "ParameterType": "global::DirRX.ProjectPlanner.IProjectPlanRX",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.IProjectPlanRX, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SaveResources",
+      "Parameters": [
+        {
+          "Name": "resourceId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "busy",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "connection",
+          "ParameterType": "System.Data.IDbConnection"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SearchGatesByName",
+      "Parameters": [
+        {
+          "Name": "nameFilter",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IGateDto>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "ShowProjectTasks",
+      "Parameters": [
+        {
+          "Name": "tasksIds",
+          "ParameterType": "global::System.Collections.Generic.List<global::System.Int64>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "StartRootTask",
+      "Parameters": [
+        {
+          "Name": "activityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "executionPercent",
+          "ParameterType": "global::System.Nullable<global::System.Int32>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "actualWorkload",
+          "ParameterType": "global::System.Nullable<global::System.Double>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "factualCosts",
+          "ParameterType": "global::System.Nullable<global::System.Double>",
+          "ParameterTypeFullName": "System.Nullable"
+        }
+      ],
+      "ReturnType": "global::DirRX.ProjectPlanner.Structures.Module.ITask",
+      "ReturnTypeFullName": "DirRX.ProjectPlanner.Structures.Module.ITask",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "TryLockProjectPlanAndLinkedEntities",
+      "Parameters": [
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::DirRX.ProjectPlanner.Structures.Module.IProjectPlanLockInfo",
+      "ReturnTypeFullName": "DirRX.ProjectPlanner.Structures.Module.IProjectPlanLockInfo",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "UpdatePlanData",
+      "Parameters": [
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numberVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::DirRX.ProjectPlanner.Structures.Module.IProjectPlanDto",
+      "ReturnTypeFullName": "DirRX.ProjectPlanner.Structures.Module.IProjectPlanDto",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "WriteJsonBodyToProjectVersion",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "projectPlanId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "writeToPublicBody",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "WriteJsonBodyToProjectVersion",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "projectPlan",
+          "ParameterType": "global::DirRX.ProjectPlanner.IProjectPlanRX",
+          "ParameterTypeFullName": "DirRX.ProjectPlanner.IProjectPlanRX, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "numVersion",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "writeToPublicBody",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "ActivityDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Priority",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        },
+        {
+          "Name": "FactualCosts",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "PlannedCosts",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "TypeActivity",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "SortIndex",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "UnfinishedTasks",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ITaskDto>"
+        },
+        {
+          "Name": "SubmittedTasks",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ITaskDto>"
+        },
+        {
+          "Name": "Predecessors",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IPredecessorDto>"
+        },
+        {
+          "Name": "Status",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanner.Structures.Module.IActivityStatusDto"
+        },
+        {
+          "Name": "ExecutionPercent",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "EndDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "StartDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "ResponsibleId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "LeadActivityId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "Note",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "CurrentNumber",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "RefId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "BaselineWork",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "ActualWorkload",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "Resources",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IResourcesWorkloadDto>"
+        },
+        {
+          "Name": "Attachments",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IAttachmentDto>"
+        },
+        {
+          "Name": "GateId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ActivityGateDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ActivityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Gate",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanner.Structures.Module.IGateDto"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ActivityStatusDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "EnumValue",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LocalizeValue",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "AttachmentDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "AttachmentId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "Url",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "AttachmentDtoResponse",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Attachment",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanner.Structures.Module.IAttachmentDto"
+        },
+        {
+          "Name": "Error",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "Capacity",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Values",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ICapacityValue>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "CapacityDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Values",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ICapacityValueDto>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "CapacityResponseDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "WorkingTimeCalendar",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IWorkingTimeCalendar>"
+        },
+        {
+          "Name": "Capacity",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ICapacity>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "CapacityValue",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "Busy",
+          "TypeFullName": "global::System.Double"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "CapacityValueDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "Busy",
+          "TypeFullName": "global::System.Double"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "GanttProjectPlanDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Activities",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IActivityDto>"
+        },
+        {
+          "Name": "LastActivityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "ResourcesData",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanner.Structures.Module.IResourcesDataDto"
+        },
+        {
+          "Name": "Project",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanner.Structures.Module.IProjectDto"
+        },
+        {
+          "Name": "NumberVersion",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "ProjectPlanId",
+          "TypeFullName": "global::System.Int64"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "GateDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DisplayName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Level",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IsPassed",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Boolean>"
+        },
+        {
+          "Name": "PlanDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "ActualDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "LocalizedEnum",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Localized",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "MaterialResource",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "MaterialResourcesDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "PredecessorDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "LinkType",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Lag",
+          "TypeFullName": "global::System.Int32"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ProjectCoreDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Type",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ShortName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "StatusIssues",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ManagerName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LeadingId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "StartDatePlan",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "EndDatePlan",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "StartDateActual",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "EndDateActual",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ProjectDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "BaselineWork",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "ActualWorkload",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "EndDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "ExecutionPercent",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        },
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Note",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "StartDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "TypeActivity",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "PlannedCosts",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "FactualCosts",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "ManagerId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ProjectPlanDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceData",
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanner.Structures.Module.IResourcesData"
+        },
+        {
+          "Name": "Tasks",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ITask>"
+        },
+        {
+          "Name": "ActivityGates",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IActivityGateDto>"
+        },
+        {
+          "Name": "LevelStatuses",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ILocalizedEnum>"
+        },
+        {
+          "Name": "ActivityStatuses",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ILocalizedEnum>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ProjectPlanLockInfo",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "lockMessages",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.String>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "Resource",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "EntityTypeId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "EntityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "UnitLabel",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourceReportOrgRow",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "PerformerId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Busy",
+          "TypeFullName": "global::System.Double"
+        },
+        {
+          "Name": "ActivityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "ActivityName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ProjectPlanId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "ProjectCoreId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "ManagerName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "AvailabilityStatus",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourceReportRow",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "PerformerId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Busy",
+          "TypeFullName": "global::System.Double"
+        },
+        {
+          "Name": "ActivityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "ActivityName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ProjectPlanId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "ProjectCoreId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "ManagerName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourcesData",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Capacity",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ICapacity>"
+        },
+        {
+          "Name": "MaterialResources",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IMaterialResource>"
+        },
+        {
+          "Name": "Resources",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IResource>"
+        },
+        {
+          "Name": "ResourceTypes",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IResourceTypes>"
+        },
+        {
+          "Name": "Users",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IUser>"
+        },
+        {
+          "Name": "WorkingTimeCalendars",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IWorkingTimeCalendar>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourcesDataDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceTypes",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IResourceTypesDto>"
+        },
+        {
+          "Name": "Users",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IUsersDto>"
+        },
+        {
+          "Name": "MaterialResources",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IMaterialResourcesDto>"
+        },
+        {
+          "Name": "Resources",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IResourcesDto>"
+        },
+        {
+          "Name": "Capacity",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.ICapacityDto>"
+        },
+        {
+          "Name": "WorkingTimeCalendars",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IWorkingTimeCalendarDto>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourcesDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "EntityTypeId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "EntityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "UnitLabel",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourcesWorkloadDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourceId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Value",
+          "TypeFullName": "global::System.Double"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourceTypes",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "SectionName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "ResourceTypesDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "SectionName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "RoadmapProjectDatabaseItem",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "ParentId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "Project",
+          "IsEntity": true,
+          "IsNullable": true,
+          "TypeFullName": "global::DirRX.ProjectPlanning.IProjectCore"
+        },
+        {
+          "Name": "ManagerId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "ManagerName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ProjectPlanId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "RootTaskInfo",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "RootTaskIds",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.Int64>"
+        },
+        {
+          "Name": "NotRootTaskIds",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.Int64>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "SignatureDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "VersionId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "IsApproval",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "IsEndorsing",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "SigningDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "SignatoryFullName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "SignatoryId",
+          "TypeFullName": "global::System.Int64"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "Task",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ActivityId",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Deadline",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "HyperLink",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "TaskStatus",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DisplayValue",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "StartDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "EndDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "IsRoot",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "ActivityStatus",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ExecutionPercent",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        },
+        {
+          "Name": "ActualWorkload",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        },
+        {
+          "Name": "FactualCosts",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Double>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "TaskDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "DisplayValue",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "HyperLink",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Deadline",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "User",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "JobTitle",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Department",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IsActive",
+          "TypeFullName": "global::System.Boolean"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "UsersDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Surname",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Position",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "WorkDay",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "Duration",
+          "TypeFullName": "global::System.Double"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "WorkDaysDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "Duration",
+          "TypeFullName": "global::System.Double"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "WorkingTimeCalendar",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourcesIds",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.Int64>"
+        },
+        {
+          "Name": "FreeDays",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.DateTime>"
+        },
+        {
+          "Name": "WorkDays",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IWorkDay>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    },
+    {
+      "Name": "WorkingTimeCalendarDto",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ResourcesIds",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.Int64>"
+        },
+        {
+          "Name": "FreeDays",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::System.DateTime>"
+        },
+        {
+          "Name": "WorkDays",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.ProjectPlanner.Structures.Module.IWorkDaysDto>"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.ProjectPlanner",
+  "ResourcesKeys": [
+    "SendTaskSubject",
+    "SendTaskActiveText",
+    "CantEditCompletedProject",
+    "ProjectPlannerNoLicense",
+    "ExceprionMessage",
+    "ProjectsFileTypeName",
+    "AplicationName",
+    "ProjectPlanName",
+    "EmployeeNotFound",
+    "ProjectSettingsName",
+    "ProjectPlanLockedError",
+    "ProjectLockedError",
+    "EmployeeResourceTypeName",
+    "EmployeeResourceTypeUnit",
+    "RoomResourceTypeName",
+    "TransportResourceTypeName",
+    "TransportResourceTypeUnit",
+    "MaterialResourcesTypeName",
+    "WebClientURIEmptyError",
+    "EmployeeForActivityNotFound",
+    "EmployeeIdNotFilled",
+    "NotEnoughRightsToUpdateProject",
+    "ResourceNotFound",
+    "CannotConvert",
+    "LastVersionAutoSigned",
+    "NullReferenceResourceTypeException",
+    "EmployeeIdNotFoundExeption",
+    "ExecutionRequestExeption",
+    "GetCapacityException",
+    "LastVersionAutoSignedPrefix",
+    "NonExistentPlanIdExeption",
+    "UpdatePlanDataException",
+    "CheckPlanExistsExeption",
+    "ErrorWhileTryOpenWebClient",
+    "CouldNotConvertProjectPlan",
+    "ResourceLinksTableNotFoundExceptionText",
+    "HealthCheckExceptionText",
+    "PplanRespAssigned",
+    "PplanSectionRespAssigned",
+    "PplanActivityRespAssigned",
+    "PplanMilestoneRespAssigned",
+    "PlanParticipAdd",
+    "PlanMustStarted",
+    "PlanMustEnded",
+    "PlanOverdated",
+    "SectMustStarted",
+    "SectMustEnded",
+    "SectOverdated",
+    "ActMustStarted",
+    "ActCannotStart",
+    "ActMustEnded",
+    "ActOverdated",
+    "MilestMustReach",
+    "MilestOverdated",
+    "ActStatusChangd",
+    "StartedActChd",
+    "FailedToGrantPermissionsToDocType",
+    "FailToFindUpdatedIdExceptionText",
+    "ErrorUriTicket",
+    "ErrorUriActivity",
+    "ColdNotFindCalendarWithResourceId",
+    "CouldNotFIndVariables",
+    "ResourceReportTitle",
+    "Workload",
+    "ProjectCoreId",
+    "DateRange",
+    "BlockedVersionsText",
+    "BlockedLinkedProjectText",
+    "BlockedProjectPlanCardText",
+    "ProjectPlanNotFoundExceptionText",
+    "PerformerName",
+    "ActivityName",
+    "Year",
+    "Month",
+    "Week",
+    "Date",
+    "WorkloadAnalysisTimeline",
+    "YearsTimeline",
+    "QuartersTimeline",
+    "WeeksTimeline",
+    "MonthsTimeline",
+    "DaysTimeline",
+    "QuarterString",
+    "Quarter",
+    "NoAccessRightsName",
+    "ManagerName",
+    "ManagerDepartment",
+    "ManagerJobTitle",
+    "OrganizationName",
+    "DepartmentName",
+    "JobTitle",
+    "Project",
+    "FreeTime",
+    "BusinessUnit",
+    "ResourceReportOrgTitle",
+    "Available",
+    "AvailabilityStatus",
+    "OtherStage",
+    "OtherProject",
+    "OtherState",
+    "OtherKind",
+    "OtherLeadingProject",
+    "OtherManager",
+    "SingleGateToMilestoneWarning",
+    "DefaultRoadMapTitle",
+    "RoadMapPortfolioTitle",
+    "RoadMapProgramTitle",
+    "RoadMapProjectTitle",
+    "SyncAccessRightsProjectError",
+    "NoAccess",
+    "SelectBusinessUnitsForAdd",
+    "SelectBusinessUnitsForDelete",
+    "SelectDepartmentsForAdd",
+    "SelectDepartmentsForDelete",
+    "AddBusinessUnit",
+    "RemoveBusinessUnit",
+    "AddDepartment",
+    "RemoveDepartment",
+    "LevelStatusesGenerationError",
+    "OverdueTaskDateHistoryComment",
+    "CouldNotStopProjectActivityTaskError",
+    "CouldNotUpdateAndRestartProjectActivityTaskError",
+    "CouldNotCreateAndStartProjectActivityTaskError",
+    "RootTaskAlreadyExistMessage",
+    "ActivityDeletionBlockedByTask",
+    "PlannedCostsName",
+    "PlanWorkloadName",
+    "FactCostsName",
+    "FactWorkloadName",
+    "ExecutionPercentageName",
+    "FactStartDateName",
+    "FactEndDateName",
+    "PlanStartDateName",
+    "PlanEndDateName",
+    "ProjectDates",
+    "SyncProjectPlanDataError"
+  ],
+  "ServerAssemblyName": "DirRX.ProjectPlanner.Server",
+  "ServerNamespace": "DirRX.ProjectPlanner.Server",
+  "SharedAssemblyName": "DirRX.ProjectPlanner.Shared",
+  "SharedNamespace": "DirRX.ProjectPlanner.Shared",
+  "SpecialFolders": [],
+  "Version": "2.9.4700.15",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

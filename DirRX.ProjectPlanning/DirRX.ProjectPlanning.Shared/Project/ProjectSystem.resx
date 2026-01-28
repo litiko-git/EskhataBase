@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_PlannedWorkloadDirRX" xml:space="preserve">
+    <value>Planned workload</value>
+  </data>
+  <data name="Action_PlanProject" xml:space="preserve">
+    <value>Plan project</value>
+  </data>
+  <data name="Action_PlanProjectDescription" xml:space="preserve">
+    <value>Application will be opened for project planning</value>
+  </data>
+  <data name="Action_PlanProjectHint" xml:space="preserve">
+    <value>Plan project</value>
+  </data>
+  <data name="Action_PlanProjectConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_PlanProjectConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ReopenProjectDescription" xml:space="preserve">
+    <value>Project will be opened. Its subprojects will not be opened. The project folder will be moved to the "Projects" folder.</value>
+  </data>
+  <data name="Action_ReopenProjectHint" xml:space="preserve">
+    <value>Reopen project and retrieve it from archive</value>
+  </data>
+  <data name="Resource_ea990064fa4c4971ac1a53ec48a689a7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_623c5d3554604bc0a403543a2c855029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_d3faec491fb14decaf26fe9c252b1e37" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_bbca20a1f1f34488b835c107cd110244" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_ab0d039d1cf949aea7fa6756f64635c3" xml:space="preserve">
+    <value>Project Duration</value>
+  </data>
+  <data name="Resource_79423b56cae045b8ac8b9e9bce81699b" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_ab391200f1554ef9ae3c209add2c6ce8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_cd4f408183a34194803fe74e578076a0" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_01ea0939144e46ae86571e6d31c7e3bf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_c45f3bb48e80474a97be56d5b5cda28c" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Resource_ad957de2de894fbe8a0835cf850c5ff5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ad957de2de894fbe8a0835cf850c5ff5_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_88c571d88352453681f0ac9e55f05bf6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_7a51bfa3c4274bbbad4a7ec35746712c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_f73c485555ef452a8456ec09adc01721" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="Resource_5fce9b60eb654779a0be63fb2fce6675" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_b9e1831b69024aa29aa8bbdd1a0afd4c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_081364b76eef4a64ae2b35878d1729cf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_66b6eeccda394b92bbadf75a9178b370" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateProjectDocument" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="Action_CreateProjectDocumentDescription" xml:space="preserve">
+    <value>Create project document</value>
+  </data>
+  <data name="Action_CreateProjectDocumentHint" xml:space="preserve">
+    <value>Create Document</value>
+  </data>
+  <data name="Action_CloseProjectHint" xml:space="preserve">
+    <value>Close project and move it to archive</value>
+  </data>
+  <data name="Ribbon_Planning_f0a8eca2386b49ed8a0a204989952f6f" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="Ribbon_ProjectActions_a2fbbc635813445c9b2695d6c1ed0f1e" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Ribbon_Project_44d591cd3c8c4b96b2bda9e7d909ba65" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Ribbon_Planning_f6c9849a33944976b09ecb571d9d5652" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="Property_AdministratorGroup" xml:space="preserve">
+    <value>Project administrator group</value>
+  </data>
+  <data name="Enum_Stage_Initiation" xml:space="preserve">
+    <value>Initiation</value>
+  </data>
+  <data name="Enum_Stage_Execution" xml:space="preserve">
+    <value>Execution</value>
+  </data>
+  <data name="Enum_Stage_Completion" xml:space="preserve">
+    <value>Closure</value>
+  </data>
+  <data name="Property_Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Property_FactualCosts" xml:space="preserve">
+    <value>Factual costs</value>
+  </data>
+  <data name="Property_PlannedCosts" xml:space="preserve">
+    <value>Planned costs</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>Manager [Manager]</value>
+  </data>
+  <data name="Form_4523887dc1e3468eaef77dbe96a408cf" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="Property_ProjectPlanDirRX" xml:space="preserve">
+    <value>Main project plan</value>
+  </data>
+  <data name="Enum_Status_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Enum_Status_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="ControlGroup_24f59a492a144abbb9a37f03fe8e3b37" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_ProjectKind" xml:space="preserve">
+    <value>Project kind</value>
+  </data>
+  <data name="Action_ShowSelectedEntity" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Action_ShowSelectedEntityHint" xml:space="preserve">
+    <value>Open the project card</value>
+  </data>
+  <data name="Action_CloseProjectDescription" xml:space="preserve">
+    <value>Project and its subprojects will be closed. The project folder will be moved to the "Project Archive" folder.</value>
+  </data>
+  <data name="Action_ShowSelectedEntityDescription" xml:space="preserve">
+    <value>Open the project card.</value>
+  </data>
+  <data name="Property_ActualWorkloadDirRX" xml:space="preserve">
+    <value>Actual workload</value>
+  </data>
+  <data name="Action_ShowProgressReportDirRX" xml:space="preserve">
+    <value>Progress Report</value>
+  </data>
+  <data name="Action_ShowProgressReportDirRXDescription" xml:space="preserve">
+    <value>Generate a progress report on the project plan</value>
+  </data>
+  <data name="Action_ShowProgressReportDirRXHint" xml:space="preserve">
+    <value>Generate a progress report on the project plan</value>
+  </data>
+  <data name="Action_ShowProgressReportDirRXConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ShowProgressReportDirRXConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_09ad0ab20c864b85b687bc6c860619fd" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_e2079f9aa6e54d068f485007a777714f" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_47ce4d5e94ea40a299b9c285d32b23ce" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_bd39b8f96e6146c6b4516a1979c2a982" xml:space="preserve">
+    <value />
+  </data>
+</root>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Риск</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Риск</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Риски</value>
+  </data>
+  <data name="Property_RelatedProjectCore" xml:space="preserve">
+    <value>Объект управления</value>
+  </data>
+  <data name="Property_RelatedActivityRef" xml:space="preserve">
+    <value>Этап плана проекта</value>
+  </data>
+  <data name="Property_Category" xml:space="preserve">
+    <value>Категория риска</value>
+  </data>
+  <data name="Property_Currency" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
+  <data name="Property_StartDate" xml:space="preserve">
+    <value>Актуален с</value>
+  </data>
+  <data name="Property_DueDate" xml:space="preserve">
+    <value>Актуален по</value>
+  </data>
+  <data name="Property_Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Property_Probability" xml:space="preserve">
+    <value>Вероятность</value>
+  </data>
+  <data name="Enum_Type_Risk" xml:space="preserve">
+    <value>Риск</value>
+  </data>
+  <data name="Enum_Type_Possibility" xml:space="preserve">
+    <value>Возможность</value>
+  </data>
+  <data name="Property_Impact" xml:space="preserve">
+    <value>Последствия</value>
+  </data>
+  <data name="Property_Cost" xml:space="preserve">
+    <value>Стоимость последствий</value>
+  </data>
+  <data name="Property_Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Property_MitigationPlan" xml:space="preserve">
+    <value>План предотвращения</value>
+  </data>
+  <data name="Property_ContingencyPlan" xml:space="preserve">
+    <value>План устранения последствий</value>
+  </data>
+  <data name="ControlGroup_7066a5102f744f3abc9966e6da7719ee" xml:space="preserve">
+    <value>План предотвращения</value>
+  </data>
+  <data name="ControlGroup_6e2ec6f10566406f8add9518549a4d75" xml:space="preserve">
+    <value>План устранения последствий</value>
+  </data>
+  <data name="Action_AddRisk" xml:space="preserve">
+    <value>Добавить риск</value>
+  </data>
+  <data name="Action_AddRiskHint" xml:space="preserve">
+    <value>Создание риска, связанного с текущим проектом</value>
+  </data>
+  <data name="Action_AddRiskDescription" xml:space="preserve">
+    <value>Создание риска, связанного с текущим проектом</value>
+  </data>
+  <data name="Action_CopyToProject" xml:space="preserve">
+    <value>Скопировать в проект</value>
+  </data>
+  <data name="Action_CopyToProjectHint" xml:space="preserve">
+    <value>Создание копий выбранных рисков с привязкой к объекту управления</value>
+  </data>
+  <data name="Action_CopyToProjectDescription" xml:space="preserve">
+    <value>Создание копий выбранных рисков с привязкой к объекту управления</value>
+  </data>
+  <data name="Property_IsImplement" xml:space="preserve">
+    <value>Реализация</value>
+  </data>
+</root>

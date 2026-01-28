@@ -1,0 +1,312 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "6fa0e4f8-24ec-487e-8539-ddcaddd9031a",
+  "Name": "ProgressReport",
+  "AssociatedGuid": "f2894e4d-a950-497f-a311-1fd7e9665d28",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Word",
+  "ExportFormats": [
+    "Word"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteClient",
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "ProjectPlannerProgressReport",
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "ExportFormats",
+    "DefaultExportFormat",
+    "DisplayName",
+    "Description",
+    "HandledEvents",
+    "Parameters",
+    "DataSources"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "2ed8d6b3-e52b-4100-9633-9c10fa9fe872",
+      "Name": "StartDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsRequired": true,
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "47111c90-5367-4577-9dfb-41217c415990",
+      "Name": "CurrentDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsRequired": true,
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "7dde7462-555f-40db-b79c-ff09e536e191",
+      "Name": "ProjectPlanRX",
+      "EntityType": "a319de81-7897-43e0-8f52-3eefbc011f91",
+      "InternalDataTypeName": "DirRX.ProjectPlanner.IProjectPlanRX, Sungero.Domain.Interfaces",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "45427f77-3d0f-4fca-ac3b-43ec6d5848d0",
+      "Name": "ProjectPlanRXLink",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "4922af60-a63e-449e-8a5a-75033f553abe",
+      "Name": "ProjectCharterLink",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "d8491bdf-fe7a-4379-8bef-45e59b5c3782",
+      "Name": "ProjectFolderLink",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "310d27c6-feff-4638-bc70-f21d5ca81658",
+      "Name": "Workload",
+      "InternalDataTypeName": "System.Double",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "773aa1a8-ec30-4cf6-ba20-e99e85aabcca",
+      "Name": "DurationFact",
+      "InternalDataTypeName": "System.Int32",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "a48971c6-b528-457e-984a-5016ab5da969",
+      "Name": "DurationApproved",
+      "InternalDataTypeName": "System.Int32",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "5156b463-c3ee-4d73-bf06-38fc938ccbd8",
+      "Name": "BudgetCurrent",
+      "InternalDataTypeName": "System.Double",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "c5ccacba-e38d-4b03-b3b6-561ac4e0cb04",
+      "Name": "BudgetApproved",
+      "InternalDataTypeName": "System.Double",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "df79a9ee-ba14-478c-9934-0e00e76c2930",
+      "Name": "EndDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "b04dd371-6b6e-4508-aa34-13e3f193ca06",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "f64f0edb-b3ca-4ebc-9bc4-e33891327b87",
+      "Name": "CountTable",
+      "InternalDataTypeName": "System.Int32",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "9e973dce-a0ff-4f51-8f80-ee53d3024fca",
+      "Name": "IsIncludeAgile",
+      "InternalDataTypeName": "System.Boolean",
+      "IsRequired": true,
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "90bacfab-f278-4381-a57a-b12c36b0a801",
+      "Name": "ProjectId",
+      "InternalDataTypeName": "System.Int64",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "c3867b50-b157-43d1-a2c9-e33fc5be5146",
+      "Name": "HasAgileProject",
+      "InternalDataTypeName": "System.Boolean",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "38e85a33-5d21-46d7-a9d4-b3dc859e108d",
+      "Name": "ProjectCharter",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "28aa0600-fdc8-4f7d-8f85-dd7616fdd30f",
+      "Name": "ProjectFolder",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "b4f89955-a8cd-4423-9627-2de2c456a72a",
+      "Name": "IsHourCost",
+      "InternalDataTypeName": "System.Boolean",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "94e3832f-d87c-450b-a600-536abb069fa9",
+      "Name": "SelectedVersion",
+      "InternalDataTypeName": "System.Int32",
+      "IsSimpleDataType": true
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "MilestoneTableLine",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Id",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Wbs",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.DateTime>"
+        },
+        {
+          "Name": "Status",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Responsible",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "NumberVersion",
+          "TypeFullName": "global::System.Int32"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.ProgressReport"
+    },
+    {
+      "Name": "StageTableLine",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IdStage",
+          "TypeFullName": "global::System.Int64"
+        },
+        {
+          "Name": "Wbs",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "NameStage",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "StartDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "EndDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.DateTime"
+        },
+        {
+          "Name": "ExecutionPercent",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "Responsible",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "NumberVersion",
+          "TypeFullName": "global::System.Int32"
+        }
+      ],
+      "StructureNamespace": "DirRX.ProjectPlanner.Structures.ProgressReport"
+    }
+  ],
+  "ResourcesKeys": [
+    "ProgressReportTitle",
+    "ProjectPlanName",
+    "ProjectCharterName",
+    "ProjectFolderName",
+    "ProjectCostsHourTitle",
+    "ProjectCharacteristicsName",
+    "CharacteristicName",
+    "PlannedValues",
+    "PredictableName",
+    "FactValueName",
+    "ComplexityProjectTitle",
+    "ProjectDurationTitle",
+    "ProjectCostsRubTitle",
+    "MilestonesName",
+    "MilestoneName",
+    "DateName",
+    "StatusName",
+    "PerformerName",
+    "NoteName",
+    "WbsName",
+    "DialogName",
+    "ReportPeriodDialogName",
+    "IncludeAgileDialogName",
+    "ProgressTitle",
+    "OverdueStagesName",
+    "StageName",
+    "StartDateName",
+    "EndDateName",
+    "PercentCompletedName",
+    "CompletedStagesName",
+    "CurrentStagesName",
+    "TableName",
+    "ProgressAgileTitle",
+    "CompletedTicketsTitle",
+    "TicketName",
+    "WorkloadName",
+    "CompletedDateName",
+    "DeadlineName",
+    "PerformerTicketName",
+    "StubTextAgile",
+    "CurrentTicketsTitle",
+    "MilestoneStatusDone",
+    "MilestoneStatusNotDone",
+    "StartPeriodDateNotAvailable",
+    "TextEmptyCompletedStages",
+    "TextEmptyOverdueStages",
+    "TextEmptyCurrentStages",
+    "CustomDate",
+    "EntirePlan",
+    "Month",
+    "OneWeek",
+    "Quarter",
+    "TwoWeeks",
+    "ReportVersionDialogName",
+    "ReportVersionItemName"
+  ],
+  "Versions": []
+}
